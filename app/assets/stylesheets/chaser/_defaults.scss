@@ -3,7 +3,6 @@
 // ---------------------------------- //
 
 $debug-mode:          false !default;   // + Visually highlight any potential markup/accessibility quirks
-$use-animations:      false !default;   // + Ready to use CSS animations, implement via jQuery
 $use-media:           true !default;    // + Use media objects
 $sticky-footer:       true !default;    // + Use sticky footer
 
@@ -110,6 +109,27 @@ h6,
 	@include font-size($micro-size);
 }
 
+::selection,
+::moz-selection{
+	background: $brand-color;
+	color: #fff;
+}
+img::selection,
+img::moz-selection{
+	background: transparent;
+}
+body{
+	-webkit-tap-highlight-color: $brand-color;
+}
+
+a{
+	color: $link-color;
+	@include transition(all .2 linear);
+	
+	&:hover, &:focus{
+		color: lighten($link-color, 15%);
+	}
+}
 
 // ---------------------------------- //
 // Base Project Spacing
