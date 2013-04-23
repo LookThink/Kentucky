@@ -1,0 +1,120 @@
+// ---------------------------------- //
+// Project Settings
+// ---------------------------------- //
+
+$debug-mode:          false !default;   // + Visually highlight any potential markup/accessibility quirks
+$use-animations:      false !default;   // + Ready to use CSS animations, implement via jQuery
+$use-media:           true !default;    // + Use media objects
+$sticky-footer:       true !default;    // + Use sticky footer
+
+
+// ---------------------------------- //
+// Typographic Variables
+// ---------------------------------- //
+
+$base-font-family:    $helvetica !default;
+$base-font-size:      14px !default;
+$base-line-height:    24px !default;
+$base-font-color:     #333 !default;
+
+$giga-size:           96px !default;
+$mega-size:           72px !default;
+$kilo-size:           48px !default;
+
+$h1-size:             85px !default;
+$h2-size:             30px !default;
+$h3-size:             20px !default;
+$h4-size:             12px !default;
+$h5-size:             18px !default;
+$h6-size:             16px !default;
+
+$milli-size:          12px !default;
+$micro-size:          10px !default;
+
+
+// ---------------------------------- //
+// Brand Variables
+// ---------------------------------- //
+
+@include font-face(Verb, '../fonts/verb/VerbLight-webfont', 300);
+@include font-face(Verb, '../fonts/verb/VerbBold-webfont', 700);
+@include font-face(Verb, '../fonts/verb/VerbBlack-webfont', 900);
+
+$brand-font-family:   'Verb', $helvetica !default;
+$brand-color:         #333 !default;;
+$brand-round:         3px !default;
+
+$link-color:          #bebebe !default;
+
+
+// ---------------------------------- //
+// Typographic Variable Calls
+// ---------------------------------- //
+
+// Font-Size + Line Height
+// https://twitter.com/redclov3r/status/250301539321798657
+
+@mixin font-size($font-size, $line-height:true){
+	font-size: $font-size;
+	line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size) + em;
+}
+
+html{
+	font-size: $base-font-size;
+	color: $base-font-color;
+}
+
+%giga{
+	@include font-size($giga-size);
+}
+%mega{
+	@include font-size($mega-size);
+}
+%kilo{
+	@include font-size($kilo-size);
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: $brand-font-family;
+}
+h1,
+%alpha{
+	@include font-size($h1-size);
+}
+h2,
+%bravo{
+	@include font-size($h2-size);
+}
+h3,
+%charlie{
+	@include font-size($h3-size);
+}
+h4,
+%delta{
+	@include font-size($h4-size);
+}
+h5,
+%echo{
+	@include font-size($h5-size);
+}
+h6,
+%foxtrot{
+	@include font-size($h6-size);
+}
+
+.smallprint,
+%milli{
+	@include font-size($milli-size);
+}
+%micro{
+	@include font-size($micro-size);
+}
+
+
+// ---------------------------------- //
+// Base Project Spacing
+// ---------------------------------- //
+
+$base-spacing-unit: $base-line-height !default;
+$half-spacing-unit: $base-spacing-unit / 2 !default;
+$line-height-ratio: $base-line-height / $base-font-size;

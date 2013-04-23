@@ -1,0 +1,168 @@
+// ---------------------------------- //
+// Chaser Mixins & Helper Classes
+// ---------------------------------- //
+
+// Show / Hide elements
+// Use with jQuery
+
+.is-shown{
+	display: block;
+}
+.is-hidden{
+	display: none;
+}
+
+
+// Hide Text
+// Use only as an extend
+
+.hide-text{
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+
+// Add / remove floats
+
+.float-left{
+	float: left !important;
+}
+.float-right{
+	float: right !important;
+}
+.float-none{
+	float: none !important;
+}
+
+
+// Text Alignment
+
+.text-left{
+	text-align: left !important;
+}
+.text-right{
+	text-align: right !important;
+}
+.text-center{
+	text-align: center !important;
+}
+
+
+// Non-standard border width specification
+
+@mixin border($border-widths, $border-style, $border-color){
+	border: $border-style $border-color;
+	border-width: $border-widths;
+}
+
+
+// Mute DOM elements
+
+.muted{
+	opacity: .5 !important;
+	filter: alpha(opacity = 50) !important;
+}
+
+
+// Rocker switches (or button groups)
+// Resets buttons to squared corners, applies left/right rounding
+
+.rocker{
+	border-radius: 0;
+	
+	&:first-child{
+		border-radius: $brand-round 0 0 $brand-round;
+	}
+	&:last-child{
+		border-radius: 0 $brand-round $brand-round 0;
+	}
+}
+
+
+// Sticky Footer
+// Requires full site wrapper and <div class="push"></div>
+// immediately before the footer
+
+$footer-height: 60px;
+
+@if $sticky-footer == true{
+	
+	html,
+	body{
+		height: 100%;
+	}
+	
+	.wrapper{
+		min-height: 100%;
+		height: auto !important;
+		height: 100%;
+		margin: 0 auto -$footer-height;
+	}
+	
+	footer,
+	.footer,
+	.push{
+		height: $footer-height;
+	}
+	
+} // END if
+
+
+// ---------------------------------- //
+// Inuit Mixins - inuitcss.com
+// ---------------------------------- //
+
+
+// Media Object
+// Left / right objects with no content wrapping under media-img
+
+@if $use-media == true{
+
+	.media{
+		display:block;
+		@include clearfix;
+		
+		.media-img{
+			float: left;
+			margin-right: $base-spacing-unit;
+		}
+		.media-img-flipped{
+			float: right;
+			margin-left: $base-spacing-unit;
+		}
+		
+		.media-body{
+			overflow: hidden;
+			
+			&,
+			& > :last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+
+} // END if
+
+
+// Truncation
+// Single line text truncation (boundary is a width)
+// If multi-line is required, use Badonkatrunc: http://badonkatrunc.com/
+
+@mixin truncate($truncation-boundary){
+	max-width: $truncation-boundary;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
+// Clearfix
+
+.clearfix{
+	&:after{
+		content: '';
+		display: table;
+		clear: both;
+	}
+}

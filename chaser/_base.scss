@@ -1,0 +1,54 @@
+// ---------------------------------- //
+// Standard Imports
+// ---------------------------------- //
+
+@import 'normalize';
+@import 'defaults';
+@import 'helpers';
+@import 'shame';
+
+
+// ---------------------------------- //
+// Conditional Imports
+// Only loaded if options in _defaults
+// are set to TRUE
+// ---------------------------------- //
+
+@import 'debug';
+
+
+// ---------------------------------- //
+// Base Project Settings
+// ---------------------------------- //
+
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+::selection,
+::moz-selection{
+	background: $brand-color;
+	color: #fff;
+}
+img::selection,
+img::moz-selection{
+	background: transparent;
+}
+body{
+	-webkit-tap-highlight-color: $brand-color;
+}
+
+a{
+	color: $link-color;
+	@include transition(all .2 linear);
+	
+	&:hover, &:focuse{
+		color: lighten($link-color, 15%);
+	}
+}
+
+ul, ul, dl{
+	margin: 0;
+}
