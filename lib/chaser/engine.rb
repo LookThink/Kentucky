@@ -1,4 +1,4 @@
-module Bourbon
+module Chaser
   class Engine < Rails::Engine
     # auto wire
   end
