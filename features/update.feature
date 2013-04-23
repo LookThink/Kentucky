@@ -1,30 +1,30 @@
 @disable-bundler
-Feature: Update bourbon files
+Feature: Update chaser files
 
-  Scenario: Updating updates an existing bourbon install
-    Given bourbon is already installed
-    When I write to "bourbon/_bourbon.scss" with:
+  Scenario: Updating updates an existing chaser install
+    Given chaser is already installed
+    When I write to "chaser/_base.scss" with:
       """
       foobar
       """
-    And I run `bundle exec bourbon update`
-    Then the output should contain "Bourbon files updated."
-    And the file "bourbon/_bourbon.scss" should not contain "foobar"
+    And I run `bundle exec chaser update`
+    Then the output should contain "Chaser files updated."
+    And the file "chaser/_base.scss" should not contain "foobar"
 
   Scenario: Updating with a --path option
-    Given I install bourbon to "custom_path"
-    When I write to "custom_path/bourbon/_bourbon.scss" with:
+    Given I install chaser to "custom_path"
+    When I write to "custom_path/chaser/_base.scss" with:
       """
       foobar
       """
-    And I run `bundle exec bourbon update`
-    Then the output should contain "No existing bourbon installation. Doing nothing."
+    And I run `bundle exec chaser update`
+    Then the output should contain "No existing Chaser installation. Doing nothing."
 
-    When I run `bundle exec bourbon update --path custom_path`
-    Then the output should contain "Bourbon files updated."
-    And the file "custom_path/bourbon/_bourbon.scss" should not contain "foobar"
+    When I run `bundle exec chaser update --path custom_path`
+    Then the output should contain "Chaser files updated."
+    And the file "custom_path/chaser/_base.scss" should not contain "foobar"
 
-  Scenario: Updating does not generate a new bourbon install
-    And I run `bundle exec bourbon update`
-    Then bourbon should not have been generated
-    And the output should contain "No existing bourbon installation. Doing nothing."
+  Scenario: Updating does not generate a new chaser install
+    And I run `bundle exec chaser update`
+    Then chaser should not have been generated
+    And the output should contain "No existing chaser installation. Doing nothing."
