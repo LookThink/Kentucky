@@ -73,11 +73,24 @@ module Chaser
     end
 
     def copy_in_scss_files
-      FileUtils.cp_r(all_stylesheets, install_path)
+      FileUtils.cp_r(chaser_stylesheets, install_path)
+      FileUtils.cp(master_stylesheet, install_path.parent())
+    end
+
+    def master_stylesheet
+      Dir["#{stylesheets_directory}/style.scss"]
+    end
+
+    def chaser_stylesheets
+      Dir["#{chaser_directory}/*"]
     end
 
     def all_stylesheets
       Dir["#{stylesheets_directory}/*"]
+    end
+
+    def chaser_directory
+      File.join(stylesheets_directory, "chaser")
     end
 
     def stylesheets_directory
