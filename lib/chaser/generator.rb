@@ -29,6 +29,12 @@ module Chaser
       end
     end
 
+    desc 'installdeps', 'Install Dependencies'
+    def installdeps
+      installdeps_files
+      puts "Chaser dependencies installed to current directory"
+    end
+
     desc 'version', 'Show Chaser version'
     def version
       say "Chaser #{Chaser::VERSION}"
@@ -51,6 +57,11 @@ module Chaser
     def install_files
       make_install_directory
       copy_in_scss_files
+    end
+
+    def installdeps_files
+      `bourbon install`
+      `neat install`
     end
 
     def remove_chaser_directory
