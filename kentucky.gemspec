@@ -26,6 +26,6 @@ Writeme
   s.add_dependency('neat', '~> 1.2')
   s.add_dependency('thor')
 
-  s.add_development_dependency('aruba', '~> 0.4')
+  s.add_development_dependency('aruba', '= 0.4.11')
   s.add_development_dependency('rake')
 end
