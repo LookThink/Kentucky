@@ -1,56 +1,56 @@
-require 'chaser/version'
+require 'kentucky/version'
 require "fileutils"
 require 'thor'
 
-module Chaser
+module Kentucky
   class Generator < Thor
     map ['-v', '--version'] => :version
 
-    desc 'install', 'Install Chaser into your project'
+    desc 'install', 'Install Kentucky into your project'
     method_options :path => :string, :force => :boolean
     def install
-      if chaser_files_already_exist? && !options[:force]
-        puts "Chaser files already installed, doing nothing."
+      if kentucky_files_already_exist? && !options[:force]
+        puts "Kentucky files already installed, doing nothing."
       else
         install_files
-        puts "Chaser files installed to #{install_path}/"
+        puts "Kentucky files installed to #{install_path}/"
       end
     end
 
-    desc 'update', 'Update Chaser'
+    desc 'update', 'Update Kentucky'
     method_options :path => :string
     def update
-      if chaser_files_already_exist?
-        remove_chaser_directory
+      if kentucky_files_already_exist?
+        remove_kentucky_directory
         install_files
-        puts "Chaser files updated."
+        puts "Kentucky files updated."
       else
-        puts "No existing Chaser installation. Doing nothing."
+        puts "No existing Kentucky installation. Doing nothing."
       end
     end
 
     desc 'installdeps', 'Install Dependencies'
     def installdeps
       installdeps_files
-      puts "Chaser dependencies installed to current directory"
+      puts "Kentucky dependencies installed to current directory"
     end
 
-    desc 'version', 'Show Chaser version'
+    desc 'version', 'Show Kentucky version'
     def version
-      say "Chaser #{Chaser::VERSION}"
+      say "Kentucky #{Kentucky::VERSION}"
     end
 
     private
 
-    def chaser_files_already_exist?
+    def kentucky_files_already_exist?
       install_path.exist?
     end
 
     def install_path
       @install_path ||= if options[:path]
-          Pathname.new(File.join(options[:path], 'chaser'))
+          Pathname.new(File.join(options[:path], 'kentucky'))
         else
-          Pathname.new('chaser')
+          Pathname.new('kentucky')
         end
     end
 
@@ -64,8 +64,8 @@ module Chaser
       `neat install`
     end
 
-    def remove_chaser_directory
-      FileUtils.rm_rf("chaser")
+    def remove_kentucky_directory
+      FileUtils.rm_rf("kentucky")
     end
 
     def make_install_directory
@@ -73,7 +73,7 @@ module Chaser
     end
 
     def copy_in_scss_files
-      FileUtils.cp_r(chaser_stylesheets, install_path)
+      FileUtils.cp_r(kentucky_stylesheets, install_path)
       FileUtils.cp(master_stylesheet, install_path.parent())
     end
 
@@ -81,16 +81,16 @@ module Chaser
       Dir["#{stylesheets_directory}/style.scss"]
     end
 
-    def chaser_stylesheets
-      Dir["#{chaser_directory}/*"]
+    def kentucky_stylesheets
+      Dir["#{kentucky_directory}/*"]
     end
 
     def all_stylesheets
       Dir["#{stylesheets_directory}/*"]
     end
 
-    def chaser_directory
-      File.join(stylesheets_directory, "chaser")
+    def kentucky_directory
+      File.join(stylesheets_directory, "kentucky")
     end
 
     def stylesheets_directory

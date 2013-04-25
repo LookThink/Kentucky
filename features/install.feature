@@ -1,29 +1,29 @@
 @disable-bundler
-Feature: Install chaser files
+Feature: Install kentucky files
 
-  Scenario: Chaser generates a new chaser installation
-    When I run `bundle exec chaser install`
+  Scenario: Kentucky generates a new kentucky installation
+    When I run `bundle exec kentucky install`
     Then the sass directories should have been generated
     And the following directories should exist:
-      | chaser     |
-    And the master chaser partial should have been generated
-    And the output should contain "Chaser files installed to chaser/"
+      | kentucky     |
+    And the master kentucky partial should have been generated
+    And the output should contain "Kentucky files installed to kentucky/"
 
-  Scenario: Generating does not overwrite an existing chaser directory
-    Given chaser is already installed
-    When I run `bundle exec chaser install`
-    Then the output should contain "Chaser files already installed, doing nothing."
+  Scenario: Generating does not overwrite an existing kentucky directory
+    Given kentucky is already installed
+    When I run `bundle exec kentucky install`
+    Then the output should contain "Kentucky files already installed, doing nothing."
 
-  Scenario: Install Chaser into a custom path
-    When I run `bundle exec chaser install --path=custom_path`
+  Scenario: Install Kentucky into a custom path
+    When I run `bundle exec kentucky install --path=custom_path`
     Then the sass directories with "custom_path" prefix should have been generated
     And the following directories should exist:
-      | custom_path/chaser     |
-    And the master chaser partial should have been generated within "custom_path" directory
-    And the output should contain "Chaser files installed to custom_path/chaser/"
+      | custom_path/kentucky     |
+    And the master kentucky partial should have been generated within "custom_path" directory
+    And the output should contain "Kentucky files installed to custom_path/kentucky/"
 
-  Scenario: Forcing install of chaser
-    Given chaser is already installed
-    When I run `bundle exec chaser install --force`
-    Then the output from "bundle exec chaser install --force" should contain "Chaser files installed to chaser/"
-    And the output should not contain "Chaser files already installed, doing nothing."
+  Scenario: Forcing install of kentucky
+    Given kentucky is already installed
+    When I run `bundle exec kentucky install --force`
+    Then the output from "bundle exec kentucky install --force" should contain "Kentucky files installed to kentucky/"
+    And the output should not contain "Kentucky files already installed, doing nothing."

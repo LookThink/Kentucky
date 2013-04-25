@@ -1,15 +1,15 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "chaser/version"
+require "kentucky/version"
 
 Gem::Specification.new do |s|
-  s.name        = "chaser"
-  s.version     = Chaser::VERSION
+  s.name        = "kentucky"
+  s.version     = Kentucky::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Aaron Clemmer", "Greg Bruening", "Chris Brinson"]
   s.email       = ["greg@lookthink.com"]
-  s.homepage    = "https://bitbucket.org/lookthink/chaser"
-  s.summary     = "Chaser Sass Mixins using SCSS syntax."
+  s.homepage    = "https://bitbucket.org/lookthink/kentucky"
+  s.summary     = "Kentucky Sass Mixins using SCSS syntax."
   s.description = <<-DESC
 Writeme
   DESC

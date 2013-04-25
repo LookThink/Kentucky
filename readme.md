@@ -1,12 +1,12 @@
-# Chaser
+# Kentucky
 ###### Remember to tip your bartender!
 
 ***
 
-## What is Chaser?
-Chaser is LookThink's contribution to further enhance an already stellar SCSS library put together by the people at [ThoughtBot](http://www.thoughtbot.com/). Their mixin library ([Bourbon](http://bourbon.io/)) and grid system ([Neat](http://neat.bourbon.io/)) now serve as the base to all LookThink projects.
+## What is Kentucky?
+Kentucky is LookThink's contribution to further enhance an already stellar SCSS library put together by the people at [ThoughtBot](http://www.thoughtbot.com/). Their mixin library ([Bourbon](http://bourbon.io/)) and grid system ([Neat](http://neat.bourbon.io/)) now serve as the base to all LookThink projects.
 
-Chaser includes a variety of mixins from various projects that we find useful and weren't included in Bourbon. It also includes a handy-dandy file (_defaults.scss) for handling all of your variables, keeping them centralized and easy to maintain.
+Kentucky includes a variety of mixins from various projects that we find useful and weren't included in Bourbon. It also includes a handy-dandy file (_defaults.scss) for handling all of your variables, keeping them centralized and easy to maintain.
 
 ***
 
@@ -15,11 +15,11 @@ LookThink now uses SCSS exclusively as it's CSS preprocessor language of choice.
 
 We've also lessened the maintenance burden by relying on libraries that already exist and do the exact same things our previous framework did. The new method for acquiring the framework also means you'll always have the most up to date version of the components.
 
-Lastly, we've opened a Trello board for all feedback, issue / bug reporting, and additions to the framework. You can track it's growth as well as alert us to potential or existing problems in Chaser.
+Lastly, we've opened a Trello board for all feedback, issue / bug reporting, and additions to the framework. You can track it's growth as well as alert us to potential or existing problems in Kentucky.
 
 ***
 
-## How do I get Chaser?
+## How do I get Kentucky?
 There are a few steps needed to build the new framework. Luckily for you we've automated as much as we can and all you have to do is copy-paste (or type if you're so inclined) a few lines into your terminal and you're set!
 
 + Create your project folder
@@ -27,11 +27,11 @@ There are a few steps needed to build the new framework. Luckily for you we've a
 + Open Terminal
 
         $ cd 'project-folder'
-        $ chaser install
+        $ kentucky install
         
 + If full project structure is required, add the -dir command to the install:
 
-        $ chaser install -dir
+        $ kentucky install -dir
         
     *This will install the following folders for you: fonts, images, scss, style, and scripts*
 

@@ -2,16 +2,16 @@
 dir = File.dirname(__FILE__)
 $LOAD_PATH.unshift dir unless $LOAD_PATH.include?(dir)
 
-require "chaser/generator"
+require "kentucky/generator"
 
 unless defined?(Sass)
   require 'sass'
 end
 
-module Chaser
+module Kentucky
   if defined?(Rails) && defined?(Rails::Engine)
     class Engine < ::Rails::Engine
-      require 'chaser/engine'
+      require 'kentucky/engine'
     end
 
     module Rails

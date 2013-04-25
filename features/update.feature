@@ -1,30 +1,30 @@
 @disable-bundler
-Feature: Update chaser files
+Feature: Update kentucky files
 
-  Scenario: Updating updates an existing chaser install
-    Given chaser is already installed
-    When I write to "chaser/_base.scss" with:
+  Scenario: Updating updates an existing kentucky install
+    Given kentucky is already installed
+    When I write to "kentucky/_base.scss" with:
       """
       foobar
       """
-    And I run `bundle exec chaser update`
-    Then the output should contain "Chaser files updated."
-    And the file "chaser/_base.scss" should not contain "foobar"
+    And I run `bundle exec kentucky update`
+    Then the output should contain "Kentucky files updated."
+    And the file "kentucky/_base.scss" should not contain "foobar"
 
   Scenario: Updating with a --path option
-    Given I install chaser to "custom_path"
-    When I write to "custom_path/chaser/_base.scss" with:
+    Given I install kentucky to "custom_path"
+    When I write to "custom_path/kentucky/_base.scss" with:
       """
       foobar
       """
-    And I run `bundle exec chaser update`
-    Then the output should contain "No existing Chaser installation. Doing nothing."
+    And I run `bundle exec kentucky update`
+    Then the output should contain "No existing Kentucky installation. Doing nothing."
 
-    When I run `bundle exec chaser update --path custom_path`
-    Then the output should contain "Chaser files updated."
-    And the file "custom_path/chaser/_base.scss" should not contain "foobar"
+    When I run `bundle exec kentucky update --path custom_path`
+    Then the output should contain "Kentucky files updated."
+    And the file "custom_path/kentucky/_base.scss" should not contain "foobar"
 
-  Scenario: Updating does not generate a new chaser install
-    And I run `bundle exec chaser update`
-    Then chaser should not have been generated
-    And the output should contain "No existing chaser installation. Doing nothing."
+  Scenario: Updating does not generate a new kentucky install
+    And I run `bundle exec kentucky update`
+    Then kentucky should not have been generated
+    And the output should contain "No existing kentucky installation. Doing nothing."
