@@ -2,9 +2,20 @@
 // Project Settings
 // ---------------------------------- //
 
-$debug-mode:          false !default;   // + Visually highlight any potential markup/accessibility quirks
-$use-media:           true !default;    // + Use media objects
-$sticky-footer:       true !default;    // + Use sticky footer
+// Visually highlight any potential markup/accessibility quirks
+$debug-mode:          false !default;
+
+// Use media objects
+$use-media:           true !default;
+
+// Use sticky footer, if true, uncomment variables
+$sticky-footer:       false !default;
+//$footer-height:       60px;
+
+// Use project sprite sheet, if true, uncomment variables
+$sprite-sheet:        false !default;/
+//$sprite-sheet-loc:    'sprite sheet url.png';
+//$sprite-sheet-grid:   36px;
 
 
 // ---------------------------------- //

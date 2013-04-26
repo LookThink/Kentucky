@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Aaron Clemmer", "Greg Bruening", "Chris Brinson"]
   s.email       = ["greg@lookthink.com"]
   s.homepage    = "https://bitbucket.org/lookthink/kentucky"
-  s.summary     = "Kentucky Sass Mixins using SCSS syntax."
+  s.summary     = "Kentucky Bourbon, Neat SCSS Mixins and Grid System"
   s.description = <<-DESC
 Writeme
   DESC

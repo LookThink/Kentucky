@@ -1,12 +1,12 @@
 # Kentucky
-###### Remember to tip your bartender!
+###### Straight from the source.
 
 ***
 
 ## What is Kentucky?
 Kentucky is LookThink's contribution to further enhance an already stellar SCSS library put together by the people at [ThoughtBot](http://www.thoughtbot.com/). Their mixin library ([Bourbon](http://bourbon.io/)) and grid system ([Neat](http://neat.bourbon.io/)) now serve as the base to all LookThink projects.
 
-Kentucky includes a variety of mixins from various projects that we find useful and weren't included in Bourbon. It also includes a handy-dandy file (_defaults.scss) for handling all of your variables, keeping them centralized and easy to maintain.
+Kentucky also includes a variety of mixins from various projects that we find useful and weren't included in Bourbon. Additionally, it includes a handy-dandy file (_defaults.scss) for handling all of your variables, keeping them centralized and easy to maintain.
 
 ***
 
@@ -26,15 +26,9 @@ There are a few steps needed to build the new framework. Luckily for you we've a
 + Create an **'scss'** folder within your project
 + Open Terminal
 
-        $ cd 'project-folder'
+        $ cd 'project-folder/scss'
         $ kentucky install
         
-+ If full project structure is required, add the -dir command to the install:
-
-        $ kentucky install -dir
-        
-    *This will install the following folders for you: fonts, images, scss, style, and scripts*
-
 + Run the SASS watch command
 
         $ sass --watch scss/style.scss:style/style.css
