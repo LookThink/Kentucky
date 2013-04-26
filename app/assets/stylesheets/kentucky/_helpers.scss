@@ -84,8 +84,6 @@
 // Requires full site wrapper and <div class="push"></div>
 // immediately before the footer
 
-$footer-height: 60px;
-
 @if $sticky-footer == true{
 	
 	html,
@@ -107,6 +105,18 @@ $footer-height: 60px;
 	}
 	
 } // END if
+
+
+// Sprite Sheet Mixins
+
+@if $sprite-sheet == true{
+	
+	@include sprite($col $row){
+		background-image: url($sprite-sheet-loc) no-repeat 0 0;
+		background-position: ($col *  $sprite-sheet-grid) ($row * $sprite-sheet-grid);
+	}
+	
+}
 
 
 // ---------------------------------- //
