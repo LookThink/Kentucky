@@ -3,4 +3,4 @@
 # CodeKit needs relative paths
 require File.dirname(__FILE__) + '/../lib/kentucky.rb'
 
-kentucky::Generator.start
+Kentucky::Generator.start

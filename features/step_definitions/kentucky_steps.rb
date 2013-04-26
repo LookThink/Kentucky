@@ -12,7 +12,7 @@ Then /^the sass directories(?: with "([^"]+)" prefix)? should have been generate
 end
 
 Then /^the master kentucky partial should have been generated(?: within "([^"]+)" directory)?$/ do |prefix|
-  check_file_presence([kentucky_path(prefix, '_base.scss')], true)
+  check_file_presence([kentucky_path(prefix, '_kentucky.scss')], true)
 end
 
 Then /^kentucky should not have been generated$/ do
@@ -22,3 +22,4 @@ end
 Then /^the output should contain the current version of Kentucky$/ do
   step %(the output should contain exactly "Kentucky #{Kentucky::VERSION}\n")
 end
+
