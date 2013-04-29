@@ -7,13 +7,15 @@ module Kentucky
     map ['-v', '--version'] => :version
 
     desc 'install', 'Install Kentucky into your project'
-    method_options :path => :string, :force => :boolean
+    method_options :path => :string, :force => :boolean, :dir => :boolean
     def install
       if kentucky_files_already_exist? && !options[:force]
         puts "Kentucky files already installed, doing nothing."
       else
+        create_site_structure if !options[:force]
+        install_deps
         install_files
-        puts "Kentucky files installed to #{install_path}/"
+        puts "Kentucky files installed to #{install_path_kentucky}/"
       end
     end
 
@@ -22,17 +24,12 @@ module Kentucky
     def update
       if kentucky_files_already_exist?
         remove_kentucky_directory
+        create_kentucky_directory
         install_files
         puts "Kentucky files updated."
       else
         puts "No existing Kentucky installation. Doing nothing."
       end
-    end
-
-    desc 'installdeps', 'Install Dependencies'
-    def installdeps
-      installdeps_files
-      puts "Kentucky dependencies installed to current directory"
     end
 
     desc 'version', 'Show Kentucky version'
@@ -43,38 +40,69 @@ module Kentucky
     private
 
     def kentucky_files_already_exist?
-      install_path.exist?
+      install_path_kentucky.exist?
     end
 
-    def install_path
-      @install_path ||= if options[:path]
-          Pathname.new(File.join(options[:path], 'kentucky'))
-        else
-          Pathname.new('kentucky')
-        end
-    end
-
-    def install_files
+    def create_site_structure
       make_install_directory
-      copy_in_scss_files
-    end
-
-    def installdeps_files
-      `bourbon install`
-      `neat install`
-    end
-
-    def remove_kentucky_directory
-      FileUtils.rm_rf("kentucky")
+      if options[:dir]
+        dirs = %w(fonts images scripts scss style)
+        dirs.each do |dir|
+          FileUtils.mkdir(install_path + Pathname.new(dir))
+        end
+      end
+      create_kentucky_directory
     end
 
     def make_install_directory
       FileUtils.mkdir_p(install_path)
     end
 
+    def create_kentucky_directory
+      FileUtils.mkdir(install_path_kentucky)
+    end
+
+    def remove_kentucky_directory
+      FileUtils.rm_rf(install_path_kentucky)
+    end
+
+    def install_path
+      if options[:path]
+        path = Pathname.new(options[:path])
+      else
+        path = Pathname.new('.')
+      end
+
+      @install_path = path
+      return path
+    end
+
+    def install_files
+      copy_in_scss_files
+    end
+
+    def install_deps
+      Dir.chdir install_path_scss do
+        `bourbon install`
+        `neat install`
+      end
+    end
+
     def copy_in_scss_files
-      FileUtils.cp_r(kentucky_stylesheets, install_path)
-      FileUtils.cp(master_stylesheet, install_path.parent())
+      FileUtils.cp_r(kentucky_stylesheets, install_path_kentucky)
+      FileUtils.cp(master_stylesheet, install_path_scss)
+    end
+
+    def install_path_scss
+      if options[:dir]
+        return install_path + Pathname.new("scss")
+      else
+        return install_path
+      end
+    end
+
+    def install_path_kentucky
+      return install_path_scss + Pathname.new("kentucky")
     end
 
     def master_stylesheet
