@@ -13,7 +13,7 @@ $sticky-footer:       false !default;
 //$footer-height:       60px;
 
 // Use project sprite sheet, if true, uncomment variables
-$sprite-sheet:        false !default;/
+$sprite-sheet:        false !default;
 //$sprite-sheet-loc:    'sprite sheet url.png';
 //$sprite-sheet-grid:   36px;
 
@@ -46,11 +46,7 @@ $micro-size:          10px !default;
 // Brand Variables
 // ---------------------------------- //
 
-@include font-face(Verb, '../fonts/verb/VerbLight-webfont', 300);
-@include font-face(Verb, '../fonts/verb/VerbBold-webfont', 700);
-@include font-face(Verb, '../fonts/verb/VerbBlack-webfont', 900);
-
-$brand-font-family:   'Verb', $helvetica !default;
+$brand-font-family:   $helvetica !default;
 $brand-color:         #333 !default;;
 $brand-round:         3px !default;
 
@@ -135,7 +131,7 @@ body{
 
 a{
 	color: $link-color;
-	@include transition(all .2 linear);
+	@include transition(all .3s linear);
 	
 	&:hover, &:focus{
 		color: lighten($link-color, 15%);
