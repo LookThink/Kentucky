@@ -1,193 +1,243 @@
 // ---------------------------------- //
 // Normalize by Nicolas Gallagher
 // http://necolas.github.io/normalize.css/
+//
+// Edited for use with Kentucky
 // ---------------------------------- //
 
-article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {
-	display:block;
+*{
+	@include box-sizing(border-box);
 }
 
-audio,canvas,video {
-	display:inline-block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+	display: block;
+}
+
+audio,
+canvas,
+video {
+	display: inline-block;
 }
 
 audio:not([controls]) {
-	display:none;
-	height:0;
+	display: none;
+	height: 0;
 }
 
 [hidden] {
-	display:none;
+	display: none;
 }
 
+// ---------------------------------- //
+// Base
+// ---------------------------------- //
+
 html {
-	background:#fff;
-	color:#000;
-	font-family:sans-serif;
-	-ms-text-size-adjust:100%;
-	-webkit-text-size-adjust:100%;
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 }
 
 body {
-	margin:0;
+	margin: 0;
 }
+
+// ---------------------------------- //
+// Links
+// ---------------------------------- //
 
 a:focus {
-	outline:thin dotted;
+	outline: thin dotted;
 }
 
-a:active,a:hover {
-	outline:0;
+a:active,
+a:hover {
+	outline: 0;
 }
 
-h1 {
-	font-size:2em;
-	margin:.67em 0;
-}
+// ---------------------------------- //
+// Typography
+// ---------------------------------- //
 
 abbr[title] {
-	border-bottom:1px dotted;
+	border-bottom: 1px dotted;
 }
 
-b,strong {
-	font-weight:700;
+b,
+strong {
+	font-weight: bold;
 }
 
 dfn {
-	font-style:italic;
+	font-style: italic;
 }
 
 hr {
-	-moz-box-sizing:content-box;
-	box-sizing:content-box;
-	height:0;
+	display: block;
+	height: 1px;
+	background: #ccc;
+	border: none;
 }
 
 mark {
-	background:#ff0;
-	color:#000;
+	background: #ff0;
+	color: #000;
 }
 
-code,kbd,pre,samp {
-	font-family:monospace,serif;
-	font-size:1em;
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace,serif;
+	font-size: 1em;
 }
 
 pre {
-	white-space:pre-wrap;
+	white-space: pre-wrap;
 }
 
 q {
-	quotes:"\201C" "\201D" "\2018" "\2019";
+	quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
 small {
-	font-size:80%;
+	font-size: 80%;
 }
 
-sub,sup {
-	font-size:75%;
-	line-height:0;
-	position:relative;
-	vertical-align:baseline;
+sub,
+sup {
+	position: relative;
+	font-size: 75%;
+	line-height: 0;
+	vertical-align: baseline;
 }
 
 sup {
-	top:-.5em;
+	top: -.5em;
 }
 
 sub {
-	bottom:-.25em;
+	bottom: -.25em;
 }
 
+// ---------------------------------- //
+// Embedded Content
+// ---------------------------------- //
+
 img {
-	border:0;
+	border: 0;
 }
 
 svg:not(:root) {
-	overflow:hidden;
+	overflow: hidden;
 }
+
+// ---------------------------------- //
+// Figures
+// ---------------------------------- //
 
 figure {
 	margin:0;
 }
 
+// ---------------------------------- //
+// Forms
+// ---------------------------------- //
+
 fieldset {
-	border:1px solid silver;
-	margin:0 2px;
-	padding:.35em .625em .75em;
+	margin: 0 2px;
+	padding: .35em .625em .75em;
+	border: 1px solid #ccc;
 }
 
 legend {
-	border:0;
-	padding:0;
+	padding: 0;
+	border: 0;
 }
 
-button,input,select,textarea {
-	font-family:inherit;
-	font-size:100%;
-	margin:0;
+button,
+input,
+select,
+textarea {
+	margin: 0;
+	font-family: inherit;
+	font-size: 100%;
 }
 
-button,input {
-	line-height:normal;
+button,
+input {
+	line-height: normal;
 }
 
-button,select {
-	text-transform:none;
+button,
+select {
+	text-transform: none;
 }
 
-button,html input[type="button"],input[type="reset"],input[type="submit"] {
-	-webkit-appearance:button;
-	cursor:pointer;
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
 }
 
-button[disabled],html input[disabled] {
-	cursor:default;
+button[disabled],
+html input[disabled] {
+	cursor: default;
 }
 
-input[type="checkbox"],input[type="radio"] {
-	box-sizing:border-box;
-	padding:0;
+input[type="checkbox"],
+input[type="radio"] {
+	padding: 0;
 }
 
 input[type="search"] {
-	-webkit-appearance:textfield;
-	-moz-box-sizing:content-box;
-	-webkit-box-sizing:content-box;
-	box-sizing:content-box;
+	-webkit-appearance: textfield;
 }
 
-input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration {
-	-webkit-appearance:none;
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
 }
 
-button::-moz-focus-inner,input::-moz-focus-inner {
-	border:0;
-	padding:0;
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	padding: 0;
+	border: 0;
 }
 
 textarea {
-	overflow:auto;
+	overflow: auto;
 	vertical-align:top;
 }
 
-table {
-	border-collapse:collapse;
-	border-spacing:0;
-}
-
-
 // ---------------------------------- //
-// Additional LookThink Resets
+// Lists
 // ---------------------------------- //
 
-*{
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-ul, ul, dl{
+ul,
+ol,
+dl{
 	margin: 0;
+}
+
+// ---------------------------------- //
+// Tables
+// ---------------------------------- //
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
