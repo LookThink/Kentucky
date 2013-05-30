@@ -5,6 +5,7 @@ require "kentucky/version"
 Gem::Specification.new do |s|
   s.name        = "kentucky"
   s.version     = Kentucky::VERSION
+  s.license     = "MIT"
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Aaron Clemmer", "Greg Bruening", "Chris Brinson"]
   s.email       = ["greg@lookthink.com"]
