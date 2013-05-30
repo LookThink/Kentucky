@@ -1,6 +1,6 @@
-// ---------------------------------- //
-// Chaser Mixins & Helper Classes
-// ---------------------------------- //
+// ------------------------------------------------------------------- //
+// Kentucky Mixins & Helper Classes
+// ------------------------------------------------------------------- //
 
 // Show / Hide elements
 // Use with jQuery
@@ -16,7 +16,7 @@
 // Hide Text
 // Use only as an extend
 
-.hide-text{
+%hide-text{
 	text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;
@@ -25,26 +25,26 @@
 
 // Add / remove floats
 
-.float-left{
+%float-left{
 	float: left !important;
 }
-.float-right{
+%float-right{
 	float: right !important;
 }
-.float-none{
+%float-none{
 	float: none !important;
 }
 
 
 // Text Alignment
 
-.text-left{
+%text-left{
 	text-align: left !important;
 }
-.text-right{
+%text-right{
 	text-align: right !important;
 }
-.text-center{
+%text-center{
 	text-align: center !important;
 }
 
@@ -59,7 +59,7 @@
 
 // Mute DOM elements
 
-.muted{
+%muted{
 	opacity: .5 !important;
 	filter: alpha(opacity = 50) !important;
 }
@@ -76,6 +76,17 @@
 	}
 	&:last-child{
 		border-radius: 0 $brand-round $brand-round 0;
+	}
+}
+
+.v-rocker{
+	border-radius: 0;
+	
+	&:first-child{
+		border-radius: $brand-round $brand-round 0 0;
+	}
+	&:last-child{
+		border-radius: 0 0 $brand-round $brand-round;
 	}
 }
 
@@ -111,7 +122,7 @@
 
 @if $sprite-sheet == true{
 	
-	@include sprite($col $row){
+	@mixin sprite($col $row){
 		background-image: url($sprite-sheet-loc) no-repeat 0 0;
 		background-position: ($col *  $sprite-sheet-grid) ($row * $sprite-sheet-grid);
 	}
@@ -119,9 +130,9 @@
 }
 
 
-// ---------------------------------- //
+// ------------------------------------------------------------------- //
 // Inuit Mixins - inuitcss.com
-// ---------------------------------- //
+// ------------------------------------------------------------------- //
 
 
 // Media Object
@@ -164,15 +175,4 @@
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-}
-
-
-// Clearfix
-
-.clearfix{
-	&:after{
-		content: '';
-		display: table;
-		clear: both;
-	}
 }

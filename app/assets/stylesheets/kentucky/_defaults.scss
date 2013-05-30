@@ -1,12 +1,12 @@
-// ---------------------------------- //
+// ------------------------------------------------------------------- //
 // Project Settings
-// ---------------------------------- //
+// ------------------------------------------------------------------- //
 
 // Visually highlight any potential markup/accessibility quirks
 $debug-mode:          false !default;
 
 // Use media objects
-$use-media:           true !default;
+$use-media:           false !default;
 
 // Use sticky footer, if true, uncomment variables
 $sticky-footer:       false !default;
@@ -18,9 +18,9 @@ $sprite-sheet:        false !default;
 //$sprite-sheet-grid:   36px;
 
 
-// ---------------------------------- //
+// ------------------------------------------------------------------- //
 // Typographic Variables
-// ---------------------------------- //
+// ------------------------------------------------------------------- //
 
 $base-font-family:    $helvetica !default;
 $base-font-size:      14px !default;
@@ -42,9 +42,9 @@ $milli-size:          12px !default;
 $micro-size:          10px !default;
 
 
-// ---------------------------------- //
+// ------------------------------------------------------------------- //
 // Brand Variables
-// ---------------------------------- //
+// ------------------------------------------------------------------- //
 
 $brand-font-family:   $helvetica !default;
 $brand-color:         #333 !default;;
@@ -53,9 +53,9 @@ $brand-round:         3px !default;
 $link-color:          #bebebe !default;
 
 
-// ---------------------------------- //
+// ------------------------------------------------------------------- //
 // Typographic Variable Calls
-// ---------------------------------- //
+// ------------------------------------------------------------------- //
 
 // Font-Size + Line Height
 // https://twitter.com/redclov3r/status/250301539321798657
@@ -126,9 +126,9 @@ a{
 	}
 }
 
-// ---------------------------------- //
+// ------------------------------------------------------------------- //
 // Custom Selection Text
-// ---------------------------------- //
+// ------------------------------------------------------------------- //
 
 ::selection,
 ::-moz-selection {
@@ -143,9 +143,9 @@ body{
 	-webkit-tap-highlight-color: $brand-color;
 }
 
-// ---------------------------------- //
+// ------------------------------------------------------------------- //
 // Base Project Spacing
-// ---------------------------------- //
+// ------------------------------------------------------------------- //
 
 $base-spacing-unit: $base-line-height !default;
 $half-spacing-unit: $base-spacing-unit / 2 !default;
