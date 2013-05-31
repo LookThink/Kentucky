@@ -62,7 +62,7 @@ $link-color:          #bebebe !default;
 
 @mixin font-size($font-size, $line-height:true){
 	font-size: $font-size;
-	line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size) + em;
+	line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
 }
 
 html{
