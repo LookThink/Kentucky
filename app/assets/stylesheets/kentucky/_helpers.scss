@@ -65,32 +65,6 @@
 }
 
 
-// Rocker switches (or button groups)
-// Resets buttons to squared corners, applies left/right rounding
-
-.rocker{
-	border-radius: 0;
-	
-	&:first-child{
-		border-radius: $brand-round 0 0 $brand-round;
-	}
-	&:last-child{
-		border-radius: 0 $brand-round $brand-round 0;
-	}
-}
-
-.v-rocker{
-	border-radius: 0;
-	
-	&:first-child{
-		border-radius: $brand-round $brand-round 0 0;
-	}
-	&:last-child{
-		border-radius: 0 0 $brand-round $brand-round;
-	}
-}
-
-
 // Sticky Footer
 // Requires full site wrapper and <div class="push"></div>
 // immediately before the footer
@@ -118,15 +92,10 @@
 } // END if
 
 
-// Sprite Sheet Mixins
+// Sprite Sheet Mixin
 
-@if $sprite-sheet == true{
-	
-	@mixin sprite($col $row){
-		background-image: url($sprite-sheet-loc) no-repeat 0 0;
-		background-position: ($col *  $sprite-sheet-grid) ($row * $sprite-sheet-grid);
-	}
-	
+@mixin sprite($col, $row){
+	background: url($sprite-shet-loc) no-repeat ($col * -$sprite-sheet-grid) ($row * -$sprite-sheet-grid);
 }
 
 
@@ -160,8 +129,8 @@
 			& > :last-child{
 				margin-bottom: 0;
 			}
-		}
-	}
+		} // END media-body
+	} // END media
 
 } // END if
 
