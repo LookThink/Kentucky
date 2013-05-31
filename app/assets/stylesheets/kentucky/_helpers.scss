@@ -120,13 +120,8 @@
 
 // Sprite Sheet Mixins
 
-@if $sprite-sheet == true{
-	
-	@mixin sprite($col $row){
-		background-image: url($sprite-sheet-loc) no-repeat 0 0;
-		background-position: ($col *  $sprite-sheet-grid) ($row * $sprite-sheet-grid);
-	}
-	
+@mixin sprite($col, $row){
+	background: url($sprite-shet-loc) no-repeat ($col * -$sprite-sheet-grid) ($row * -$sprite-sheet-grid);
 }
 
 

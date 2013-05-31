@@ -8,14 +8,14 @@ $debug-mode:          false !default;
 // Use media objects
 $use-media:           false !default;
 
-// Use sticky footer, if true, uncomment variables
+// Use sticky footer, if true, alter $footer-height to proper value
 $sticky-footer:       false !default;
-//$footer-height:       60px;
+$footer-height:       60px;
 
-// Use project sprite sheet, if true, uncomment variables
-$sprite-sheet:        false !default;
-//$sprite-sheet-loc:    'sprite sheet url.png';
-//$sprite-sheet-grid:   36px;
+// If sprite sheet required, input relative URL and sprite-grid
+// If not required, feel free to comment these out
+$sprite-sheet-loc:    "sprite sheet url.png";
+$sprite-sheet-grid:   36px;
 
 
 // ------------------------------------------------------------------- //
