@@ -62,68 +62,68 @@ $link-color:          #bebebe !default;
 // Customized to allow unitless line-height
 
 @mixin font-size($font-size, $line-height:1){
-	font-size: $font-size;
-	line-height: $line-height;
+  font-size: $font-size;
+  line-height: $line-height;
 }
 
 html{
-	font-family: $base-font-family;
-	color: $base-font-color;
-	@include font-size($base-font-size);
+  font-family: $base-font-family;
+  color: $base-font-color;
+  @include font-size($base-font-size);
 }
 
 %giga{
-	@include font-size($giga-size);
+  @include font-size($giga-size);
 }
 %mega{
-	@include font-size($mega-size);
+  @include font-size($mega-size);
 }
 %kilo{
-	@include font-size($kilo-size);
+  @include font-size($kilo-size);
 }
 
 h1, h2, h3, h4, h5, h6{
-	font-family: $brand-font-family;
+  font-family: $brand-font-family;
 }
 h1,
 %alpha{
-	@include font-size($h1-size);
+  @include font-size($h1-size);
 }
 h2,
 %bravo{
-	@include font-size($h2-size);
+  @include font-size($h2-size);
 }
 h3,
 %charlie{
-	@include font-size($h3-size);
+  @include font-size($h3-size);
 }
 h4,
 %delta{
-	@include font-size($h4-size);
+  @include font-size($h4-size);
 }
 h5,
 %echo{
-	@include font-size($h5-size);
+  @include font-size($h5-size);
 }
 h6,
 %foxtrot{
-	@include font-size($h6-size);
+  @include font-size($h6-size);
 }
 
 %milli{
-	@include font-size($milli-size);
+  @include font-size($milli-size);
 }
 %micro{
-	@include font-size($micro-size);
+  @include font-size($micro-size);
 }
 
 a{
-	color: $link-color;
-	@include transition(all .3s linear);
-	
-	&:hover, &:focus{
-		color: lighten($link-color, 15%);
-	}
+  color: $link-color;
+  @include transition(all .3s linear);
+  
+  &:hover, &:focus{
+    color: lighten($link-color, 15%);
+  }
 }
 
 // ------------------------------------------------------------------- //
@@ -132,13 +132,13 @@ a{
 
 ::selection,
 ::-moz-selection {
-	background: $brand-color;
-	color: #fff;
+  background: $brand-color;
+  color: #fff;
 }
 img::selection,
 img::moz-selection{
-	background: transparent;
+  background: transparent;
 }
 body{
-	-webkit-tap-highlight-color: $brand-color;
+  -webkit-tap-highlight-color: $brand-color;
 }

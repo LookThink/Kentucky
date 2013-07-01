@@ -9,85 +9,85 @@
 
 @if $debug-mode == true{
 
-	// Empty page elements?
-	
-	:empty{
-		outline: 5px solid yellow;
-	}
-	
-	
-	// Images require 'alt' attributes, empty 'alt's are fine
-	// No 'alt' is bad, flagged in red
-	
-	img{
-		outline: 5px solid red;
-	
-		&[alt]{
-			outline: none;
-		}
-		&[alt=""]{
-			outline: 5px solid yellow;
-		}
-	}
-	
-	
-	// Links benefit from 'title' attributes
-	// Not severe, but good to check
-	
-	a{
-		outline: 5px solid yellow;
-		
-		&[title]{
-			outline: none;
-		}
-	}
-	
-	
-	// Esnure lists only contain 'li's as children
-	
-	ul,
-	ol{
-		> *:not(li){
-			outline: 5px solid red;
-		}
-	}
-	
-	
-	// 'tr's as children of 'table's isn't great, did you need 'thead'/'tbody'?
-	
-	table > tr{
-		outline: 5px solid yellow;
-	}
-	
-	
-	// Various form-field types have required attributes
-	// 'input's need 'type'
-	// 'textarea's need 'rows' and 'cols'
-	// 'submit' buttons need 'value'
-	
-	textarea,
-	input{
-		outline: 5px solid yellow;
-	}
-	input[type]{
-		outline: none;
-	}
-	textarea[rows][cols]{
-		outline: none;
-	}
-	input[type=submit]{
-		outline: 5px solid red;
-		
-		&[value]{
-			outline: none;
-		}
-	}
-	
-	
-	// Avoid inline styles like the plague that they are
-	
-	[style]{
-		outline: 5px solid red;
-	}
-	
+  // Empty page elements?
+  
+  :empty{
+    outline: 5px solid yellow;
+  }
+  
+  
+  // Images require 'alt' attributes, empty 'alt's are fine
+  // No 'alt' is bad, flagged in red
+  
+  img{
+    outline: 5px solid red;
+  
+    &[alt]{
+      outline: none;
+    }
+    &[alt=""]{
+      outline: 5px solid yellow;
+    }
+  }
+  
+  
+  // Links benefit from 'title' attributes
+  // Not severe, but good to check
+  
+  a{
+    outline: 5px solid yellow;
+    
+    &[title]{
+      outline: none;
+    }
+  }
+  
+  
+  // Esnure lists only contain 'li's as children
+  
+  ul,
+  ol{
+    > *:not(li){
+      outline: 5px solid red;
+    }
+  }
+  
+  
+  // 'tr's as children of 'table's isn't great, did you need 'thead'/'tbody'?
+  
+  table > tr{
+    outline: 5px solid yellow;
+  }
+  
+  
+  // Various form-field types have required attributes
+  // 'input's need 'type'
+  // 'textarea's need 'rows' and 'cols'
+  // 'submit' buttons need 'value'
+  
+  textarea,
+  input{
+    outline: 5px solid yellow;
+  }
+  input[type]{
+    outline: none;
+  }
+  textarea[rows][cols]{
+    outline: none;
+  }
+  input[type=submit]{
+    outline: 5px solid red;
+    
+    &[value]{
+      outline: none;
+    }
+  }
+  
+  
+  // Avoid inline styles like the plague that they are
+  
+  [style]{
+    outline: 5px solid red;
+  }
+  
 } // END if
