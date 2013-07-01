@@ -24,7 +24,7 @@ $sprite-sheet-grid:   36px;
 
 $base-font-family:    $helvetica !default;
 $base-font-size:      14px !default;
-$base-line-height:    24px !default;
+$base-line-height:    1 !default;
 $base-font-color:     #333 !default;
 
 $giga-size:           96px !default;
@@ -59,16 +59,17 @@ $link-color:          #bebebe !default;
 
 // Font-Size + Line Height
 // https://twitter.com/redclov3r/status/250301539321798657
+// Customized to allow unitless line-height
 
-@mixin font-size($font-size, $line-height:true){
+@mixin font-size($font-size, $line-height:1){
 	font-size: $font-size;
-	line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+	line-height: $line-height;
 }
 
 html{
 	font-family: $base-font-family;
-	font-size: $base-font-size;
 	color: $base-font-color;
+	@include font-size($base-font-size);
 }
 
 %giga{
@@ -109,7 +110,6 @@ h6,
 	@include font-size($h6-size);
 }
 
-.smallprint,
 %milli{
 	@include font-size($milli-size);
 }
@@ -142,11 +142,3 @@ img::moz-selection{
 body{
 	-webkit-tap-highlight-color: $brand-color;
 }
-
-// ------------------------------------------------------------------- //
-// Base Project Spacing
-// ------------------------------------------------------------------- //
-
-$base-spacing-unit: $base-line-height !default;
-$half-spacing-unit: $base-spacing-unit / 2 !default;
-$line-height-ratio: $base-line-height / $base-font-size;
