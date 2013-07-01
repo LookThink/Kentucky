@@ -24,6 +24,8 @@
 
 
 // Add / remove floats
+// Use only as an extend when used for sections or block elements
+// Ex: Buckets, nav-lists, etc.
 
 %float-left{
 	float: left !important;
@@ -58,10 +60,11 @@
 
 
 // Mute DOM elements
+// 100%-based percentage ($muted-opacity: 50 = 50%)
 
-%muted{
-	opacity: .5 !important;
-	filter: alpha(opacity = 50) !important;
+@mixin muted($muted-opacity){
+	opacity: ($muted-opacity / 100) !important;
+	filter: alpha(opacity = $muted-opacity) !important;
 }
 
 
