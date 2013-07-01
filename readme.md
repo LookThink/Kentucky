@@ -20,36 +20,28 @@ Lastly, we've opened a Trello board for all feedback, issue / bug reporting, and
 ***
 
 ## How do I get Kentucky?
-There are a few steps needed to build the new framework. Luckily for you we've automated as much as we can and all you have to do is copy-paste (or type if you're so inclined) a few lines into your terminal and you're set!
+To install Kentucky:
 
-If you need to navigate to your project folder in the Terminal, use the `cd` command to get to your project folder: `$ cd projects-base/project/build`.
++ Open Terminal.
++ Navigate to your project folder (`cd LookThink/Project`).
 
-The simplest way to get Kentucky is to navigate to your project's SCSS folder, open Terminal and type:
+At this point there are two options - you may install Kentucky in an existing SCSS folder or, for static (non-CMS) projects, you may install a full project directory.
 
-		$ kentucky install
++ **For CMS or existing folder structures:**
+	+ Navigate to your SCSS/styles folder (`cd scss`).
+	+ Type `gem install kentucky`.
+	+ Type `kentucky install`.
 		
-This will install Bourbon, Neat, and Kentucky in nice little folders ready for you to use. All you need to do is add a folder for your partials, pages, or whatever you need and get to coding!
++ **For static, non-CMS projects:**
+	+ Type `gem install kentucky`.
+	+ Type `kentucky install --dir`.
+	
+After installing Kentucky, you need to set SCSS to watch your stylesheets for changes and compile your usable CSS file.
 
-Kentucky also comes with a few options to make your life easier in particular situations.
++ Navigate to your project's home folder (if you are in the SCSS folder, type `cd ../`)
++ Type `sass --watch input:output` (i.e., `sass --watch scss/style.scss:css/style.css`)
 
-If you need a full project structure (fonts, images, etc.), navigate to your project folder, open Terminal:
-
-		$ kentucky install --dir
-		
-This will create **fonts**, **images**, **SCSS**, **style**, and **scripts** folders in your project folder. It then installs Kentucky inside of the created SCSS folder! Super easy, right?!
-
-The last option is for you Terminal pro's. Kentucky includes the capability to create your project folder, tell Kentucky where it is, and install it there, *without* needing to `cd` there. To do this open Terminal:
-
-		$ mkdir -p projects-base/project/build
-		$ kentucky install --path=projects-base/project/build --dir
-
-This creates your project folder, creates all required folders inside of that folder, and installs Kentucky! Boom! This is also runnable without the `--dir` option if all you need is to point Kentucky to the project from anywhere but the project folder, `$ kentucky install --patch=projects-base/project/build/scss`. 
-
-Once Kentucky is installed, navigate to the project folder, open Terminal and run:
-
-		$ sass --watch scss/style.scss:style/style.css
-		
-Leave Terminal open and whenever you make a change to your SCSS files, it will compile a new style.css for you.
+Now, whenever a change is made to an SCSS file, your code will be compiled and exported to the location dictated.
 
 ***
 
