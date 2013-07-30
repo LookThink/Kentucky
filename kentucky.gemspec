@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Aaron Clemmer", "Greg Bruening", "Chris Brinson"]
   s.email       = ["greg@lookthink.com"]
   s.homepage    = "https://bitbucket.org/lookthink/kentucky"
-  s.summary     = "Kentucky Bourbon, Neat SCSS Mixins and Grid System"
+  s.summary     = "Kentucky Bourbon, Neat Grid System and SCSS Mixins"
   s.description = <<-DESC
 Kentucky is LookThink's contribution to further enhance an already stellar SCSS library put together by the people at ThoughtBot. Their mixin library (Bourbon) and grid system (Neat) now serve as the base to all LookThink projects. Kentucky also includes a variety of mixins from various projects that we find useful and weren't included in Bourbon. Additionally, it includes a handy-dandy file (_defaults.scss) for handling all of your variables, keeping them centralized and easy to maintain.
   DESC

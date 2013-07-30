@@ -61,25 +61,18 @@ $link-color:          #bebebe !default;
 // https://twitter.com/redclov3r/status/250301539321798657
 // Customized to allow unitless line-height
 
-@mixin font-size($font-size, $line-height:1){
-  font-size: $font-size;
-  line-height: $line-height;
-}
-
 html{
-  font-family: $base-font-family;
-  color: $base-font-color;
-  @include font-size($base-font-size);
+  font: $base-font-size/$base-line-height $base-font-family;
 }
 
 %giga{
-  @include font-size($giga-size);
+  font-size: $giga-size;
 }
 %mega{
-  @include font-size($mega-size);
+  font-size: $mega-size;
 }
 %kilo{
-  @include font-size($kilo-size);
+  font-size: $kilo-size;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -87,34 +80,34 @@ h1, h2, h3, h4, h5, h6{
 }
 h1,
 %alpha{
-  @include font-size($h1-size);
+  font-size: $h1-size;
 }
 h2,
 %bravo{
-  @include font-size($h2-size);
+  font-size: $h2-size;
 }
 h3,
 %charlie{
-  @include font-size($h3-size);
+  font-size: $h3-size;
 }
 h4,
 %delta{
-  @include font-size($h4-size);
+  font-size: $h4-size;
 }
 h5,
 %echo{
-  @include font-size($h5-size);
+  font-size: $h5-size;
 }
 h6,
 %foxtrot{
-  @include font-size($h6-size);
+  font-size: $h6-size;
 }
 
 %milli{
-  @include font-size($milli-size);
+  font-size: $milli-size;
 }
 %micro{
-  @include font-size($micro-size);
+  font-size: $micro-size;
 }
 
 a{
@@ -124,6 +117,23 @@ a{
   &:hover, &:focus{
     color: lighten($link-color, 15%);
   }
+}
+
+
+// ------------------------------------------------------------------- //
+// Single Direction Margins
+//
+// Any block level elements should be added to this list as well.
+// Keeping the margins in one direction will avoid margin collapse
+// issues and keep spacing consistant.
+// ------------------------------------------------------------------- //
+
+h1, h2, h3, h4, h5, h6,
+ul, ol, dd,
+section, article, p,
+pre, table, fieldset, hr{
+  margin-bottom: ($base-font-size / $base-line-height); // IE8 Fallback
+  margin-bottom: 1rem;
 }
 
 // ------------------------------------------------------------------- //

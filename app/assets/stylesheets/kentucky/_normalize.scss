@@ -5,8 +5,28 @@
 // Edited for use with Kentucky
 // ------------------------------------------------------------------- //
 
+
+// ------------------------------------------------------------------- //
+// Base Reset
+// Allows for better control over spacing from the start
+// ------------------------------------------------------------------- //
+
 *{
 	@include box-sizing(border-box);
+}
+
+html, body, div, span, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr,
+a, abbr, address, cite, code,
+em, img, small, strong, sub, sup,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, menu, nav, section, summary,
+time, mark, audio, video{
+	margin: 0;
+	padding: 0;
 }
 
 article,
@@ -61,8 +81,7 @@ a:focus {
 	outline: thin dotted;
 }
 
-a:active,
-a:hover {
+a:active {
 	outline: 0;
 }
 
@@ -144,25 +163,14 @@ svg:not(:root) {
 }
 
 // ------------------------------------------------------------------- //
-// Figures
-// ------------------------------------------------------------------- //
-
-figure {
-	margin:0;
-}
-
-// ------------------------------------------------------------------- //
 // Forms
 // ------------------------------------------------------------------- //
 
 fieldset {
-	margin: 0 2px;
-	padding: .35em .625em .75em;
 	border: 1px solid #ccc;
 }
 
 legend {
-	padding: 0;
 	border: 0;
 }
 
@@ -214,7 +222,6 @@ input[type="search"]::-webkit-search-decoration {
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-	padding: 0;
 	border: 0;
 }
 
@@ -223,15 +230,22 @@ textarea {
 	vertical-align:top;
 }
 
+
 // ------------------------------------------------------------------- //
 // Lists
 // ------------------------------------------------------------------- //
 
 ul,
 ol,
-dl{
-	margin: 0;
+dl {
+	margin-left: 1.5em;
 }
+
+li > ul,
+li > ol{
+	padding-bottom: 0;
+}
+
 
 // ------------------------------------------------------------------- //
 // Tables
