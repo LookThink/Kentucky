@@ -16,6 +16,6 @@ li{
 // Enjoy numbered lists without the semantics implied by `ol`
 // ------------------------------------------------------------------- //
 
-/*ul*/.numbered-list{
+/*ul*/%numbered-list{
   list-style-type: decimal;
 }

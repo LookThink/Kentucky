@@ -23,46 +23,22 @@
 // folder/files.
 // 
 // ------------------------------------------------------------------- //
-
-// ------------------------------------------------------------------- //
 // Contents
 // ------------------------------------------------------------------- //
 
 // Imports             Begin importing the sections below
 
+// Defaults            All variable values set here
 // Normalize           Nicolas Gallagher's normalize.css, sassy style
 // Clearfix            Set some defaults
-// Mixins              Super-simple Sass stuff
+// Mixins              Super-simple SCSS stuff
 
 // Main                High-level elements like `html`, `body`, etc.
 // Headings            Double-stranded heading hierarchy
 // Smallprint          Smaller text elements like `small`
-// Lists               
+// Lists               Basic list styles and extends
 
-// GRIDS...............Fluid, proportional and nestable grids
-// FLEXBOX.............Crudely emulate flexbox
-// COLUMNS.............CSS3 columns
-// NAV.................A simple abstraction to put a list in horizontal nav mode
-// OPTIONS.............Grouped nav items
-// PAGINATION..........Very stripped back, basic paginator
-// BREADCRUMB..........Simple breadcrumb trail object
-// MEDIA...............Media object
-// MARGINALIA..........Simple marginalia content
-// ISLAND..............Boxed off content
-// BLOCK-LIST..........Blocky lists of content
-// MATRIX..............Gridded lists
-// SPLIT...............A simple split-in-two object
-// THIS-OR-THIS........Options object
-// LINK-COMPLEX........
-// FLYOUT..............Flyout-on-hover object
-// ARROWS..............CSS arrows
-// SPRITE..............Generic spriting element
-// ICON-TEXT...........Icon and text couplings
-// BEAUTONS............Use the beautons micro library
-// LOZENGES............Basic lozenge styles
-// RULES...............Horizontal rules
-// STATS...............Simple stats object
-// GREYBOX.............Wireframing styles
+// Abstraction details here
 
 // Brand               Helper class to apply brand treatment to elements
 // Helpers             A series of helper classes to use arbitrarily
@@ -93,7 +69,9 @@
 // Objects and abstractions
 // ------------------------------------------------------------------- //
 
-
+@import "objects/media";
+@import "objects/breadcrumb";
+@import "objects/split";
 
 
 // ------------------------------------------------------------------- //
@@ -103,29 +81,3 @@
 @import "generic/brand";
 @import "generic/helpers";
 @import "generic/debug";
-
-
-// ------------------------------------------------------------------- //
-// EXISTING KENTUCKY WORK v
-// ------------------------------------------------------------------- //
-
-// ------------------------------------------------------------------- //
-// Standard Imports
-// ------------------------------------------------------------------- //
-
-@import 'normalize';
-@import 'defaults';
-@import 'helpers';
-
-// ------------------------------------------------------------------- //
-// For those last minute changes you'll come back to later
-// ------------------------------------------------------------------- //
-
-@import 'shame';
-
-// ------------------------------------------------------------------- //
-// Conditional Imports
-// Only loaded if options in _defaults are set to TRUE
-// ------------------------------------------------------------------- //
-
-@import 'debug';

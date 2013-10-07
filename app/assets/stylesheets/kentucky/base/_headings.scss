@@ -9,7 +9,7 @@
 // military alphabet).
 // ------------------------------------------------------------------- //
 
-@include headings(1,2,3,4,5,6){
+@include headings(1,6){
   font-family: $brand-font-family;
 }
 
@@ -51,7 +51,7 @@ h6,
 // ------------------------------------------------------------------- //
 
 %hgroup{
-  @include headings(1,2,3,4,5,6){
+  @include headings(1,6){
     margin-bottom: 0;
   }
 }
