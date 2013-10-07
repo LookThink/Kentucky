@@ -1,0 +1,16 @@
+// ------------------------------------------------------------------- //
+// Brand extensions
+// ------------------------------------------------------------------- //
+
+%brand{
+  font-family: $brand-font-family !important;
+  color: $brand-color !important;
+}
+
+%brand-type{
+  font-family: $brand-font-family !important;
+}
+
+%brand-color{
+  color: $brand-color !important;
+}

@@ -1,0 +1,556 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/assets/stylesheets/kentucky/_defaults.scss",
+			"settings":
+			{
+				"buffer_size": 3897,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/kentucky/generic/_helpers.scss",
+			"settings":
+			{
+				"buffer_size": 2190,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 93.0,
+		"selected_items":
+		[
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git pull",
+				"Git: Pull"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git ad",
+				"Git: Add Current File"
+			],
+			[
+				"git commit",
+				"Git: Quick Commit"
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
+			[
+				"git quick",
+				"Git: Quick Commit"
+			],
+			[
+				"git comi",
+				"Git: Quick Commit"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"git log",
+				"Git: Log All"
+			],
+			[
+				"git pus",
+				"Git: Push"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"synta html",
+				"Set Syntax: HTML"
+			],
+			[
+				"git re",
+				"Git: Reset (unstage) All"
+			],
+			[
+				"git pul",
+				"Git: Pull"
+			],
+			[
+				"git statu",
+				"Git: Status"
+			],
+			[
+				"git ",
+				"Git: Commit history"
+			],
+			[
+				"git co",
+				"Git: Commit"
+			],
+			[
+				"synta scs",
+				"Set Syntax: SCSS"
+			],
+			[
+				"git mes",
+				"Set Syntax: Git Commit Message"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"syntax html",
+				"Set Syntax: HTML"
+			],
+			[
+				"syn html",
+				"Set Syntax: HTML"
+			],
+			[
+				"syntax htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"search",
+				"Search In Project"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"tidy",
+				"TidyHTML"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 579.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Greg/Kentucky/app/assets/stylesheets/kentucky/generic/_mixins.scss",
+		"/Users/Greg/Kentucky/app/assets/stylesheets/kentucky/generic/_brand.scss",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/css/styles.css",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/scss/calamp/_product.scss",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/scss/calamp/_industry.scss",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/scss/calamp/_footer.scss",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/scss/calamp/_challenge.scss",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/scss/calamp/_mixins.scss",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/scss/calamp/_layout.scss",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/scss/calamp/_newsroom.scss",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/scss/calamp/_resources.scss",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/SFTP/Default (OSX).sublime-keymap",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/Users/Greg/LookThink/calamp/build-dev/themes/seven/style.css",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/scss/_calamp-backend.scss",
+		"/Users/Greg/Library/Caches/Cleanup At Startup/Transmit/442EE7C6-0D9D-450B-A61B-5249F3810705/styles.css",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/js/challenges.js",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/scss/calamp/_home.scss",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/js/resources.js",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/js/responsiveslides.js",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/js/script.js",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/User/GitGutter.sublime-settings",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/GitGutter/GitGutter.sublime-settings",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/js/products.js",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/Git/Git.sublime-settings",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/scss/calamp/_header.scss",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/scss/calamp/_icons.scss",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/scss/calamp/_spcp.scss",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/scss/calamp/_company.scss",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/scss/calamp/_hero.scss",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/scss/calamp/_buttons.scss",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/scss/kentucky/_defaults.scss",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/scss/kentucky/_normalize.scss",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/scss/calamp.scss",
+		"/Users/Greg/Desktop/frontify.js",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/User/SublimeCodeIntel.sublime-settings",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/SublimeCodeIntel/Default (OSX).sublime-mousemap",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/ds_layouts/product_detail/product_detail.inc",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/ds_layouts/product_detail/product-detail.tpl.php",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/templates/views-view-unformatted--product-landing-categories-hardware.tpl.php",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/scss/neat/settings/_grid.scss",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/js/badonkatrunc.js",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/AdvancedNewFile/README.md",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/css/README.txt",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/templates/page--content3.tpl.php",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/templates/views-view-field--block--field-resource-category-1.tpl.php",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/templates/views-view-unformatted--resources.tpl.php",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/templates/block--sidebar_first.tpl.php",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/templates/block.tpl.php",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/ds_layouts/challenge_landing/challenge_landing.inc",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/ds_layouts/challenge_landing/challenge-landing.tpl.php",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/User/bh_core.sublime-settings",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/BracketHighlighter/bh_core.sublime-settings",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/Alignment/Base File.sublime-settings",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/scss/kentucky/_helpers.scss",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/sftp-config.json",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/User/SFTP.sublime-settings",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/SFTP/SFTP.sublime-settings",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/scss/kentucky/_shame.scss",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/Tomorrow Color Schemes/Tomorrow-Night-Eighties.tmTheme",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/User/SCSS Autocomplete.py",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/User/Comment Block.sublime-snippet",
+		"/Users/Greg/Desktop/footer.html",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/TidyHTML5/TidyHTML.sublime-settings",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/User/Comment Block",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-settings",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/templates/ds-1col--node-challenge-listing.tpl.php",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/templates/views-view-field--block--field-product-category-1.tpl.php",
+		"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/templates/views-view-field--block--field-product-industry.tpl.php",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/Tomorrow Color Schemes/Tomorrow-Night-Bright.tmTheme",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/Emmet/Default (OSX).sublime-keymap",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/User/Emmet.sublime-settings",
+		"/Users/Greg/Library/Application Support/Sublime Text 2/Packages/Emmet/Emmet.sublime-settings",
+		"/Users/Greg/Sublime Text 2",
+		"/Users/Greg/open",
+		"/tmp/subl stdin w82po8.txt"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"",
+			"/Users/Greg/LookThink/calamp/build-dev/sites/all/themes/calamp/scss/calamp",
+			"scss",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"challenge__results",
+			"chosen",
+			"child",
+			"color: $brand-color-1d;",
+			"<a href=\"\">Learn More </a>",
+			"data-feature-id=\"",
+			"<div class=\"member__position\">",
+			"about__right",
+			".sidebar",
+			".sidebar .learn-more",
+			".learn-more",
+			"#00ACED",
+			"arrow",
+			".png",
+			"%icon-base;",
+			"imce-icon",
+			"href",
+			"hero",
+			"industry",
+			"f",
+			"uppercase",
+			"$brand-color-1c"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"<p class=\"member__position\">",
+			"$brand-color-1d",
+			"f"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/assets/stylesheets/kentucky/_defaults.scss",
+					"settings":
+					{
+						"buffer_size": 3897,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								662,
+								662
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/assets/stylesheets/kentucky/generic/_helpers.scss",
+					"settings":
+					{
+						"buffer_size": 2190,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2123,
+								2123
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 134.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 102.0
+	},
+	"output.git":
+	{
+		"height": 141.0
+	},
+	"output.sftp":
+	{
+		"height": 71.0
+	},
+	"output.tooltips":
+	{
+		"height": 102.0
+	},
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": false,
+	"side_bar_visible": true,
+	"side_bar_width": 244.0,
+	"status_bar_visible": true
+}
