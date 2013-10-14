@@ -1,4 +1,6 @@
 // ------------------------------------------------------------------- //
+// Main
+// ------------------------------------------------------------------- //
 // Kentucky Headings
 // 
 // The goal here is to define headings and establish practical
@@ -70,3 +72,40 @@ h6,
 %kilo{
   @include font-size($kilo-size);
 }
+
+
+// ------------------------------------------------------------------- //
+// What is this? Type for ants?!
+// ------------------------------------------------------------------- //
+
+%milli{
+  @include font-size($milli-size);
+}
+
+%micro{
+  @include font-size($micro-size);
+}
+
+
+// ------------------------------------------------------------------- //
+// Basic Page Setup
+// ------------------------------------------------------------------- //
+
+html{
+  font: #{($base-font-size/16px)*1em} / #{$base-line-height} $base-font-family;
+  min-height: 100%;
+  overflow-y: scroll;
+} // END html
+
+body{
+  background: #fff;
+} // END body
+
+a{
+  color: $link-color;
+  @include transition(all .3s linear);
+  
+  &:hover, &:focus{
+    color: lighten($link-color, 15%);
+  }
+} // END a

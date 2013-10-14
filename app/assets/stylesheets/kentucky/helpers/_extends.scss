@@ -1,8 +1,8 @@
 // ------------------------------------------------------------------- //
-// Kentucky Helper Extensions
+// Kentucky Extends
 // ------------------------------------------------------------------- //
 // Show / Hide Elements
-// To be used in jQuery
+// To be used in jQuery as a toggle class
 // ------------------------------------------------------------------- //
 
 .is-shown{
@@ -10,6 +10,19 @@
 }
 .is-hidden{
   display: none;
+}
+
+
+// ------------------------------------------------------------------- //
+// Clearfix
+// ------------------------------------------------------------------- //
+
+%cf{
+ &:after{
+   content: "";
+   display: table;
+   clear: both;
+ } 
 }
 
 
@@ -54,12 +67,43 @@
 
 
 // ------------------------------------------------------------------- //
-// "Go" - Add right-facing arrow, indicating movement through site
+// "Go"
+//
+// Add right-facing arrow, indicating movement through site
 // ------------------------------------------------------------------- //
 
-%go:after{
-  content: "\00A0" "\OOBB";
+%go{
+  &:after{
+    content: "\00A0" "\OOBB";
+  }
 }
+
+
+// ------------------------------------------------------------------- //
+// Breadcrumbs
+//
+// Must be extended in the ul of the breadcrumbs
+// Adds auto-magical separators
+// ------------------------------------------------------------------- //
+
+// Simple breadcrumb ">"
+%breadcrumb{
+  & > li + li:before{
+    content:"\00BB" "\00A0";
+  }
+}
+
+// Path breadcrumb "/"
+%breadcrumb--path{
+  & > li + li:before{
+    content:"\002F" "\00A0";
+  }
+}
+
+%breadcrumb__root{
+    font-weight:bold;
+}
+
 
 
 // ------------------------------------------------------------------- //

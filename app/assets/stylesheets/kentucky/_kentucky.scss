@@ -46,38 +46,35 @@
 
 
 // ------------------------------------------------------------------- //
-// Generic utility styles
+// Initial Setup
 // ------------------------------------------------------------------- //
 
-@import "defaults";
-@import "generic/normalize";
-@import "generic/clearfix";
-@import "generic/mixins";
-
+@import "setup/normalize";
 
 // ------------------------------------------------------------------- //
-// Base styles; unclassed HTML elements
+// Kentucky's Core
 // ------------------------------------------------------------------- //
 
-@import "base/main";
-@import "base/headings";
-@import "base/smallprint";
-@import "base/lists";
-
-
-// ------------------------------------------------------------------- //
-// Objects and abstractions
-// ------------------------------------------------------------------- //
-
+@import "helpers/extends";
+@import "helpers/mixins";
 @import "objects/media";
-@import "objects/breadcrumb";
 @import "objects/split";
 
+// ------------------------------------------------------------------- //
+// Main (Type, Brand, etc.)
+// ------------------------------------------------------------------- //
+
+@import "main/brand";
+@import "main/main";
 
 // ------------------------------------------------------------------- //
-// Style trumps; helper and brand classes
+// Load that hacky cuss last...
 // ------------------------------------------------------------------- //
 
-@import "generic/brand";
-@import "generic/helpers";
-@import "generic/debug";
+@import "shame";
+
+// ------------------------------------------------------------------- //
+// And if required, load debugging styles
+// ------------------------------------------------------------------- //
+
+@import "debug";
