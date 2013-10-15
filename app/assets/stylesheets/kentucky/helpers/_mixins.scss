@@ -71,7 +71,7 @@
 // @include border(2px 0 5px 3px, solid, #B4DA55);
 // ------------------------------------------------------------------- //
 
-@mixin border($border-widths, $border-style $border-color){
+@mixin border($border-widths, $border-style, $border-color){
   border: $border-style $border-color;
   border-width: $border-widths;
 }
