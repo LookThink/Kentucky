@@ -61,7 +61,7 @@
 // ------------------------------------------------------------------- //
 
 @mixin sprite($col, $row){
-  background: url($sprite-shet-loc) no-repeat ($col * -$sprite-sheet-grid) ($row * -$sprite-sheet-grid);
+  background: url($sprite-sheet-loc) no-repeat ($col * -$sprite-sheet-grid) ($row * -$sprite-sheet-grid);
 }
 
 
