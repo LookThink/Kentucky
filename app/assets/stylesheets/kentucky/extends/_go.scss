@@ -1,3 +1,11 @@
 // ------------------------------------------------------------------- //
-// We're up all night to get hacky...
+//  "Go"
+//
+//  Add right-facing arrow, indicating movement through site
 // ------------------------------------------------------------------- //
+
+%go{
+  &:after{
+    content: "\00A0" "\OOBB";
+  }
+}

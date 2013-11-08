@@ -1,17 +1,23 @@
 // ------------------------------------------------------------------- //
-// Main
-// ------------------------------------------------------------------- //
-// Kentucky Headings
-// 
-// The goal here is to define headings and establish practical
-// font-sizing from the get go.
-//
-// Also includes a "double-stranded hierarchy" allowing you to use HTML
-// heading elements or the alternate extend included (based on the 
-// military alphabet).
+//  Base Typographic Rules
 // ------------------------------------------------------------------- //
 
-@include headings(1,6){
+html{
+  font: #{($base-font-size/16px)*1em} / #{$base-line-height} $base-font-family;
+}
+
+// ------------------------------------------------------------------- //
+//  Headings
+// 
+//  The goal here is to define headings and establish practical
+//  font-sizing from the get go.
+//
+//  Also includes a "double-stranded hierarchy" allowing you to use HTML
+//  heading elements or the alternate extend included (based on the 
+//  military alphabet).
+// ------------------------------------------------------------------- //
+
+h1, h2, h3, h4, h5, h6{
   font-family: $brand-font-family;
 }
 
@@ -45,11 +51,10 @@ h6,
   @include font-size($h6-size);
 }
 
-
 // ------------------------------------------------------------------- //
-// Heading Groups
-// 
-// Target a group of headers stacked together (such as title/subtitle)
+//  Heading Groups
+//
+//  Target a group of headings stacked together (such as title/subtitle)
 // ------------------------------------------------------------------- //
 
 %hgroup{
@@ -58,25 +63,21 @@ h6,
   }
 }
 
-
 // ------------------------------------------------------------------- //
-// A set of extends for massive type (heroes, mastheads, etc.)
+//  Extra Large / Small Extends
 // ------------------------------------------------------------------- //
 
 %giga{
   @include font-size($giga-size);
 }
+
 %mega{
   @include font-size($mega-size);
 }
+
 %kilo{
   @include font-size($kilo-size);
 }
-
-
-// ------------------------------------------------------------------- //
-// What is this? Type for ants?!
-// ------------------------------------------------------------------- //
 
 %milli{
   @include font-size($milli-size);
@@ -86,26 +87,28 @@ h6,
   @include font-size($micro-size);
 }
 
-
 // ------------------------------------------------------------------- //
-// Basic Page Setup
+//  Links
 // ------------------------------------------------------------------- //
-
-html{
-  font: #{($base-font-size/16px)*1em} / #{$base-line-height} $base-font-family;
-  min-height: 100%;
-  overflow-y: scroll;
-} // END html
-
-body{
-  background: #fff;
-} // END body
 
 a{
   color: $link-color;
-  @include transition(all .3s linear);
-  
-  &:hover, &:focus{
-    color: lighten($link-color, 15%);
-  }
-} // END a
+  text-decoration: none;
+}
+
+// ------------------------------------------------------------------- //
+//  Single-direction Margins
+// ------------------------------------------------------------------- //
+
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl,
+p,
+pre, table, fieldset{
+  margin-bottom: ($base-font-size / $base-line-height); // IE8 Fallback
+  margin-bottom: 1rem;
+}
+
+hr{
+  margin: ($base-font-size / $base-line-height) 0;
+  margin: 1rem 0;
+}

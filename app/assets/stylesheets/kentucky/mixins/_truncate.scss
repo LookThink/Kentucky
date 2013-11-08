@@ -1,0 +1,14 @@
+// ------------------------------------------------------------------- //
+//  Text Truncation
+//
+//  @include truncate(450px);
+//  Only works for single-line truncation
+// ------------------------------------------------------------------- //
+
+@mixin truncate($truncation-boundary){
+  display: inline-block;
+  max-width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

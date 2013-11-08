@@ -1,81 +1,35 @@
 // ------------------------------------------------------------------- //
-// Kentucky.scss
-// 
-// The goal of Kentucky is to do a majority of the heavy lifting
-// for you at the very start of a project. The styles and organization
-// required at the beginning of every project is done for you, just
-// fill in the variables!
-// 
-// The table of contents below explains, briefly, what each import
-// does.
-// 
-// Kentucky aims to be heavily documented to help you learn why or how
-// it's pieces work. More complex portions come with implemenation
-// examples.
-// 
-// Copyright 2013 LookThink
-// Developed in part by:
-// Greg Bruening, Aaron Clemmer, and Chris Brinson
-// 
-// WARNING: Variables set now are being used throughout the entirety
-// of Kentucky. Any custom, project-related styles SHOULD NOT be added
-// or modified in Kentucky diretcly, but added via a separate theme
-// folder/files.
-// 
-// ------------------------------------------------------------------- //
-// Contents
+//  Kentucky Imports
 // ------------------------------------------------------------------- //
 
-// Imports             Begin importing the sections below
-
-// Defaults            All variable values set here
-// Normalize           Nicolas Gallagher's normalize.css, sassy style
-// Clearfix            Set some defaults
-// Mixins              Super-simple SCSS stuff
-
-// Main                High-level elements like `html`, `body`, etc.
-// Headings            Double-stranded heading hierarchy
-// Smallprint          Smaller text elements like `small`
-// Lists               Basic list styles and extends
-
-// Abstraction details here
-
-// Brand               Helper class to apply brand treatment to elements
-// Helpers             A series of helper classes to use arbitrarily
-// Debug               Enable to add visual flags for debugging purposes
-
+@import "project-settings";
 
 // ------------------------------------------------------------------- //
-// Initial Setup
+//  Mixins & Extends
 // ------------------------------------------------------------------- //
 
-@import "setup/normalize";
-@import "defaults";
+@import "mixins/font-size";
+@import "mixins/headings";
+@import "mixins/sprite";
+@import "mixins/borders";
+@import "mixins/truncate";
+
+@import "extends/alignment";
+@import "extends/breadcrumbs";
+@import "extends/capslock";
+@import "extends/go";
+@import "extends/mute";
+@import "extends/show-hide";
 
 // ------------------------------------------------------------------- //
-// Kentucky's Core
+//  Base
 // ------------------------------------------------------------------- //
 
-@import "helpers/extends";
-@import "helpers/mixins";
-@import "objects/media";
-@import "objects/split";
+@import "base/normalize";
+@import "base/typography";
 
 // ------------------------------------------------------------------- //
-// Main (Type, Brand, etc.)
+//  Debug
 // ------------------------------------------------------------------- //
 
-@import "main/brand";
-@import "main/main";
-
-// ------------------------------------------------------------------- //
-// Load that hacky cuss last...
-// ------------------------------------------------------------------- //
-
-@import "shame";
-
-// ------------------------------------------------------------------- //
-// And if required, load debugging styles
-// ------------------------------------------------------------------- //
-
-@import "setup/debug";
+@import "debug";
