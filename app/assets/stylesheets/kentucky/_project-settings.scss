@@ -45,13 +45,25 @@ $kilo-size:           48px !default;
 $milli-size:          12px !default;
 $micro-size:          10px !default;
 
+
+// ------------------------------------------------------------------- //
+//  Font Weights
+// ------------------------------------------------------------------- //
+
+$lightest:  100 !default;
+$light:     300 !default;
+$normal:    400 !default;
+$semibold:  600 !default;
+$bold:      700 !default;
+$black:     900 !default;
+
 // ------------------------------------------------------------------- //
 //  Media Query Widths
 //
 //  [max-width] [in pixels] [columns]
 // ------------------------------------------------------------------- //
 
-$mobile: new-breakpoint(max-width 480px 4);
-$tablet: new-breakpoint(max-width 990px 8);
-$laptop: new-breakpoint(max-width 1440px 12);
+$mobile:  new-breakpoint(max-width 480px 4);
+$tablet:  new-breakpoint(max-width 990px 8);
+$laptop:  new-breakpoint(max-width 1440px 12);
 $desktop: new-breakpoint(max-width 1920px 12);
