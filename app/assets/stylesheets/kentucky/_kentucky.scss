@@ -1,20 +1,35 @@
 // ------------------------------------------------------------------- //
-// Standard Imports
+//  Kentucky Imports
 // ------------------------------------------------------------------- //
 
-@import 'normalize';
-@import 'defaults';
-@import 'helpers';
+@import "project-settings";
 
 // ------------------------------------------------------------------- //
-// For those last minute changes you'll come back to later
+//  Mixins & Extends
 // ------------------------------------------------------------------- //
 
-@import 'shame';
+@import "mixins/font-size";
+@import "mixins/headings";
+@import "mixins/sprite";
+@import "mixins/borders";
+@import "mixins/truncate";
+
+@import "extends/alignment";
+@import "extends/breadcrumbs";
+@import "extends/capslock";
+@import "extends/go";
+@import "extends/mute";
+@import "extends/show-hide";
 
 // ------------------------------------------------------------------- //
-// Conditional Imports
-// Only loaded if options in _defaults are set to TRUE
+//  Base
 // ------------------------------------------------------------------- //
 
-@import 'debug';
+@import "base/normalize";
+@import "base/typography";
+
+// ------------------------------------------------------------------- //
+//  Debug
+// ------------------------------------------------------------------- //
+
+@import "debug";

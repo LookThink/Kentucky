@@ -1,0 +1,114 @@
+// ------------------------------------------------------------------- //
+//  Base Typographic Rules
+// ------------------------------------------------------------------- //
+
+html{
+  font: #{($base-font-size/16px)*1em} / #{$base-line-height} $base-font-family;
+}
+
+// ------------------------------------------------------------------- //
+//  Headings
+// 
+//  The goal here is to define headings and establish practical
+//  font-sizing from the get go.
+//
+//  Also includes a "double-stranded hierarchy" allowing you to use HTML
+//  heading elements or the alternate extend included (based on the 
+//  military alphabet).
+// ------------------------------------------------------------------- //
+
+h1, h2, h3, h4, h5, h6{
+  font-family: $brand-font-family;
+}
+
+h1,
+%alpha{
+  @include font-size($h1-size);
+}
+
+h2,
+%bravo{
+  @include font-size($h2-size);
+}
+
+h3,
+%charlie{
+  @include font-size($h3-size);
+}
+
+h4,
+%delta{
+  @include font-size($h4-size);
+}
+
+h5,
+%echo{
+  @include font-size($h5-size);
+}
+
+h6,
+%foxtrot{
+  @include font-size($h6-size);
+}
+
+// ------------------------------------------------------------------- //
+//  Heading Groups
+//
+//  Target a group of headings stacked together (such as title/subtitle)
+// ------------------------------------------------------------------- //
+
+%hgroup{
+  @include headings(1,6){
+    margin-bottom: 0;
+  }
+}
+
+// ------------------------------------------------------------------- //
+//  Extra Large / Small Extends
+// ------------------------------------------------------------------- //
+
+%giga{
+  @include font-size($giga-size);
+}
+
+%mega{
+  @include font-size($mega-size);
+}
+
+%kilo{
+  @include font-size($kilo-size);
+}
+
+%milli{
+  @include font-size($milli-size);
+}
+
+%micro{
+  @include font-size($micro-size);
+}
+
+// ------------------------------------------------------------------- //
+//  Links
+// ------------------------------------------------------------------- //
+
+a{
+  color: $link-color;
+  text-decoration: none;
+}
+
+// ------------------------------------------------------------------- //
+//  Single-direction Margins
+// ------------------------------------------------------------------- //
+
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl,
+p,
+pre, table, fieldset{
+  margin-bottom: ($base-font-size / $base-line-height); // IE8 Fallback
+  margin-bottom: 1rem;
+}
+
+hr{
+  margin: ($base-font-size / $base-line-height) 0;
+  margin: 1rem 0;
+}

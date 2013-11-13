@@ -1,0 +1,24 @@
+// ------------------------------------------------------------------- //
+//  Breadcrumbs
+//
+//  Must be extended in the ul of the breadcrumbs
+//  Adds auto-magical separators
+// ------------------------------------------------------------------- //
+
+// Simple breadcrumb ">"
+%breadcrumb{
+  & > li + li:before{
+    content:"\00BB" "\00A0";
+  }
+}
+
+// Path breadcrumb "/"
+%breadcrumb--path{
+  & > li + li:before{
+    content:"\002F" "\00A0";
+  }
+}
+
+%breadcrumb__root{
+    font-weight:bold;
+}
