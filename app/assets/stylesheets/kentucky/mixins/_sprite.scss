@@ -5,5 +5,5 @@
 // ------------------------------------------------------------------- //
 
 @mixin sprite($col, $row){
-  background: url($sprite-sheet-loc) no-repeat ($col * -$sprite-sheet-grid) ($row * -$sprite-sheet-grid);
+  background: url($sprite-sheet-location) no-repeat ($col * -$sprite-sheet-gridsize) ($row * -$sprite-sheet-gridsize);
 }
