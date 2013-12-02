@@ -50,10 +50,11 @@
     $btb: nth($border-width, 2);
     $br: nth($border-width, 3);
 
-
+    // TODO for each variable, check for unit
   }
 
   // If 4 values...
+  // TODO Check to ensure all values have units
   @if length($border-width) == 4{
     border-width: $border-width;
   }
