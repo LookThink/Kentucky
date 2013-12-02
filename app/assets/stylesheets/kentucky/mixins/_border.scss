@@ -1,0 +1,29 @@
+// Border mixin for multi-border-width borders
+
+
+@mixin borders($border-width, $border-style: solid, $border-color: black) {
+  // if too many widths, throw error
+  @if (length($border-width) > 4) {
+    @warn "Border-width accepts a maximum of 4 parameters;  #{length($border-width)} found.";
+  }
+
+  // New border width list
+  $new-width: ();
+
+  // Populate it
+  @for $i from 1 through length($border-width) {
+
+    // If border is unitless, append unit
+    @if unitless(nth($border-width, $i)) {
+      $new-width: append($new-width, nth($border-width, $i) + px);
+    }
+
+    // Otherwise, keep as is
+    @else {
+      $new-width: append($new-width, nth($border-width, $i));
+    }
+  }
+
+  border: $border-style $border-color;
+  border-width: $new-width;
+}
