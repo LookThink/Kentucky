@@ -1,0 +1,67 @@
+// Borders with variable border-widths
+
+@mixin borders($border-width, $border-style: solid, $border-color: #111){
+
+  // Check for border-widths, apply intelligently
+  // If 1 value...
+  @if length($border-width) == 1{
+
+    $bwidth: $border-width;
+
+    @if unitless($bwidth){
+      border-width: $bwidth + px;
+    }
+    @else if not(unitless($bwidth)){
+      border-width: $bwidth;
+    }
+  }
+
+  // If 2 values...
+  @if length($border-width) == 2{
+
+    $btb: nth($border-width, 1);
+    $blr: nth($border-width, 2);
+
+    // If first value is unitless
+    @if unitless($btb){
+      @if unitless($blr){
+        border-width: $btb + px $blr +px;
+      }
+      @else if not(unitless($blr)){
+        border-width: $btb + px $blr;
+      }
+    }
+
+    // If first value is not unitless
+    @if not(unitless($btb)){
+      @if unitless($blr){
+        border-width: $btb $blr +px;
+      }
+      @else if not(unitless($blr)){
+        border-width: $btb $blr;
+      }
+    }
+  }
+
+  // If 3 values...
+  @if length($border-width) == 3{
+
+    $bl: nth($border-width, 1);
+    $btb: nth($border-width, 2);
+    $br: nth($border-width, 3);
+
+
+  }
+
+  // If 4 values...
+  @if length($border-width) == 4{
+    border-width: $border-width;
+  }
+
+  // Return border style and color
+  border: $border-style $border-color;
+}
+
+div{
+  @include borders(3px 4px);
+}

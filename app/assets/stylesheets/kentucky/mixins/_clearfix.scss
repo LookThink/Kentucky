@@ -1,0 +1,10 @@
+// Simple, micro clearfix
+// Source: http://www.css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+
+@mixin clearfix{
+  &:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

@@ -1,9 +1,0 @@
-// ------------------------------------------------------------------- //
-//  Sprite Sheet
-//
-//  @include sprite(0,0);
-// ------------------------------------------------------------------- //
-
-@mixin sprite($col, $row){
-  background: url($sprite-sheet-loc) no-repeat ($col * -$sprite-sheet-grid) ($row * -$sprite-sheet-grid);
-}
