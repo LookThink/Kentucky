@@ -6,12 +6,10 @@
 
   // Ensure width has a value
   @if unitless($truncate-width){
-    $width: $truncate-width + px;
-    max-width: $width;
+    max-width: $truncate-width + px;
   }
-  @else if not(unitless($truncate-width)){
-    $width: $truncate-width;
-    max-width: $width;
+  @else {
+    max-width: $truncate-width;
   }
 
   white-space: nowrap;
