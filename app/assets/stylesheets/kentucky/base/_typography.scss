@@ -3,7 +3,9 @@
 // ------------------------------------------------------------------- //
 
 html{
-  font: #{($base-font-size/16px)*1em} / #{$base-line-height} $base-font-family;
+  color: $base-font-color;
+  font: $base-font-size / $base-line-height $base-font-family;
+  -webkit-font-smoothing: antialiased;
 }
 
 // ------------------------------------------------------------------- //
@@ -19,6 +21,7 @@ html{
 
 h1, h2, h3, h4, h5, h6{
   font-family: $brand-font-family;
+  line-height: $base-line-height * 1.25;
 }
 
 h1,
@@ -67,33 +70,41 @@ h6,
 //  Extra Large / Small Extends
 // ------------------------------------------------------------------- //
 
-%giga{
-  @include font-size($giga-size);
-}
-
-%mega{
-  @include font-size($mega-size);
-}
-
-%kilo{
-  @include font-size($kilo-size);
+%micro{
+  @include font-size($micro-size);
 }
 
 %milli{
   @include font-size($milli-size);
 }
 
-%micro{
-  @include font-size($micro-size);
+%kilo{
+  @include font-size($kilo-size);
 }
+
+%mega{
+  @include font-size($mega-size);
+}
+
+%giga{
+  @include font-size($giga-size);
+}
+
 
 // ------------------------------------------------------------------- //
 //  Links
 // ------------------------------------------------------------------- //
 
 a{
-  color: $link-color;
+  color: $base-link-color;
   text-decoration: none;
+  @include transition(color .1s linear);
+
+  &:hover,
+  &:active,
+  &:focus{
+    color: $hover-link-color;
+  }
 }
 
 // ------------------------------------------------------------------- //
@@ -104,11 +115,12 @@ h1, h2, h3, h4, h5, h6,
 ul, ol, dl,
 p,
 pre, table, fieldset{
-  margin-bottom: ($base-font-size / $base-line-height); // IE8 Fallback
-  margin-bottom: 1rem;
+  margin: 0 0 ($base-font-size / $base-line-height); // IE8 Fallback
+  margin: 0 0 1rem;
 }
 
 hr{
   margin: ($base-font-size / $base-line-height) 0;
   margin: 1rem 0;
+  @include border(0 0 1px 0, $base-border-color);
 }
