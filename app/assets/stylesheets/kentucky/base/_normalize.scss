@@ -152,8 +152,8 @@ select,
 textarea{
   margin: 0;
   font-family: $base-font-family;
-  font-size: 100%;
-  line-height: 1;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
 }
 
 button,

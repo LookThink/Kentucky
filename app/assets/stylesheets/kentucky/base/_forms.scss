@@ -1,0 +1,78 @@
+// ------------------------------------------------------------------- //
+//  Form Normaliztion; akin to Formalize
+// ------------------------------------------------------------------- //
+
+//  Variable set up
+$form-border-color: $base-border-color;
+$form-border-color-hover: darken($base-border-color, 10%);
+$form-border-color-focus: $brand-color;
+$form-border-radius: $base-border-radius;
+
+$form-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .1);
+$form-box-shadow-focus:
+  $form-box-shadow,
+  0 0 5px rgba(darken($form-border-color-focus, 5%), 0.7);
+
+$form-font-family: $base-font-family;
+$form-font-size: $base-font-size;
+
+
+fieldset{
+  margin: 0 0 ($base-line-height / 2) 0;
+  padding: $base-line-height;
+  background: ligthen($base-border-color, 10%);
+  border: 1px solid $base-border-color;
+}
+
+label{
+  font-weight: bold;
+  margin-bottom: $base-line-height / 4;
+
+  &.required:after{
+    content: "*";
+  }
+}
+
+#{$all-text-inputs}
+textarea{
+  @include box-sizing(border-box);
+  @include transition(border-color);
+  width: 100%;
+  margin-bottom: $base-line-height / 2;
+  padding: ($base-line-height / 3) ($base-line-height / 3);
+  background: #fff;
+  border: 1px solid $form-border-color;
+  border-radius: $form-border-radius;
+  box-shadow: $form-box-shadow;
+  font: $form-font-size / $base-line-height $form-font-family;
+  resize: vertical;
+
+  &:hover{
+    border-color: $form-border-color-hover;
+  }
+
+  &:focus{
+    border-color: $form-border-color-focus;
+    box-shadow: $form-box-shadow-focus;
+    outline: none;
+  }
+}
+
+input[type="search"]{
+  @include appearance(none);
+}
+
+input[type="checkbox"],
+input[type="radio"]{
+  display: inline;
+  margin-right: $base-line-height / 4;
+}
+
+button,
+input[type="submit"]{
+  @include appearance(none);
+  vertical-align: middle;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+}

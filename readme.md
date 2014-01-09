@@ -10,6 +10,7 @@
 **0.6.0**
 
 Updated project-settings.scss to include more settings, removed !default tags
+Added forms.scss (in place of Formalize, in addition to the normalize)
 
 
 ***
@@ -18,15 +19,6 @@ Updated project-settings.scss to include more settings, removed !default tags
 Kentucky is LookThink's contribution to further enhance an already stellar SCSS library put together by the people at [ThoughtBot](http://www.thoughtbot.com/). Their mixin library, [Bourbon](http://bourbon.io/), and grid system, [Neat](http://neat.bourbon.io/), now serve as the base to all LookThink projects.
 
 Kentucky also includes a variety of mixins from various projects that we find useful and weren't included in Bourbon. Additionally, it includes a handy-dandy file (_defaults.scss) for handling all of your variables, keeping them centralized and easy to maintain.
-
-***
-
-## What's changed?
-LookThink now uses SCSS exclusively as it's CSS preprocessor language of choice. The previous framework was written in LESS and we've taken steps to continually evolve how we code projects.
-
-We've also lessened the maintenance burden by relying on libraries that already exist and do the exact same things our previous framework did. The new method for acquiring the framework also means you'll always have the most up to date version of the components.
-
-Lastly, we've opened a Trello board for all feedback, issue / bug reporting, and additions to the framework. You can track it's growth as well as alert us to potential or existing problems in Kentucky.
 
 ***
 
