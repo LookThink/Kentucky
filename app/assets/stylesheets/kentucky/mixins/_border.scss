@@ -4,7 +4,7 @@
 @mixin borders($border-width, $border-style: solid, $border-color: black) {
   // if too many widths, throw error
   @if (length($border-width) > 4) {
-    @warn "Border-width accepts a maximum of 4 parameters;  #{length($border-width)} found.";
+    @warn "Border-width accepts a maximum of 4 width parameters;  #{length($border-width)} found.";
   }
 
   // New border width list

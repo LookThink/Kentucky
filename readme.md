@@ -5,6 +5,15 @@
 
 ***
 
+## CHANGELOG
+
+**0.6.0**
+
+Updated project-settings.scss to include more settings, removed !default tags
+
+
+***
+
 ## What is Kentucky?
 Kentucky is LookThink's contribution to further enhance an already stellar SCSS library put together by the people at [ThoughtBot](http://www.thoughtbot.com/). Their mixin library, [Bourbon](http://bourbon.io/), and grid system, [Neat](http://neat.bourbon.io/), now serve as the base to all LookThink projects.
 

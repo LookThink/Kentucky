@@ -1,61 +1,76 @@
 // ------------------------------------------------------------------- //
-//  Project Settings
+//  Project Settings 
 // ------------------------------------------------------------------- //
-// ------------------------------------------------------------------- //
-//  Toggleable Helpers / Modules
-// ------------------------------------------------------------------- //
-
-$debug-mode:    false !default;
-
-// If using a sprite, set relevant variables:
-$sprite-sheet-location: "url/to/spritesheet.png";
-$sprite-sheet-gridsize: 36px;
-
 // ------------------------------------------------------------------- //
 //  Typography
 // ------------------------------------------------------------------- //
 
-// Brand
+$brand-font-family: $helvetica;
+$base-font-family: $helvetica;
 
-$brand-font-family:   $helvetica !default;
-$brand-color:         #333 !default;
-$brand-round:         5px !default; // Used for border-radius
 
-// Base
+// ------------------------------------------------------------------- //
+//  Sizes
+// ------------------------------------------------------------------- //
 
-$base-font-family:    $helvetica !default;
-$base-font-size:      14px !default;
-$base-line-height:    1 !default;
-$base-font-color:     #333 !default;
-$link-color:          #bebebe !default;
+$base-font-size:   1em;
+$base-line-height: 1;
 
 // Heading Sizes
 
-$h1-size:             42px !default; // %alpha
-$h2-size:             36px !default; // %bravo
-$h3-size:             24px !default; // %charlie
-$h4-size:             20px !default; // %delta
-$h5-size:             18px !default; // %echo
-$h6-size:             16px !default; // %foxtrot
+$micro-size: 10px; // %micro
+$milli-size: 12px; // %milli
 
-$giga-size:           96px !default;
-$mega-size:           72px !default;
-$kilo-size:           48px !default;
+$h1-size:    42px; // %alpha
+$h2-size:    36px; // %bravo
+$h3-size:    24px; // %charlie
+$h4-size:    20px; // %delta
+$h5-size:    18px; // %echo
+$h6-size:    16px; // %foxtrot
 
-$milli-size:          12px !default;
-$micro-size:          10px !default;
+$kilo-size:  48px; // %kilo
+$mega-size:  72px; // %mega
+$giga-size:  96px; // %giga
 
 
 // ------------------------------------------------------------------- //
-//  Font Weights
+//  Weights
 // ------------------------------------------------------------------- //
 
-$lightest:  100 !default;
-$light:     300 !default;
-$normal:    400 !default;
-$semibold:  600 !default;
-$bold:      700 !default;
-$black:     900 !default;
+$lightest: 100;
+$light:    300;
+$normal:   400;
+$semibold: 600;
+$bold:     700;
+$black:    900;
+
+
+// ------------------------------------------------------------------- //
+//  Colors
+// ------------------------------------------------------------------- //
+
+//  Base colors
+$base-body-color:  #fff;
+$base-font-color:  #333;
+
+$base-link-color:  $brand-color;
+$hover-link-color: lighten($brand-color, 10%);
+
+$base-border-color: #ddd; // Also serves as <hr> color
+
+//  Brand colors
+$brand-color: #477DCA; // Blue
+
+
+// ------------------------------------------------------------------- //
+//  Grid Overrides
+// ------------------------------------------------------------------- //
+
+// $column: 90px;
+// $gutter: 30px;
+// $grid-columns: 12;
+// $max-width: em(1088);
+
 
 // ------------------------------------------------------------------- //
 //  Media Query Widths
