@@ -13,8 +13,8 @@ $brand-font-family: $helvetica;
 //  Sizes
 // ------------------------------------------------------------------- //
 
-$base-font-size:   1em; // ~14px
-$base-line-height: 1; // 1em / ~14px
+$base-font-size:   16px;
+$base-line-height: 24px;
 
 $base-border-radius: 3px;
 
@@ -54,14 +54,14 @@ $black:    900;
 //  Base colors
 $base-body-color:  #fff;
 $base-font-color:  #333;
-
-$base-link-color:  $brand-color;
-$hover-link-color: lighten($brand-color, 10%);
-
 $base-border-color: #ddd; // Also serves as <hr> color
 
 //  Brand colors
 $brand-color: #477DCA; // Blue
+
+//  Link Colors
+$base-link-color:  $brand-color;
+$hover-link-color: lighten($brand-color, 10%);
 
 
 // ------------------------------------------------------------------- //
