@@ -1,4 +1,9 @@
-// Basic positioning mixn
+// ------------------------------------------------------------------- //
+//  Basic Positioning (Type + T/L/B/R Values)
+//
+//  @include position(absolute, 10px 0 0 10px);
+// ------------------------------------------------------------------- //
+
 @mixin position($pos-type: relative, $pos-vals: 0 0 0 0) {
 
   // If no position type designated, default to "relative"
