@@ -5,13 +5,22 @@
 @import "project-settings";
 
 // ------------------------------------------------------------------- //
+//  Functions
+// ------------------------------------------------------------------- //
+
+@import "functions/remify";
+@import "functions/strip-units";
+@import "functions/timing";
+
+// ------------------------------------------------------------------- //
 //  Mixins & Extends
 // ------------------------------------------------------------------- //
 
+@import "mixins/border";
 @import "mixins/font-size";
 @import "mixins/headings";
-@import "mixins/sprite";
-@import "mixins/borders";
+@import "mixins/position";
+@import "mixins/size";
 @import "mixins/truncate";
 
 @import "extends/alignment";
@@ -27,9 +36,20 @@
 
 @import "base/normalize";
 @import "base/typography";
+@import "base/forms";
+
+// ------------------------------------------------------------------- //
+//  Addons
+// ------------------------------------------------------------------- //
+
+@import "addons/clearfix";
+@import "addons/font-family";
+@import "addons/hide-text";
+@import "addons/html5-input-types";
+@import "addons/prefixer";
 
 // ------------------------------------------------------------------- //
 //  Debug
 // ------------------------------------------------------------------- //
 
-@import "debug";
+//@import "debug";

@@ -1,10 +1,22 @@
 // ------------------------------------------------------------------- //
+//  Setup
+// ------------------------------------------------------------------- //
+
+$magic-number: $base-line-height;
+$magic-ratio:  $base-line-height / $base-font-size;
+
+%vertical-rhythm{
+  margin-bottom: $magic-number;
+  margin-bottom: $magic-ratio + rem;
+}
+
+// ------------------------------------------------------------------- //
 //  Base Typographic Rules
 // ------------------------------------------------------------------- //
 
-html{
+body{
   color: $base-font-color;
-  font: $base-font-size / $base-line-height $base-font-family;
+  font: #{$base-font-size} / #{$base-line-height} $base-font-family;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -20,8 +32,9 @@ html{
 // ------------------------------------------------------------------- //
 
 h1, h2, h3, h4, h5, h6{
+  @extend %vertical-rhythm;
   font-family: $brand-font-family;
-  line-height: $base-line-height * 1.25;
+  font-weight: normal;
 }
 
 h1,
@@ -105,22 +118,4 @@ a{
   &:focus{
     color: $hover-link-color;
   }
-}
-
-// ------------------------------------------------------------------- //
-//  Single-direction Margins
-// ------------------------------------------------------------------- //
-
-h1, h2, h3, h4, h5, h6,
-ul, ol, dl,
-p,
-pre, table, fieldset{
-  margin: 0 0 ($base-font-size / $base-line-height); // IE8 Fallback
-  margin: 0 0 1rem;
-}
-
-hr{
-  margin: ($base-font-size / $base-line-height) 0;
-  margin: 1rem 0;
-  @include border(0 0 1px 0, $base-border-color);
 }

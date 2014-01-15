@@ -92,6 +92,10 @@ abbr[title]{
   border-bottom: 1px dotted;
 }
 
+address{
+  @extend %vertical-rhythm;
+}
+
 strong{
   font-weight: bold;
 }
@@ -103,12 +107,17 @@ hr{
 
 code,
 pre{
+  @extend %vertical-rhythm;
   font-family: $monospace; // "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
   font-size: 1em;
 }
 
 pre{
   white-space: pre-wrap;
+}
+
+p{
+  @extend %vertical-rhythm;
 }
 
 small{
@@ -208,7 +217,7 @@ textarea{
 ul,
 ol,
 dl{
-  margin: 0;
+  @extend %vertical-rhythm;
   padding: 0;
 }
 
@@ -223,6 +232,12 @@ li > ol{
 // ------------------------------------------------------------------- //
 
 table{
+  @extend %vertical-rhythm;
   border-collapse: collapse;
   border-spacing: 0;
+
+  th,
+  td{
+    padding: $base-line-height / 2;
+  }
 }
