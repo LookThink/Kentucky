@@ -1,55 +1,60 @@
 // ------------------------------------------------------------------- //
-//  Kentucky Imports
+//  Kentucky Project Imports
+// ------------------------------------------------------------------- //
+// ------------------------------------------------------------------- //
+//  Helpers, Functions, Mixins, and Extends
+// ------------------------------------------------------------------- //
+
+// Called first as these are used in other helpers/files
+@import "helpers/html5-input-types";
+
+// Functions
+@import "helpers/remify";
+@import "helpers/strip-units";
+@import "helpers/timing";
+
+// Mixins
+@import "helpers/border";
+@import "helpers/font-size";
+@import "helpers/headings";
+@import "helpers/position";
+@import "helpers/prefixer";
+@import "helpers/size";
+@import "helpers/transitions";
+@import "helpers/truncate";
+
+// Extends
+@import "helpers/alignment";
+@import "helpers/breadcrumbs";
+@import "helpers/capslock";
+@import "helpers/go";
+@import "helpers/linear-gradient";
+@import "helpers/mute";
+@import "helpers/show-hide";
+
+// ------------------------------------------------------------------- //
+//  Project Settings
 // ------------------------------------------------------------------- //
 
 @import "project-settings";
-
-// ------------------------------------------------------------------- //
-//  Functions
-// ------------------------------------------------------------------- //
-
-@import "functions/remify";
-@import "functions/strip-units";
-@import "functions/timing";
-
-// ------------------------------------------------------------------- //
-//  Mixins & Extends
-// ------------------------------------------------------------------- //
-
-@import "mixins/border";
-@import "mixins/font-size";
-@import "mixins/headings";
-@import "mixins/position";
-@import "mixins/size";
-@import "mixins/truncate";
-
-@import "extends/alignment";
-@import "extends/breadcrumbs";
-@import "extends/capslock";
-@import "extends/go";
-@import "extends/mute";
-@import "extends/show-hide";
 
 // ------------------------------------------------------------------- //
 //  Base
 // ------------------------------------------------------------------- //
 
 @import "base/normalize";
-@import "base/typography";
 @import "base/forms";
+@import "base/typography";
 
 // ------------------------------------------------------------------- //
 //  Addons
 // ------------------------------------------------------------------- //
 
 @import "addons/clearfix";
-@import "addons/font-family";
 @import "addons/hide-text";
-@import "addons/html5-input-types";
-@import "addons/prefixer";
 
 // ------------------------------------------------------------------- //
-//  Debug
+//  Debug (If Required)
 // ------------------------------------------------------------------- //
 
-//@import "debug";
+// @import "debug";

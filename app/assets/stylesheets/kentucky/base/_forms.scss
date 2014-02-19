@@ -35,8 +35,6 @@ label{
 
 #{$all-text-inputs}
 textarea{
-  @include box-sizing(border-box);
-  @include transition(border-color);
   width: 100%;
   margin-bottom: $base-line-height / 2;
   padding: ($base-line-height / 3) ($base-line-height / 3);
@@ -45,6 +43,7 @@ textarea{
   border-radius: $form-border-radius;
   box-shadow: $form-box-shadow;
   font: $form-font-size / $base-line-height $form-font-family;
+  @include transition(border-color);
   resize: vertical;
 
   &:hover{
@@ -59,7 +58,7 @@ textarea{
 }
 
 input[type="search"]{
-  @include appearance(none);
+  appearance: none;
 }
 
 input[type="checkbox"],
@@ -70,7 +69,7 @@ input[type="radio"]{
 
 button,
 input[type="submit"]{
-  @include appearance(none);
+  appearance: none;
   vertical-align: middle;
   cursor: pointer;
   white-space: nowrap;
