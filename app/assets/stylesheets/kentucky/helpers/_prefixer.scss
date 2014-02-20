@@ -10,7 +10,7 @@ $prefix-ms:      true !default;
 $prefix-opera:   true !default;
 $prefix-spec:    true !default;
 
-@mixin prefixer ($property, $value, $prefixes){
+@mixin prefixer($propery, $value, $prefixes){
   @each $prefix in $prefixes{
     @if $prefix == webkit{
       -webkit-#{property}: $value;
@@ -31,12 +31,4 @@ $prefix-spec:    true !default;
       @warn "Unrecognized prefix: #{$prefix}";
     }
   }
-}
-
-@mixin disable-prefixes(){
-  $prefix-webkit:  false;
-  $prefix-mozilla: false;
-  $prefix-ms:      false;
-  $prefix-opera:   false;
-  $prefix-spec:    false;
 }

@@ -20,6 +20,18 @@ time, mark, audio, video{
 }
 
 // ------------------------------------------------------------------- //
+//  Border-Box
+// ------------------------------------------------------------------- //
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+// ------------------------------------------------------------------- //
 //  Display Definitions
 // ------------------------------------------------------------------- //
 
@@ -101,14 +113,13 @@ strong{
 }
 
 hr{
-  @include prefixer(box-sizing, content-box, moz spec);
   height: 0;
 }
 
 code,
 pre{
   @extend %vertical-rhythm;
-  font-family: $monospace; // "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
+  font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
   font-size: 1em;
 }
 
@@ -174,7 +185,7 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"]{
-  @include prefixer(appearance, button, webkit);
+  appearance: button;
   cursor: pointer;
 }
 
@@ -191,7 +202,6 @@ input[type="radio"]{
 
 input[type="search"] {
   -webkit-appearance: textfield;
-  @include prefixer(appearance, content-box, moz webkit spec);
 }
 
 input[type="search"]::-webkit-search-cancel-button,
