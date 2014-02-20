@@ -11,6 +11,12 @@
 
 Updated project-settings.scss to include more settings, removed !default tags
 Added forms.scss (in place of Formalize, in addition to the normalize)
+Added prefixer.scss (by request)
+Added timing-functions.scss
+Added remify function
+Reworked font-size mixin to use remify
+Major alterations to typography to establish smoother vertical rhythm from the start
+
 
 
 ***
