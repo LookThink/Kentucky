@@ -9,6 +9,7 @@
 @import "helpers/html5-input-types";
 
 // Functions
+@import "functions/gradient-functions";
 @import "functions/remify";
 @import "functions/tint-shade";
 @import "functions/strip-units";
@@ -17,8 +18,10 @@
 @import "helpers/border";
 @import "helpers/font-size";
 @import "helpers/headings";
+@import "helpers/linear-gradient";
 @import "helpers/position";
 @import "helpers/prefixer";
+@import "helpers/radial-gradient";
 @import "helpers/size";
 @import "helpers/transitions";
 @import "helpers/truncate";
