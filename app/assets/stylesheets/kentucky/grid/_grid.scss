@@ -1,0 +1,77 @@
+// ------------------------------------------------------------------- //
+//  Grid Settings
+// ------------------------------------------------------------------- //
+
+$max-width: 960px !default;
+$grid-columns: 12 !default;
+$column: $max-width / $grid-columns !default;
+
+// ------------------------------------------------------------------- //
+//  Set Container
+// ------------------------------------------------------------------- //
+
+@mixin outer-container {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+}
+
+// ------------------------------------------------------------------- //
+//  Set Rows
+// ------------------------------------------------------------------- //
+
+@mixin row {
+  display: block;
+  width: 100%;
+  @include clearfix;
+}
+
+// ------------------------------------------------------------------- //
+//  Set Widths
+// ------------------------------------------------------------------- //
+
+@mixin span-columns($col-size, $flow: left) {
+  $col-width: $col-size / $grid-columns;
+
+  float: left;
+  width: $col-width;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+
+  @if $flow == "right"{
+    float: right;
+  }
+}
+
+// ------------------------------------------------------------------- //
+//  Shift
+// ------------------------------------------------------------------- //
+
+@mixin shift($col-shift) {
+  $shift: $col-shift / 12;
+
+  margin-left: $shift;
+  padding: 0;
+}
+
+// ------------------------------------------------------------------- //
+//  Gap
+// ------------------------------------------------------------------- //
+
+@mixin gap($direction) {
+
+  @if $direction == "left" {
+    margin-left: 1rem;
+    padding-left: 0;
+  }
+
+  @else if $direction == "right" {
+    margin-right: 1rem;
+    padding-left: 0;
+  }
+
+  @else {
+    margin: 0 1rem;
+    padding: 0;
+  }
+}

@@ -2,12 +2,12 @@
 //  Setup
 // ------------------------------------------------------------------- //
 
-$magic-number: $base-line-height;
-$magic-ratio:  $base-line-height / $base-font-size;
+$base-space: $base-line-height;
+$base-ratio: $base-line-height / $base-font-size;
 
 %vertical-rhythm{
-  margin-bottom: $magic-number;
-  margin-bottom: $magic-ratio + rem;
+  margin-bottom: $base-space;
+  margin-bottom: $base-ratio + rem;
 }
 
 // ------------------------------------------------------------------- //
@@ -22,12 +22,12 @@ body{
 
 // ------------------------------------------------------------------- //
 //  Headings
-// 
+//
 //  The goal here is to define headings and establish practical
 //  font-sizing from the get go.
 //
 //  Also includes a "double-stranded hierarchy" allowing you to use HTML
-//  heading elements or the alternate extend included (based on the 
+//  heading elements or the alternate extend included (based on the
 //  military alphabet).
 // ------------------------------------------------------------------- //
 
@@ -74,6 +74,8 @@ h6,
 // ------------------------------------------------------------------- //
 
 %hgroup{
+  @extend %vertical-rhythm;
+
   @include headings(1,6){
     margin-bottom: 0;
   }
@@ -111,7 +113,7 @@ h6,
 a{
   color: $base-link-color;
   text-decoration: none;
-  @include transition(color .1s linear);
+  @include transition(color .3s linear);
 
   &:hover,
   &:active,

@@ -9,9 +9,9 @@
 @import "helpers/html5-input-types";
 
 // Functions
-@import "helpers/remify";
-@import "helpers/strip-units";
-@import "helpers/timing";
+@import "functions/remify";
+@import "functions/tint-shade";
+@import "functions/strip-units";
 
 // Mixins
 @import "helpers/border";
@@ -28,7 +28,6 @@
 @import "helpers/breadcrumbs";
 @import "helpers/capslock";
 @import "helpers/go";
-@import "helpers/linear-gradient";
 @import "helpers/mute";
 @import "helpers/show-hide";
 
@@ -50,8 +49,8 @@
 //  Addons
 // ------------------------------------------------------------------- //
 
-@import "addons/clearfix";
-@import "addons/hide-text";
+@import "helpers/clearfix";
+@import "helpers/hide-text";
 
 // ------------------------------------------------------------------- //
 //  Debug (If Required)
