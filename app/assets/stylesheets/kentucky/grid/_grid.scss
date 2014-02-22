@@ -33,13 +33,18 @@ $column: $max-width / $grid-columns !default;
 @mixin span-columns($col-size, $flow: left) {
   $col-width: $col-size / $grid-columns;
 
-  float: left;
-  width: $col-width;
-  margin-bottom: 1rem;
-  padding: 0 1rem;
+  @if $col-size > $grid-columns {
+    @warn "Column size can not be greater than max-columns (12).";
 
-  @if $flow == "right"{
-    float: right;
+  } @else {
+    float: left;
+    width: $col-width;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+
+    @if $flow == "right"{
+      float: right;
+    }
   }
 }
 
@@ -50,8 +55,13 @@ $column: $max-width / $grid-columns !default;
 @mixin shift($col-shift) {
   $shift: $col-shift / 12;
 
-  margin-left: $shift;
-  padding: 0;
+  @if $col-shift > 12 {
+    @warn "Can not shift greater than max-columns (12).";
+
+  } @else {
+    margin-left: $shift;
+    padding: 0;
+  }
 }
 
 // ------------------------------------------------------------------- //
@@ -70,8 +80,35 @@ $column: $max-width / $grid-columns !default;
     padding-left: 0;
   }
 
-  @else {
+  @else if $direction == "both" {
     margin: 0 1rem;
     padding: 0;
+  }
+
+  @else {
+    @warn "Gap requires 'left', 'right', or 'both'. Please choose a valid direction.";
+  }
+}
+
+// ------------------------------------------------------------------- //
+//  Hug
+// ------------------------------------------------------------------- //
+
+@mixin hug($direction){
+
+  @if $direction == "left" {
+    padding-left: 0;
+  }
+
+  @else if $direction == "right" {
+    padding-right: 0;
+  }
+
+  @else if $direction == "both" {
+    padding: 0;
+  }
+
+  @else {
+    @warn "Hug requires 'left', 'right', or 'both'. Please choose a valid direction.";
   }
 }
