@@ -7,24 +7,17 @@
 
 ## CHANGELOG
 
-**0.6.0**
+**0.8.0**
 
-Updated project-settings.scss to include more settings, removed !default tags
-Added forms.scss (in place of Formalize, in addition to the normalize)
-Added prefixer.scss (by request)
-Added timing-functions.scss
-Added remify function
-Reworked font-size mixin to use remify
-Major alterations to typography to establish smoother vertical rhythm from the start
-
-
+Major restructuring to become independent from Bourbon/Neat
+Created custom grid system
+Set up remify function
+Adjustments to single-direction margins and typography
 
 ***
 
 ## What is Kentucky?
-Kentucky is LookThink's contribution to further enhance an already stellar SCSS library put together by the people at [ThoughtBot](http://www.thoughtbot.com/). Their mixin library, [Bourbon](http://bourbon.io/), and grid system, [Neat](http://neat.bourbon.io/), now serve as the base to all LookThink projects.
-
-Kentucky also includes a variety of mixins from various projects that we find useful and weren't included in Bourbon. Additionally, it includes a handy-dandy file (_defaults.scss) for handling all of your variables, keeping them centralized and easy to maintain.
+Kentucky is an SCSS framework that works entirely in the background, removing the need to fill your HTML with multiple, repetitive classes. It's bundled with a mobile-ready grid system and a plethora of CSS3 mixins and extends.
 
 ***
 
@@ -58,6 +51,4 @@ Now, whenever a change is made to an SCSS file, your code will be compiled and e
 Fear not! Bourbon and Neat are fully documented and easy to follow. Need more general help? The SCSS documentation isn't grand, but it's better than not having any. See the list below for help with coding out your projects!
 
 + [Official SCSS Reference](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#)
-+ [Bourbon Documentation](http://bourbon.io/docs/)
-+ [Neat Documentation](http://neat.bourbon.io/docs/)
-+ *Updated code manual coming soon!*
++ *Updated documentation coming soon!*
