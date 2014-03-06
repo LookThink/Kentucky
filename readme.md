@@ -7,6 +7,12 @@
 
 ## CHANGELOG
 
+**0.9.0**
+
+Additional functionality added to the grid: center span-col and set row as "block"
+Removed grid "gap" functionality; replaced with shift additions
+Added !global variable to all-inputs target (may break libsass, sorry)
+
 **0.8.0**
 
 Major restructuring to become independent from Bourbon/Neat
