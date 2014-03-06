@@ -20,10 +20,31 @@ $column: $max-width / $grid-columns !default;
 //  Set Rows
 // ------------------------------------------------------------------- //
 
-@mixin row {
+@mixin row($block: 0) {
   display: block;
   width: 100%;
   @include clearfix;
+
+  @if $block >= 2 {
+    $row-width: $block;
+    margin: 0 -1rem;
+
+    > *:nth-child(1){
+      padding-left: 0;
+    }
+
+    > *:nth-child(#{$row-width}){
+      padding-right: 0;
+    }
+  }
+
+  @else if $block < 2 {
+    @warn "For single column rows, use 'hug' instead.";
+  }
+
+  @else if $block > 12 {
+    @warn "Block row can't extend past max columns.";
+  }
 }
 
 // ------------------------------------------------------------------- //
@@ -39,11 +60,15 @@ $column: $max-width / $grid-columns !default;
   } @else {
     float: left;
     width: $col-width;
-    margin-bottom: 1rem;
     padding: 0 1rem;
 
     @if $flow == "right"{
       float: right;
+    } 
+
+    @else if $flow == "center" {
+      float: none;
+      margin: 0 auto;
     }
   }
 }
@@ -60,33 +85,6 @@ $column: $max-width / $grid-columns !default;
 
   } @else {
     margin-left: $shift;
-    padding: 0;
-  }
-}
-
-// ------------------------------------------------------------------- //
-//  Gap
-// ------------------------------------------------------------------- //
-
-@mixin gap($direction) {
-
-  @if $direction == "left" {
-    margin-left: 1rem;
-    padding-left: 0;
-  }
-
-  @else if $direction == "right" {
-    margin-right: 1rem;
-    padding-left: 0;
-  }
-
-  @else if $direction == "both" {
-    margin: 0 1rem;
-    padding: 0;
-  }
-
-  @else {
-    @warn "Gap requires 'left', 'right', or 'both'. Please choose a valid direction.";
   }
 }
 
