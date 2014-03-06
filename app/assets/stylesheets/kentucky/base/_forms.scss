@@ -44,7 +44,6 @@ textarea{
   box-shadow: $form-box-shadow;
   font: $form-font-size / $base-line-height $form-font-family;
   @include transition(border-color);
-  resize: vertical;
 
   &:hover{
     border-color: $form-border-color-hover;
@@ -55,6 +54,10 @@ textarea{
     box-shadow: $form-box-shadow-focus;
     outline: none;
   }
+}
+
+textarea{
+  resize: vertical;
 }
 
 input[type="search"]{
