@@ -4,6 +4,7 @@
 
 $max-width: 960px !default;
 $grid-columns: 12 !default;
+$grid-gutters: 15px !default;
 $column: $max-width / $grid-columns !default;
 
 // ------------------------------------------------------------------- //
@@ -20,30 +21,18 @@ $column: $max-width / $grid-columns !default;
 //  Set Rows
 // ------------------------------------------------------------------- //
 
-@mixin row($block: 0) {
+@mixin row{
   display: block;
   width: 100%;
+  margin: 0 -#{$grid-gutters};
   @include clearfix;
 
-  @if $block >= 2 {
-    $row-width: $block;
-    margin: 0 -1rem;
-
-    > *:nth-child(1){
-      padding-left: 0;
-    }
-
-    > *:nth-child(#{$row-width}){
-      padding-right: 0;
-    }
+  & > *:first-child{
+    padding-left: 0;
   }
 
-  @else if $block < 2 {
-    @warn "For single column rows, use 'hug' instead.";
-  }
-
-  @else if $block > 12 {
-    @warn "Block row can't extend past max columns.";
+  & > *:last-child{
+    padding-right: 0;
   }
 }
 
@@ -52,19 +41,21 @@ $column: $max-width / $grid-columns !default;
 // ------------------------------------------------------------------- //
 
 @mixin span-columns($col-size, $flow: left) {
+
   $col-width: percentage($col-size / $grid-columns);
 
   @if $col-size > $grid-columns {
-    @warn "Column size can not be greater than max-columns (12).";
+    @warn "Column size should not be greater than max-columns (#{$grid-columns}).";
+  }
 
-  } @else {
+  @else {
     float: left;
     width: $col-width;
-    padding: 0 1rem;
+    padding: 0 $grid-gutters;
 
     @if $flow == "right"{
       float: right;
-    } 
+    }
 
     @else if $flow == "center" {
       float: none;
@@ -81,7 +72,7 @@ $column: $max-width / $grid-columns !default;
   $shift: percentage($col-shift / 12);
 
   @if $col-shift > 12 {
-    @warn "Can not shift greater than max-columns (12).";
+    @warn "Should not shift greater than max-columns (12).";
 
   } @else {
     margin-left: $shift;
