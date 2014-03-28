@@ -2,7 +2,7 @@
 //  Muted
 // ------------------------------------------------------------------- //
 
-%muted{
-  opacity: .5;
-  filter: alpha(opacity=50);
+@mixin muted($mute-amt){
+  opacity: $mute-amt;
+  filter: alpha(opacity=($mute-amt * 100));
 }
