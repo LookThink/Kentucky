@@ -4,7 +4,7 @@
 
 $max-width: 960px !default;
 $grid-columns: 12 !default;
-$grid-gutters: 15px !default;
+$grid-gutter: 15px !default;
 $column: $max-width / $grid-columns !default;
 
 // ------------------------------------------------------------------- //
@@ -21,17 +21,28 @@ $column: $max-width / $grid-columns !default;
 //  Set Rows
 // ------------------------------------------------------------------- //
 
-@mixin row{
+@mixin row($items){
   display: block;
   width: 100%;
-  margin: 0 -#{$grid-gutters};
   @include clearfix;
 
-  & > *:first-child{
-    padding-left: 0;
+  & > *{
+    padding: 0 ($grid-gutter * 1.5);
   }
 
-  & > *:last-child{
+  & > *:nth-child(#{$items}n+1){
+    padding-left: 0;
+    padding-right: ($grid-gutter*2);
+  }
+  & > *:nth-child(#{$items}n+2){
+    padding-left: $grid-gutter;
+  }
+
+  & > *:nth-child(#{$items}n-1){
+    padding-right: $grid-gutter;
+  }
+  & > *:nth-child(#{$items}n){
+    padding-left: ($grid-gutter*2);
     padding-right: 0;
   }
 }
@@ -51,7 +62,7 @@ $column: $max-width / $grid-columns !default;
   @else {
     float: left;
     width: $col-width;
-    padding: 0 $grid-gutters;
+    padding: 0 $grid-gutter;
 
     @if $flow == "right"{
       float: right;
@@ -73,8 +84,9 @@ $column: $max-width / $grid-columns !default;
 
   @if $col-shift > 12 {
     @warn "Should not shift greater than max-columns (12).";
+  }
 
-  } @else {
+  @else {
     margin-left: $shift;
   }
 }
