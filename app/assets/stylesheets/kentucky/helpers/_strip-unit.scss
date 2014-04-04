@@ -1,8 +1,7 @@
 // ------------------------------------------------------------------- //
-//  Muted
+//  Strip a value of it's unit
 // ------------------------------------------------------------------- //
 
-@mixin muted($mute-amt){
-  opacity: $mute-amt;
-  filter: alpha(opacity=($mute-amt * 100));
+@function strip-unit($value){
+  @return $value / ($value * 0 + 1);
 }
