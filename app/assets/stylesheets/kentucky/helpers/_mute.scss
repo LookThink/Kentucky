@@ -3,6 +3,13 @@
 // ------------------------------------------------------------------- //
 
 @mixin muted($mute-amt){
-  opacity: $mute-amt;
-  filter: alpha(opacity=($mute-amt * 100));
+
+  @if $mute-amt > 1{
+    @warn "Mute amount should be in decimal format (.1, .2, .etc)";
+  }
+
+  @else {
+    opacity: $mute-amt;
+    filter: alpha(opacity=($mute-amt * 100));
+  }
 }
