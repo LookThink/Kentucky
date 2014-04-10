@@ -13,7 +13,6 @@ module Kentucky
         puts "Kentucky files already installed, doing nothing."
       else
         create_site_structure if !options[:force]
-        install_deps
         install_files
         puts "Kentucky files installed to #{install_path_kentucky}/"
       end
@@ -79,13 +78,6 @@ module Kentucky
 
     def install_files
       copy_in_scss_files
-    end
-
-    def install_deps
-      Dir.chdir install_path_scss do
-        `bourbon install`
-        `neat install`
-      end
     end
 
     def copy_in_scss_files

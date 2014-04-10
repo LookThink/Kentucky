@@ -23,8 +23,6 @@ Kentucky is LookThink's contribution to the CSS framework world with the unique 
   s.require_paths = ["lib"]
 
   s.add_dependency('sass', '>= 3.2.0')
-  s.add_dependency('bourbon', '~> 3.1')
-  s.add_dependency('neat', '~> 1.2')
   s.add_dependency('thor')
 
   s.add_development_dependency('aruba', '= 0.4.11')
