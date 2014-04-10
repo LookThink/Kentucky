@@ -81,13 +81,6 @@ module Kentucky
       copy_in_scss_files
     end
 
-    def install_deps
-      Dir.chdir install_path_scss do
-        `bourbon install`
-        `neat install`
-      end
-    end
-
     def copy_in_scss_files
       FileUtils.cp_r(kentucky_stylesheets, install_path_kentucky)
       FileUtils.cp(master_stylesheet, install_path_scss)
