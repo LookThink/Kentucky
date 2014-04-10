@@ -7,6 +7,10 @@
 
 ## CHANGELOG
 
+**1.0.3**
+
+Fix dependency issue in gem files
+
 **1.0.2**
 
 Remove Bourbon/Neat dependencies
