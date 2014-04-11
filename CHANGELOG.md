@@ -1,3 +1,10 @@
+# 1.0.4
+
+### Bug fixes
+
+* Resolve deprecation warning in HTML5-Input-Types helper
+
+---
 # 1.0.2 / 1.0.3
 
 ### Bug fixes
