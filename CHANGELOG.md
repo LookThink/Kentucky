@@ -1,3 +1,10 @@
+# 1.0.5
+
+### Bug fixes
+
+* Resolve spelling error in antialias helper
+
+---
 # 1.0.4
 
 ### Bug fixes
