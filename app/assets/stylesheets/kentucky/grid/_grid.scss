@@ -12,38 +12,21 @@ $column: $max-width / $grid-columns !default;
 // ------------------------------------------------------------------- //
 
 @mixin outer-container {
+  @include clearfix;
   max-width: $max-width;
   width: 100%;
   margin: 0 auto;
 }
 
 // ------------------------------------------------------------------- //
-//  Set Rows
+//  Set Full Width Row
 // ------------------------------------------------------------------- //
 
-@mixin row($items){
-  display: block;
+@mixin row{
   @include clearfix;
-
-  & > *{
-    padding: 0 $grid-gutter;
-  }
-
-  & > *:nth-child(#{$items}n+1){
-    padding-left: 0;
-    padding-right: ($grid-gutter * 2);
-  }
-  & > *:nth-child(#{$items}n+2){
-    padding-left: 0;
-  }
-
-  & > *:nth-child(#{$items}n-1){
-    padding-right: 0;
-  }
-  & > *:nth-child(#{$items}n){
-    padding-left: ($grid-gutter * 2);
-    padding-right: 0;
-  }
+  position: relative;
+  display: block;
+  margin: 0 -#{$grid-gutter};
 }
 
 // ------------------------------------------------------------------- //

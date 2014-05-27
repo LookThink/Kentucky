@@ -6,3 +6,5 @@ demo/
 tmp/
 tags
 app/assets/stylesheets/kentucky/config.codekit
+
+/app/assets/config.codekit
