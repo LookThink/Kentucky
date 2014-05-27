@@ -1,5 +1,13 @@
 # 1.0.5
 
+### Feature
+
+* Added row mixin that pulls content left/right to allow content to touch container edges
+* Added clearfix to outer-container mixin
+
+---
+# 1.0.5
+
 ### Bug fixes
 
 * Resolve spelling error in antialias helper
