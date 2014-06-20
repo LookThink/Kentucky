@@ -1,3 +1,11 @@
+---
+# 1.2.1
+
+### Bug Fix
+
+* Fixed spelling error in forms file
+
+---
 # 1.2.0
 
 ### Revision
