@@ -1,0 +1,122 @@
+// ------------------------------------------------------------------- //
+//  Setup
+// ------------------------------------------------------------------- //
+
+$base-space: $base-line-height;
+$base-ratio: $base-line-height / $base-font-size;
+
+%vertical-rhythm{
+  margin-bottom: $base-space;
+  margin-bottom: $base-ratio + rem;
+}
+
+// ------------------------------------------------------------------- //
+//  Base Typographic Rules
+// ------------------------------------------------------------------- //
+
+body{
+  color: $base-font-color;
+  font: #{$base-font-size} / #{$base-line-height} $base-font-family;
+  -webkit-font-smoothing: antialiased;
+}
+
+// ------------------------------------------------------------------- //
+//  Headings
+//
+//  The goal here is to define headings and establish practical
+//  font-sizing from the get go.
+//
+//  Also includes a "double-stranded hierarchy" allowing you to use HTML
+//  heading elements or the alternate extend included (based on the
+//  military alphabet).
+// ------------------------------------------------------------------- //
+
+h1, h2, h3, h4, h5, h6{
+  @extend %vertical-rhythm;
+  font-family: $brand-font-family;
+  font-weight: normal;
+}
+
+h1,
+%alpha{
+  @include font-size($h1-size);
+}
+
+h2,
+%bravo{
+  @include font-size($h2-size);
+}
+
+h3,
+%charlie{
+  @include font-size($h3-size);
+}
+
+h4,
+%delta{
+  @include font-size($h4-size);
+}
+
+h5,
+%echo{
+  @include font-size($h5-size);
+}
+
+h6,
+%foxtrot{
+  @include font-size($h6-size);
+}
+
+// ------------------------------------------------------------------- //
+//  Heading Groups
+//
+//  Target a group of headings stacked together (such as title/subtitle)
+// ------------------------------------------------------------------- //
+
+%hgroup{
+  @extend %vertical-rhythm;
+
+  @include headings(1,6){
+    margin-bottom: 0;
+  }
+}
+
+// ------------------------------------------------------------------- //
+//  Extra Large / Small Extends
+// ------------------------------------------------------------------- //
+
+%micro{
+  @include font-size($micro-size);
+}
+
+%milli{
+  @include font-size($milli-size);
+}
+
+%kilo{
+  @include font-size($kilo-size);
+}
+
+%mega{
+  @include font-size($mega-size);
+}
+
+%giga{
+  @include font-size($giga-size);
+}
+
+
+// ------------------------------------------------------------------- //
+//  Links
+// ------------------------------------------------------------------- //
+
+a{
+  color: $base-link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus{
+    color: $base-link-color--hover;
+  }
+}

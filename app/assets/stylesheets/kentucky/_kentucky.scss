@@ -11,7 +11,6 @@
 // Functions
 @import "functions/gradient-functions";
 @import "functions/remify";
-@import "functions/tint-shade";
 @import "functions/strip-units";
 
 // Mixins
@@ -27,12 +26,9 @@
 @import "helpers/truncate";
 
 // Extends
-@import "helpers/alignment";
 @import "helpers/breadcrumbs";
-@import "helpers/capslock";
 @import "helpers/go";
 @import "helpers/mute";
-@import "helpers/show-hide";
 
 // Addons
 @import "helpers/anti-aliased";
@@ -55,12 +51,6 @@
 //  Base
 // ------------------------------------------------------------------- //
 
-@import "base/normalize";
-@import "base/forms";
-@import "base/typography";
-
-// ------------------------------------------------------------------- //
-//  Debug (If Required)
-// ------------------------------------------------------------------- //
-
-// @import "debug";
+@import "normalize";
+@import "forms";
+@import "typography";
