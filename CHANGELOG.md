@@ -1,4 +1,16 @@
-# 1.0.5
+# 1.2.0
+
+### Revision
+
+* Moved forms, typography, and normalize outside of base folder to better signify that users can and should use these to edit base styles, instead of creating files that do essentially the same things
+* Changed link hover variable to be more BEM friendly
+
+### Removed
+
+* Removed tint-shade, alignment, capslock and show-hide as they weren't being used and/or are built into SASS in some way
+
+---
+# 1.1.0
 
 ### Feature
 
