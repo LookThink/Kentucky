@@ -61,7 +61,7 @@ $brand-color: #477DCA; // Blue
 
 //  Link Colors
 $base-link-color:  $brand-color;
-$hover-link-color: lighten($brand-color, 10%);
+$base-link-color--hover: lighten($brand-color, 10%);
 
 
 // ------------------------------------------------------------------- //
