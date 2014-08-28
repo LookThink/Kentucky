@@ -42,17 +42,24 @@ $column: $max-width / $grid-columns !default;
   }
 
   @else {
-    float: left;
-    width: $col-width;
-    padding: 0 $grid-gutter;
+
+    @if $flow == left {
+      float: left;
+      width: $col-width;
+      padding: 0 $grid-gutter;
+    }
 
     @if $flow == "right"{
       float: right;
+      width: $col-width;
+      padding: 0 $grid-gutter;
     }
 
     @else if $flow == "center" {
       float: none;
+      width: $col-width;
       margin: 0 auto;
+      padding: 0 $grid-gutter;
     }
   }
 }
