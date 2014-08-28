@@ -34,7 +34,7 @@
     @if $height == auto{
       height: $height;
     }
-    @if unitless($height){
+    @else if unitless($height){
       height: $height + px;
     }
     @else if not(unitless($height)){
