@@ -4,11 +4,14 @@
   // If only one value is present
   @if length($size) == 1{
 
-    @if unitless($size){
+    @if $size == auto{
+      width: auto;
+      height: auto;
+    }
+    @else if unitless($size){
       width: $size + px;
       height: $size + px;
     }
-
     @else if not(unitless($size)){
       width: $size;
       height: $size;
