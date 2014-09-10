@@ -29,7 +29,7 @@ textarea{
   border-radius: $form-border-radius;
   box-shadow: $form-box-shadow;
   font: $form-font-size / $base-line-height $form-font-family;
-  @include transition(border-color);
+  transition: border-color, .3s;
 
   &:hover{
     border-color: $form-border-color-hover;
