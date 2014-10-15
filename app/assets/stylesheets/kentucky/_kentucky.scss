@@ -10,12 +10,11 @@
 
 // Functions
 @import "functions/gradient-functions";
-@import "functions/remify";
-@import "functions/strip-units";
+@import "functions/strip-unit";
+@import "functions/tint-shade";
 
 // Mixins
 @import "helpers/border";
-@import "helpers/font-size";
 @import "helpers/headings";
 @import "helpers/linear-gradient";
 @import "helpers/position";
@@ -23,13 +22,7 @@
 @import "helpers/size";
 @import "helpers/truncate";
 
-// Extends
-@import "helpers/breadcrumbs";
-@import "helpers/go";
-@import "helpers/mute";
-
 // Addons
-@import "helpers/anti-aliased";
 @import "helpers/clearfix";
 @import "helpers/hide-text";
 

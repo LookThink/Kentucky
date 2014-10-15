@@ -1,11 +1,7 @@
 // ------------------------------------------------------------------- //
-//  "Go"
-//
-//  Add right-facing arrow, indicating movement through site
+//  Strip a value of it's unit
 // ------------------------------------------------------------------- //
 
-%go{
-  &:after{
-    content: "\00A0" "\OOBB";
-  }
+@function strip-unit($value){
+  @return $value / ($value * 0 + 1);
 }
