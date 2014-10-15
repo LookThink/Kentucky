@@ -2,16 +2,16 @@
 //  Form Normaliztion; akin to Formalize
 // ------------------------------------------------------------------- //
 
-fieldset{
-  margin: 0 0 ($base-line-height / 2) 0;
-  padding: $base-line-height;
+fieldset {
+  margin: 0 0 $base-space 0;
+  padding: $base-space;
   background: lighten($base-border-color, 10%);
   border: 1px solid $base-border-color;
 }
 
-label{
+label {
   display: block;
-  margin-bottom: $base-line-height / 4;
+  margin-bottom: $base-space / 2;
   font-weight: bold;
 
   &.required:after{
@@ -20,16 +20,16 @@ label{
 }
 
 #{$all-text-inputs},
-textarea{
+textarea {
   width: 100%;
-  margin-bottom: $base-line-height / 2;
-  padding: ($base-line-height / 3) ($base-line-height / 3);
+  margin-bottom: $base-space;
+  padding: ($base-space / 2) ($base-space / 2);
   background: #fff;
   border: 1px solid $form-border-color;
   border-radius: $form-border-radius;
   box-shadow: $form-box-shadow;
-  font: $form-font-size / $base-line-height $form-font-family;
-  transition: border-color, .3s;
+  font: #{$form-font-size} / #{$base-line-height} $form-font-family;
+  transition: all .3s;
 
   &:hover{
     border-color: $form-border-color-hover;
@@ -42,22 +42,22 @@ textarea{
   }
 }
 
-textarea{
+textarea {
   resize: vertical;
 }
 
-input[type="search"]{
+input[type="search"] {
   appearance: none;
 }
 
 input[type="checkbox"],
-input[type="radio"]{
+input[type="radio"] {
   display: inline;
-  margin-right: $base-line-height / 4;
+  margin-right: $base-line-height / 2;
 }
 
 button,
-input[type="submit"]{
+input[type="submit"] {
   appearance: none;
   vertical-align: middle;
   cursor: pointer;

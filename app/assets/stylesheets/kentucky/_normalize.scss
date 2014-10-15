@@ -105,7 +105,7 @@ abbr[title]{
 }
 
 address{
-  @extend %vertical-rhythm;
+  margin-bottom: $base-space;
 }
 
 strong{
@@ -128,7 +128,7 @@ pre{
 }
 
 p{
-  @extend %vertical-rhythm;
+  margin-bottom: $base-space;
 }
 
 small{
@@ -227,7 +227,7 @@ textarea{
 ul,
 ol,
 dl{
-  @extend %vertical-rhythm;
+  margin-bottom: $base-space;
   padding: 0;
 }
 
@@ -242,7 +242,7 @@ li > ol{
 // ------------------------------------------------------------------- //
 
 table{
-  @extend %vertical-rhythm;
+  margin-bottom: $base-space;
   border-collapse: collapse;
   border-spacing: 0;
 
