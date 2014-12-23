@@ -1,30 +1,30 @@
 // ------------------------------------------------------------------- //
 //  Base Typographic Rules
 // ------------------------------------------------------------------- //
+//  If text is white/light againts a dark background, include an
+//  override for [1] : -webkit-font-smoothing: antialiased;
+//
+//  See test page for examples of both:
+//  http://files.christophzillgens.com/webkit-font-smoothing.html
 
-body{
+html {
   color: $base-font-color;
   font: #{$base-font-size} / #{$base-line-height} $base-font-family;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased; // [1]
 }
+
+
 
 
 
 // ------------------------------------------------------------------- //
 //  Headings
-//
-//  The goal here is to define headings and establish practical
-//  font-sizing from the get go.
-//
-//  Also includes a "double-stranded hierarchy" allowing you to use HTML
-//  heading elements or the alternate extend included (based on the
-//  military alphabet).
 // ------------------------------------------------------------------- //
 
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6 {
   margin-bottom: $base-space;
   font-family: $brand-font-family;
-  font-weight: normal;
+  font-weight: $normal;
 }
 
 h1,
@@ -60,18 +60,17 @@ h6,
 
 
 // ------------------------------------------------------------------- //
-//  Heading Groups
-//
-//  Target a group of headings stacked together (such as title/subtitle)
-// ------------------------------------------------------------------- //
+//  Heading Group
 
-%hgroup{
-  @extend %vertical-rhythm;
+%hgroup {
+  margin-bottom: $base-space;
 
-  @include headings(1,6){
-    margin-bottom: 0;
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: ($base-space / 2);
   }
 }
+
+
 
 
 
@@ -79,25 +78,26 @@ h6,
 //  Extra Large / Small Extends
 // ------------------------------------------------------------------- //
 
-%micro{
-  font-size: $micro-size;
-}
-
-%milli{
-  font-size: $milli-size;
-}
-
-%kilo{
-  font-size: $kilo-size;
+%giga{
+  font-size: $giga-size;
 }
 
 %mega{
   font-size: $mega-size;
 }
 
-%giga{
-  font-size: $giga-size;
+%kilo{
+  font-size: $kilo-size;
 }
+
+%milli{
+  font-size: $milli-size;
+}
+
+%micro{
+  font-size: $micro-size;
+}
+
 
 
 
@@ -106,13 +106,13 @@ h6,
 //  Links
 // ------------------------------------------------------------------- //
 
-a{
+a {
   color: $base-link-color;
   text-decoration: none;
 
   &:hover,
   &:active,
-  &:focus{
-    color: $base-link-color--hover;
+  &:focus {
+    color: tint($base-link-color, 15%);
   }
 }

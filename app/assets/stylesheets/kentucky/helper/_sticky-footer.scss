@@ -1,0 +1,16 @@
+// ------------------------------------------------------------------- //
+//  Sticky Footer
+// ------------------------------------------------------------------- //
+
+// Apply this to the body tag if sticky footer is required
+@mixin site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+// Apply this to the main tag
+// (Typically sandwiched between header/footer)
+@mixin site-content {
+  flex: 1;
+}
