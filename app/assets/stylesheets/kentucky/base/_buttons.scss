@@ -1,0 +1,40 @@
+// ------------------------------------------------------------------- //
+//  Button Reset
+//  
+//  General styles to better standardize / simplify default <button>
+//  elements.
+// ------------------------------------------------------------------- //
+
+#{$all-button-inputs} {
+  display: inline-block;
+  padding: ($base-spacing / 2) $base-spacing;
+  background-color: $base-button-color;
+  border: none;
+  border-radius: $base-border-radius;
+  color: white;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+
+  &:hover,
+  &:focus {
+    background-color: $hover-button-color;
+    color: white;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}

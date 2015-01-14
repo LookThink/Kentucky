@@ -1,9 +1,13 @@
 // ------------------------------------------------------------------- //
-//  Kentucky Imports
+//  Kentucky Imports - Base
+//  
+//  These are files related to project-settings (variables) and a
+//  custom set of normalization styles for more consistant HTML
+//  element display as a starting point.
 // ------------------------------------------------------------------- //
 
-@import "project-settings";
-@import "normalize";
+@import "base/project-settings";
+@import "base/buttons";
 @import "typography";
 
 
