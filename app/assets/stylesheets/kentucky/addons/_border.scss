@@ -27,6 +27,7 @@
     }
   }
 
-  border: $border-style $border-color;
+  border-style: $border-style;
+  border-color: $border-color;
   border-width: $new-width;
 }
