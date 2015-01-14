@@ -8,18 +8,6 @@
 
 @import "base/project-settings";
 @import "base/buttons";
-@import "typography";
+@import "base/forms";
+@import "base/typography";
 
-
-// ------------------------------------------------------------------- //
-//  Kentucky Imports - Helpers
-
-@import "helper/border";
-@import "helper/clearfix";
-@import "helper/hide-text";
-@import "helper/media";
-@import "helper/position";
-@import "helper/size";
-@import "helper/sticky-footer";
-@import "helper/tint-shade";
-@import "helper/truncate";

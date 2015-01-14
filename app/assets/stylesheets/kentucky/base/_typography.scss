@@ -1,118 +1,91 @@
 // ------------------------------------------------------------------- //
-//  Base Typographic Rules
+//  Typography Normalization
 // ------------------------------------------------------------------- //
-//  If text is white/light againts a dark background, include an
-//  override for [1] : -webkit-font-smoothing: antialiased;
-//
-//  See test page for examples of both:
-//  http://files.christophzillgens.com/webkit-font-smoothing.html
 
-html {
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: $base-background-color;
   color: $base-font-color;
-  font: #{$base-font-size} / #{$base-line-height} $base-font-family;
-  -webkit-font-smoothing: subpixel-antialiased; // [1]
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
 }
-
-
-
-
-
-// ------------------------------------------------------------------- //
-//  Headings
-// ------------------------------------------------------------------- //
 
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: $base-space;
-  font-family: $brand-font-family;
-  font-weight: $normal;
+  margin: 0;
+  font-family: $header-font-family;
+  line-height: $header-line-height;
 }
 
-h1,
-%alpha{
-  font-size: $h1-size;
+h1 {
+  font-size: $h1-font-size;
 }
 
-h2,
-%bravo{
-  font-size: $h2-size;
+h2 {
+  font-size: $h2-font-size;
 }
 
-h3,
-%charlie{
-  font-size: $h3-size;
+h3 {
+  font-size: $h3-font-size;
 }
 
-h4,
-%delta{
-  font-size: $h4-size;
+h4 {
+  font-size: $h4-font-size;
 }
 
-h5,
-%echo{
-  font-size: $h5-size;
+h5 {
+  font-size: $h5-font-size;
 }
 
-h6,
-%foxtrot{
-  font-size: $h6-size;
+h6 {
+  font-size: $h6-font-size;
 }
 
-
-
-// ------------------------------------------------------------------- //
-//  Heading Group
-
-%hgroup {
-  margin-bottom: $base-space;
-
-  h1, h2, h3, h4, h5, h6 {
-    margin-bottom: ($base-space / 2);
-  }
+p {
+  margin: 0 0 ($base-spacing / 2);
 }
-
-
-
-
-
-// ------------------------------------------------------------------- //
-//  Extra Large / Small Extends
-// ------------------------------------------------------------------- //
-
-%giga{
-  font-size: $giga-size;
-}
-
-%mega{
-  font-size: $mega-size;
-}
-
-%kilo{
-  font-size: $kilo-size;
-}
-
-%milli{
-  font-size: $milli-size;
-}
-
-%micro{
-  font-size: $micro-size;
-}
-
-
-
-
-
-// ------------------------------------------------------------------- //
-//  Links
-// ------------------------------------------------------------------- //
 
 a {
   color: $base-link-color;
   text-decoration: none;
+  transition: color, .1s;
 
-  &:hover,
-  &:active,
-  &:focus {
-    color: tint($base-link-color, 15%);
+  &:hover {
+    color: $hover-link-color;
+  }
+
+  &:active, &:focus {
+    color: $hover-link-color;
+    outline: none;
+  }
+}
+
+hr {
+  margin: $base-spacing 0;
+  border-bottom: $base-border;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+img,
+picture {
+  max-width: 100%;
+  margin: 0;
+}
+
+blockquote {
+  margin: $base-spacing 0;
+  padding-left: $base-spacing / 2;
+  border-left: 2px solid $base-border-color;
+  color: tint($base-font-color, 15%);
+}
+
+cite {
+  color: tint($base-font-color, 25%);
+  font-style: italic;
+
+  &:before {
+    content: "\2014 \00A0";
   }
 }
