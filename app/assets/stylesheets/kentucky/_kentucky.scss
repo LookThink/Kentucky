@@ -1,4 +1,15 @@
 // ------------------------------------------------------------------- //
+//  Kentucky Imports - Functions
+//  
+//  SCSS functions required by other elements of Kentucky.
+// ------------------------------------------------------------------- //
+
+@import "functions/assign";
+@import "functions/tint-shade";
+
+
+
+// ------------------------------------------------------------------- //
 //  Kentucky Imports - Base
 //  
 //  These are files related to project-settings (variables) and a
@@ -11,4 +22,4 @@
 @import "base/forms";
 @import "base/typography";
 @import "base/lists";
-
+@import "base/tables";
