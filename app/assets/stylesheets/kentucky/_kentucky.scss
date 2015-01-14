@@ -1,22 +1,26 @@
 // ------------------------------------------------------------------- //
-//  Kentucky Imports
+//  Kentucky Imports - Functions
+//  
+//  SCSS functions required by other elements of Kentucky.
 // ------------------------------------------------------------------- //
 
-@import "project-settings";
-@import "normalize";
-@import "typography";
-@import "grid";
+@import "functions/assign";
+@import "functions/tint-shade";
+
 
 
 // ------------------------------------------------------------------- //
-//  Kentucky Imports - Helpers
+//  Kentucky Imports - Base
+//  
+//  These are files related to project-settings (variables) and a
+//  custom set of normalization styles for more consistant HTML
+//  element display as a starting point.
+// ------------------------------------------------------------------- //
 
-@import "helper/border";
-@import "helper/clearfix";
-@import "helper/hide-text";
-@import "helper/media";
-@import "helper/position";
-@import "helper/size";
-@import "helper/sticky-footer";
-@import "helper/tint-shade";
-@import "helper/truncate";
+@import "base/project-settings";
+@import "base/buttons";
+@import "base/forms";
+@import "base/typography";
+@import "base/lists";
+@import "base/tables";
+@import "base/layouts";
