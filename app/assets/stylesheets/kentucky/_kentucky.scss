@@ -20,23 +20,6 @@
 
 
 // ------------------------------------------------------------------- //
-//  Kentucky Imports - Base
-//  
-//  These are files related to project-settings (variables) and a
-//  custom set of normalization styles for more consistant HTML
-//  element display as a starting point.
-// ------------------------------------------------------------------- //
-
-@import "base/buttons";
-@import "base/forms";
-@import "base/typography";
-@import "base/lists";
-@import "base/tables";
-@import "base/layouts";
-
-
-
-// ------------------------------------------------------------------- //
 //  Kentucky Import - Addons
 //  
 //  Additional mixin addons to help speed up front-end development.
@@ -50,3 +33,20 @@
 @import "addons/position";
 @import "addons/size";
 @import "addons/truncate";
+
+
+
+// ------------------------------------------------------------------- //
+//  Kentucky Imports - Base
+//  
+//  These are files related to project-settings (variables) and a
+//  custom set of normalization styles for more consistant HTML
+//  element display as a starting point.
+// ------------------------------------------------------------------- //
+
+@import "base/layouts";
+@import "base/typography";
+@import "base/buttons";
+@import "base/forms";
+@import "base/lists";
+@import "base/tables";
