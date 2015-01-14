@@ -1,4 +1,14 @@
 // ------------------------------------------------------------------- //
+//  Kentucky Project Settings
+//  
+//  Global variables used throughout Kentucky / projects.
+// ------------------------------------------------------------------- //
+
+@import "base/project-settings";
+
+
+
+// ------------------------------------------------------------------- //
 //  Kentucky Imports - Functions
 //  
 //  SCSS functions required by other elements of Kentucky.
@@ -17,10 +27,26 @@
 //  element display as a starting point.
 // ------------------------------------------------------------------- //
 
-@import "base/project-settings";
 @import "base/buttons";
 @import "base/forms";
 @import "base/typography";
 @import "base/lists";
 @import "base/tables";
 @import "base/layouts";
+
+
+
+// ------------------------------------------------------------------- //
+//  Kentucky Import - Addons
+//  
+//  Additional mixin addons to help speed up front-end development.
+// ------------------------------------------------------------------- //
+
+@import "addons/border";
+@import "addons/clearfix";
+@import "addons/easings";
+@import "addons/hide-text";
+@import "addons/input-types";
+@import "addons/position";
+@import "addons/size";
+@import "addons/truncate";
