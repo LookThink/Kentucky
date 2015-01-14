@@ -2,8 +2,8 @@
 //  Image Replacement - Hide Text
 // ------------------------------------------------------------------- //
 
-@mixin hide-text{
-  color: transparent;
-  font: 0/0 a;
-  text-shadow: none;
+@mixin hide-text {
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
 }

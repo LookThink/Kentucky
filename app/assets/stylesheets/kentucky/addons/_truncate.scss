@@ -1,19 +1,10 @@
 // Truncate single-lined elements
 
-@mixin truncate($truncate-width){
-
+@mixin truncate($truncate-width: 100%){
   display: inline-block;
-
-  // Ensure width has a value
-  @if unitless($truncate-width){
-    max-width: $truncate-width + px;
-  }
-  @else {
-    max-width: $truncate-width;
-  }
-
-  white-space: nowrap;
+  max-width: $truncate-width;
   overflow: hidden;
   text-overflow: ellipsis;
-
+  white-space: nowrap;
+  word-wrap: normal;
 }
