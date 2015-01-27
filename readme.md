@@ -63,7 +63,7 @@ A simple mixin that allows users to define unequal border widths inline with bor
 
 *Usage Example:*
 
-```
+```SCSS
 @include border(1px 2px 5px, solid, #b4d455);
 ```
 
@@ -72,7 +72,7 @@ Simple mixin to call the super-micro clearfix snippet based on Theirry Koblentz'
 
 *Usage Example:*
 
-```
+```SCSS
 @include clearfix;
 ```
 
@@ -81,7 +81,7 @@ Variable-based timing functions to be used in transition / animation styles.
 
 *Usage Example:*
 
-```
+```SCSS
 .selector {
   transition: all .5s #{$ease-in-quad};
 }
@@ -92,7 +92,7 @@ Simple mixin to "hide text" in a new method, akin to the old -9999px hack to mov
 
 *Usage Example:*
 
-```
+```SCSS
 @include hide-text;
 ```
 
@@ -101,7 +101,7 @@ Primarily created for usage in the button / form normalization files but these c
 
 *Usage Example:*
 
-```
+```SCSS
 #{$all-button-inputs} {
   margin-bottom: 20px;
 }
@@ -110,7 +110,7 @@ Primarily created for usage in the button / form normalization files but these c
 ##### Position
 Akin to the border mixin, this allows users to include the type of positioning and coordinates in a single line.
 
-```
+```SCSS
 @include position(absolute, 10px 20px 0 0);
 ```
 
@@ -120,13 +120,13 @@ Akin to the border mixin, this allows users to include the type of positioning a
 ##### Size
 A dead simple mixin allowing users to set the width / height on a single line.
 
-```
+```SCSS
 @include size(15px 20px);
 ```
 
 *A single value will print the same value for width and height.*
 
-```
+```SCSS
 @include size(20px);
 ```
 
@@ -134,7 +134,7 @@ A dead simple mixin allowing users to set the width / height on a single line.
 ##### Truncate
 Mixin that allows single-line, CSS-based truncation with an ellipsis. Requires a width value.
 
-```
+```SCSS
 @include truncate(300px);
 ```
 
@@ -147,7 +147,7 @@ Used in the input types addon. Usage is fairly minimal outside of that.
 ##### Tint / Shade
 An improvement to the typical `darken` / `lighten` abilities of SCSS. Tint and shade add white / black respectively to create richer colors.
 
-```
+```SCSS
 .selector {
   background-color: tint(#b4d455, 5%);
   color: shade($brand-color, 10%);
