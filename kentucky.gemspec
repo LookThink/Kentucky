@@ -10,9 +10,9 @@ Gem::Specification.new do |s|
   s.authors     = ["Aaron Clemmer", "Greg Bruening", "Chris Brinson"]
   s.email       = ["greg@lookthink.com"]
   s.homepage    = "https://github.com/geebru/Kentucky"
-  s.summary     = "SCSS-based grid system and mixin library"
+  s.summary     = "SCSS project base and mixin library."
   s.description = <<-DESC
-Kentucky is LookThink's contribution to the CSS framework world with the unique difference of being entirely written in SCSS. This means no class restrictions muddling up your HTML. Kentucky is a collection of mixins, extends, and functions that you can use with your own HTML/CSS semantics to create responsive-ready websites.
+Kentucky is a class-independent front-end framework built as a standard project starting point.
   DESC
 
   #s.rubyforge_project = "bourbon"
