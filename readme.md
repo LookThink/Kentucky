@@ -34,31 +34,31 @@ Below is some base documentation into what is included in Kentucky.
 
 ### Base
 
-###### Project Settings
+##### Project Settings
 This file serves as the starting point for all projects. Full of default values for typography, spacing, colors, etc. it's the perfect place to store global, project-specific variables to use throughout your project.
 
-###### Layouts
+##### Layouts
 A very barebones file meant to serve as a place to keep global layout-related styles.
 
-###### Typography
+##### Typography
 Slightly deceiving in name, but houses general typography / main content styles and normalization. This is where a majority of the variables (related to typography) in *_project-settings.scss* are called. 
 
-###### Buttons
+##### Buttons
 Normalization of all button-style inputs and serves as a location where project-wide button styles can live.
 
-###### Forms
+##### Forms
 Normalization of form elements.
 
-###### Lists
+##### Lists
 Normalization of unordered / ordered lists as well as definition lists. Also includes placeholder extends `%default-ul` and `%default-ol` that can applied to `ul` and `ol` elements that re-add the default list-styles for both as well as some margin/padding.
 
-###### Tables
+##### Tables
 Normalization of table elements.
 
 
 ### Addons
 
-###### Border
+##### Border
 A simple mixin that allows users to define unequal border widths inline with border style and color.
 
 *Usage Example:*
@@ -67,7 +67,7 @@ A simple mixin that allows users to define unequal border widths inline with bor
 @include border(1px 2px 5px, solid, #b4d455);
 ```
 
-###### Clearfix
+##### Clearfix
 Simple mixin to call the super-micro clearfix snippet based on Theirry Koblentz's minification of Nicolas Gallagher's micro clearfix.
 
 *Usage Example:*
@@ -76,7 +76,7 @@ Simple mixin to call the super-micro clearfix snippet based on Theirry Koblentz'
 @include clearfix;
 ```
 
-###### Easings
+##### Easings
 Variable-based timing functions to be used in transition / animation styles.
 
 *Usage Example:*
@@ -87,7 +87,7 @@ Variable-based timing functions to be used in transition / animation styles.
 }
 ```
 
-###### Hide Text
+##### Hide Text
 Simple mixin to "hide text" in a new method, akin to the old -9999px hack to move text off of image replaced objects.
 
 *Usage Example:*
@@ -96,7 +96,7 @@ Simple mixin to "hide text" in a new method, akin to the old -9999px hack to mov
 @include hide-text;
 ```
 
-###### Input Types
+##### Input Types
 Primarily created for usage in the button / form normalization files but these can be used to target all button / text inputs at once without having to list each individually.
 
 *Usage Example:*
@@ -107,7 +107,7 @@ Primarily created for usage in the button / form normalization files but these c
 }
 ```
 
-###### Position
+##### Position
 Akin to the border mixin, this allows users to include the type of positioning and coordinates in a single line.
 
 ```
@@ -117,7 +117,7 @@ Akin to the border mixin, this allows users to include the type of positioning a
 *Note that all four values are required.*
 
 
-###### Size
+##### Size
 A dead simple mixin allowing users to set the width / height on a single line.
 
 ```
@@ -131,7 +131,7 @@ A dead simple mixin allowing users to set the width / height on a single line.
 ```
 
 
-###### Truncate
+##### Truncate
 Mixin that allows single-line, CSS-based truncation with an ellipsis. Requires a width value.
 
 ```
@@ -141,10 +141,10 @@ Mixin that allows single-line, CSS-based truncation with an ellipsis. Requires a
 
 ### Functions
 
-###### Assign
+##### Assign
 Used in the input types addon. Usage is fairly minimal outside of that.
 
-###### Tint / Shade
+##### Tint / Shade
 An improvement to the typical `darken` / `lighten` abilities of SCSS. Tint and shade add white / black respectively to create richer colors.
 
 ```
