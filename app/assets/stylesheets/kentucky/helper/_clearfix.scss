@@ -1,7 +1,11 @@
 // ------------------------------------------------------------------- //
-//  Strip a value of it's unit
+//  Micro Clearfix
 // ------------------------------------------------------------------- //
 
-@function strip-unit($value){
-  @return $value / ($value * 0 + 1);
+@mixin clearfix {
+  &:after {
+    content:"";
+    display:table;
+    clear:both;
+  }
 }

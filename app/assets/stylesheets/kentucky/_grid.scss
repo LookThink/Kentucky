@@ -1,0 +1,64 @@
+// ------------------------------------------------------------------- //
+//  Grid System
+// ------------------------------------------------------------------- //
+//  Site Container
+
+@mixin container {
+  @if $block-grid == false {
+    display: -webkit-flex; // Safari
+    display: -ms-flexbox; // IE10
+    display: flex;
+
+  } @else {
+
+    @include clearfix;
+    display: block;
+  }
+
+  width: $max-width;
+  margin: 0 auto;
+}
+
+
+
+// ------------------------------------------------------------------- //
+//  Flex Container
+
+@mixin grid {
+  @if $block-grid == false {
+    display: -webkit-flex; // Safari
+    display: -ms-flexbox; // IE10
+    display: flex;
+
+  } @else {
+
+    @include clearfix;
+    display: block;
+  }
+
+  margin-left: -#{$base-space};
+}
+
+
+
+// ------------------------------------------------------------------- //
+//  Flex Items
+
+@mixin grid-cell($size: 1, $out-of: 1) {
+  $block-gutter: ($base-space / $max-width) * 100%;
+  $size-percent: (($size / $out-of) * 100%) - $block-gutter;
+
+  @if $block-grid == false {
+    -webkit-flex: $size-percent; // Safari
+    -ms-flex: $size-percent; // IE10
+    flex: $size-percent;
+    margin-left: $base-space;
+
+  } @else {
+
+    float: left;
+    display: block;
+    width: $size-percent;
+    margin-right: $block-gutter;
+  }
+}
