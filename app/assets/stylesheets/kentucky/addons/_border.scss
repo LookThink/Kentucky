@@ -19,10 +19,7 @@
     // If border is unitless, append unit
     @if unitless(nth($border-width, $i)) {
       $new-width: append($new-width, nth($border-width, $i) + px);
-    }
-
-    // Otherwise, keep as is
-    @else {
+    } @else {
       $new-width: append($new-width, nth($border-width, $i));
     }
   }
