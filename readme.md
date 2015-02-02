@@ -3,6 +3,10 @@
 
 [![Gem Version](https://badge.fury.io/rb/kentucky.png)](http://badge.fury.io/rb/kentucky)
 
+###### CHANGELOG
+
+*2.1.0* - Update file semantics to match custom LookThink linter
+
 ***
 
 Kentucky was originally an additional library to use with Bourbon as our developers ventured into the realm of front-end frameworks. As time progressed and more frameworks emerged from all corners of the internet it became clear we needed to create our own.
