@@ -3,26 +3,11 @@
 
 [![Gem Version](https://badge.fury.io/rb/kentucky.png)](http://badge.fury.io/rb/kentucky)
 
-### Installation
+###### CHANGELOG
 
-```
-gem install kentucky
-
-cd your/project/folder
-kentucky install
-```
-
-Kentucky also comes with an option upon install to create a set of commonly used directories.
-
-```
-kentucky install --dir
-```
-
-The above will provide you with `fonts`, `images`, `scripts`, `scss` (with Kentucky inside), and `style` folders.
+*2.1.0* - Update file semantics to match custom LookThink linter
 
 ***
-
-### Overview
 
 Kentucky was originally an additional library to use with Bourbon as our developers ventured into the realm of front-end frameworks. As time progressed and more frameworks emerged from all corners of the internet it became clear we needed to create our own.
 
