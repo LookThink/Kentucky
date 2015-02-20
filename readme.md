@@ -5,6 +5,7 @@
 
 ###### CHANGELOG
 
+*2.2.0* - Update dependencies and code styles
 *2.1.0* - Update file semantics to match custom LookThink linter
 
 ***
