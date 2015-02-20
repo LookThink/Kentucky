@@ -23,33 +23,19 @@ h6 {
   line-height: $header-line-height;
 }
 
-h1 {
-  font-size: $h1-font-size;
-}
+h1 { font-size: $h1-font-size; }
 
-h2 {
-  font-size: $h2-font-size;
-}
+h2 { font-size: $h2-font-size; }
 
-h3 {
-  font-size: $h3-font-size;
-}
+h3 { font-size: $h3-font-size; }
 
-h4 {
-  font-size: $h4-font-size;
-}
+h4 { font-size: $h4-font-size; }
 
-h5 {
-  font-size: $h5-font-size;
-}
+h5 { font-size: $h5-font-size; }
 
-h6 {
-  font-size: $h6-font-size;
-}
+h6 { font-size: $h6-font-size; }
 
-p {
-  margin: 0 0 ($base-spacing / 2);
-}
+p { margin: 0 0 ($base-spacing / 2); }
 
 a {
   color: $base-link-color;
