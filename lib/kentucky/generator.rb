@@ -45,7 +45,7 @@ module Kentucky
     def create_site_structure
       make_install_directory
       if options[:dir]
-        dirs = %w(fonts images scripts scss style)
+        dirs = %w(images scripts scss css)
         dirs.each do |dir|
           FileUtils.mkdir(install_path + Pathname.new(dir))
         end
