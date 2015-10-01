@@ -24,7 +24,7 @@
 ///
 ///  @todo Allow multiple border style and color declarations.
 @mixin border($border-width, $border-style: solid, $border-color: $color-border-base) {
-  // If too many widths, throw error
+  // If more than 4 widths submitted, display error
   @if (length($border-width) > 4) {
     @error "Border-width accepts a maximum of 4 width parameters;  #{length($border-width)} found.";
   }
@@ -46,4 +46,28 @@
   border-style: $border-style;
   border-color: $border-color;
   border-width: $new-width;
+}
+
+
+///  Quick clearfix mixin for clearing container content.
+///  Proper use-case is when a container's children are floated. If the
+///  container itself is floated and needs to be cleared, this will not
+///  function the same as a `clear: left/right/both;`.
+///
+///  @example scss
+///  .container {
+///    @include clearfix;
+///  }
+///  @example css
+///  .container::after {
+///    content: "";
+///    display: table;
+///    clear: both;
+///  }
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
