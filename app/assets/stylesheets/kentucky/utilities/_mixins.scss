@@ -211,6 +211,33 @@
 
   // If more than 2 values, display error
   @if length($size) > 2 {
-    @error "Too many values detected. Size mixin only accepts 1-2 values."
+    @error "Too many values detected. Size mixin only accepts 1-2 values.";
   }
+}
+
+
+///  Shorthand for single-line text truncation based on width.
+///
+///  @parameter {string} $truncate-width [100%] - Width the element will be truncated at.
+///
+///  @example scss
+///  .short-title {
+///    @include truncate(250px);
+///  }
+///  @example css
+///  .short-title {
+///    display: inline-block;
+///    max-width: 250px;
+///    overflow: hidden;
+///    text-overflow: ellipsis;
+///    white-space: nowrap;
+///    word-wrap: normal;
+///  }
+@mixin truncate($truncate-width: 100%) {
+  display: inline-block;
+  max-width: $truncate-width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
 }
