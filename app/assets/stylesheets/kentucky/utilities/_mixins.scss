@@ -49,6 +49,74 @@
 }
 
 
+///  Shorthand centering of elements.
+///  If width and height are undefined, centering will be done via `translate`.
+///  If width and height are defined, centering will be done via `margin`.
+///  If width is defined and height is undefined, centering will be done via `margin-left` and `translateY`.
+///  If width is undefined and height is defined, centering will be done via `translateX` and `margin-top`.
+///
+///  Centering via flexbox is included as a separate mixin.
+///  @see {center-children}
+///
+///  @parameter {string} $width [null] - Width of the element to be centered (can be "null").
+///  @parameter {string} $height [null] - Height of the element to be centered (can be "null").
+///
+///  @example scss
+///  .action {
+///    @include center(400px null);
+///  }
+///  @example css
+///  .action {
+///    position: absolute;
+///    top: 50%;
+///    left: 50%;
+///    width: 400px;
+///    margin-left: -200px;
+///    transform: translateY(-50%);
+///  }
+@mixin center($width: null, $height: null) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  @if not $width and not $height {
+    transform: translate(-50%, -50%);
+  } @else if $width and $height {
+    width: $width;
+    height: $height;
+    margin: -($width / 2) #{0 0} -($height / 2);
+  } @else if not $height {
+    width: $width;
+    margin-left: -($width / 2);
+    transform: translateY(-50%);
+  } @else {
+    height: $height;
+    margin-top: -($height / 2);
+    transform: translateX(-50%);
+  }
+}
+
+
+///  Shorthand centering of elements via flex.
+///  Should be applied to a container whose child elements you want centered (horizontally and vertically).
+///
+///  @example scss
+///  .callout {
+///    @include center-children;
+///  }
+///  @example css
+///  .callout {
+///    display: flex;
+///    justify-content: center;
+///    align-items: center;
+///  }
+@mixin center-children {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 ///  Quick clearfix mixin for clearing container content.
 ///  Proper use-case is when a container's children are floated. If the
 ///  container itself is floated and needs to be cleared, this will not
