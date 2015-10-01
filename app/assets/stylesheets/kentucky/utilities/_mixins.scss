@@ -71,3 +71,23 @@
     clear: both;
   }
 }
+
+
+///  Quick text replacement mixin for hiding text outside of an element.
+///  Primarily used to hide text when a background-image replaces it.
+///
+///  @example scss
+///  .hero {
+///    @include hide-text;
+///  }
+///  @example css
+///  .hero {
+///    text-indent: 101%;
+///    overflow: hidden;
+///    white-space: nowrap;
+///  }
+@mixin hide-text {
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
