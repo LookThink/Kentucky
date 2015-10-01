@@ -56,7 +56,7 @@
 ///  If width is undefined and height is defined, centering will be done via `translateX` and `margin-top`.
 ///
 ///  Centering via flexbox is included as a separate mixin.
-///  @see {center-children}
+///  @see {mixin} center-children
 ///
 ///  @parameter {string} $width [null] - Width of the element to be centered (can be "null").
 ///  @parameter {string} $height [null] - Height of the element to be centered (can be "null").
