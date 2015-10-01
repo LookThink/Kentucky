@@ -91,3 +91,126 @@
   overflow: hidden;
   white-space: nowrap;
 }
+
+
+///  Shorthand element positioning mixin.
+///
+///  @parameter {string} $pos-type [relative] - Accepts all valid position strings (static, relative, absolute, fixed).
+///  @parameter {string} $pos-vals [0 0 0 0] - Position values in typical order (top, right, bottom, left). If a value is not required, inset a unitless 0.
+///
+///  @example scss
+///  .call-to-action {
+///    @include position(absolute, 15px 50px 0 0);
+///  }
+///  @example css
+///  .call-to-action {
+///    position: absolute;
+///    top: 15px;
+///    right: 50px;
+///  }
+///
+///  @todo Allow for unitless usage (i.e., `left: 0; right: 0;`) due to it being valid content.
+@mixin position($pos-type: relative, $pos-vals: 0 0 0 0) {
+
+  // If no position type designated, default to "relative"
+  @if type-of($pos-type) == list{
+    $pos-vals: $pos-type;
+    $pos-type: relative;
+  }
+
+  // Separate values into top, right, bottom, left
+  $top: nth($pos-vals, 1);
+  $right: nth($pos-vals, 2);
+  $bottom: nth($pos-vals, 3);
+  $left: nth($pos-vals, 4);
+
+  // Return position
+  position: $pos-type;
+
+  // Return values
+  // If value is a number and has a unit type, print value
+  // otherwise ignore
+  @if (type-of($top) == number and not unitless($top)){
+    top: $top;
+  }
+
+  @if (type-of($right) == number and not unitless($right)){
+    right: $right;
+  }
+
+  @if (type-of($bottom) == number and not unitless($bottom)){
+    bottom: $bottom;
+  }
+
+  @if (type-of($left) == number and not unitless($left)){
+    left: $left;
+  }
+}
+
+
+///  Shorthand element sizing.
+///  Accepts auto or unit values. If only one value is provided, it will use that value for both width and height.
+///  Otherwise the first value is width and the second value is height.
+///
+///  @parameter {string} - Accepts 1 or 2 values.
+///
+///  @example scss
+///  .bucket {
+///    @include size(auto 150px);
+///  }
+///  @example css
+///  .bucket {
+///    width: auto;
+///    height: 150px;
+///  }
+@mixin size($size) {
+
+  // If only one value is present
+  @if length($size) == 1 {
+
+    @if $size == auto{
+      width: auto;
+      height: auto;
+    }
+    @else if unitless($size) {
+      width: $size * 1px;
+      height: $size * 1px;
+    }
+    @else if not(unitless($size)) {
+      width: $size;
+      height: $size;
+    }
+  }
+
+  // If both values are present
+  @if length($size) == 2 {
+
+    $width: nth($size, 1);
+    $height: nth($size, 2);
+
+    @if $width == auto {
+      width: $width;
+    }
+    @else if unitless($width){
+      width: $width * 1px;
+    }
+    @else if not(unitless($width)) {
+      width: $width;
+    }
+
+    @if $height == auto{
+      height: $height;
+    }
+    @else if unitless($height) {
+      height: $height * 1px;
+    }
+    @else if not(unitless($height)) {
+      height: $height;
+    }
+  }
+
+  // If more than 2 values, display error
+  @if length($size) > 2 {
+    @error "Too many values detected. Size mixin only accepts 1-2 values."
+  }
+}
