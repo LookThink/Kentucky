@@ -1,0 +1,49 @@
+////
+///  Project mixins
+///
+///  @group utilities
+////
+
+///  Shorthand border creation mixin.
+///  Allows for single line, variable border width,
+///
+///  @parameter {string} $border-width - Accepts 1-4 unit values dictating border-widths.
+///  @parameter {string} $border-style [solid] - Set border style.
+///  @parameter {string} $border-color [$color-border-base] - Set border color.
+///
+///  @example scss
+///  .well {
+///    @include border(2px 1px 5px, dashed, #666);
+///  }
+///  @example css
+///  .well {
+///    border-style: dashed;
+///    border-color: #666;
+///    border-width: 2px 1px 5px;
+///  }
+///
+///  @todo Allow multiple border style and color declarations.
+@mixin border($border-width, $border-style: solid, $border-color: $color-border-base) {
+  // If too many widths, throw error
+  @if (length($border-width) > 4) {
+    @error "Border-width accepts a maximum of 4 width parameters;  #{length($border-width)} found.";
+  }
+
+  // New border width list
+  $new-width: ();
+
+  // Populate it
+  @for $i from 1 through length($border-width) {
+
+    // If border is unitless, append unit
+    @if unitless(nth($border-width, $i)) {
+      $new-width: append($new-width, nth($border-width, $i) * 1px);
+    } @else {
+      $new-width: append($new-width, nth($border-width, $i));
+    }
+  }
+
+  border-style: $border-style;
+  border-color: $border-color;
+  border-width: $new-width;
+}
