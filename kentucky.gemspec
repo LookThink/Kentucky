@@ -15,8 +15,6 @@ Gem::Specification.new do |s|
 Kentucky is a class-independent front-end framework built as a standard project starting point.
   DESC
 
-  #s.rubyforge_project = "bourbon"
-
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
