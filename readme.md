@@ -1,7 +1,7 @@
 # Kentucky
 ###### Straight from the source.
 
-[![Gem Version](https://badge.fury.io/rb/kentucky.png)](http://badge.fury.io/rb/kentucky)
+[![Gem Version](https://badge.fury.io/rb/kentucky.svg)](https://badge.fury.io/rb/kentucky)
 
 **Kentucky is a front-end project kickstart system to allow for rapidly beginning CSS development on a myriad of projects.**
 
