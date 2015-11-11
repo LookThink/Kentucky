@@ -26,7 +26,7 @@
 @mixin border($border-width, $border-style: solid, $border-color: $color-border-base) {
   // If more than 4 widths submitted, display error
   @if (length($border-width) > 4) {
-    @error "Border-width accepts a maximum of 4 width parameters;  #{length($border-width)} found.";
+    @error 'Border-width accepts a maximum of 4 width parameters;  #{length($border-width)} found.';
   }
 
   // New border width list
@@ -58,8 +58,8 @@
 ///  Centering via flexbox is included as a separate mixin.
 ///  @see {mixin} center-children
 ///
-///  @parameter {string} $width [null] - Width of the element to be centered (can be "null").
-///  @parameter {string} $height [null] - Height of the element to be centered (can be "null").
+///  @parameter {string} $width [null] - Width of the element to be centered (can be 'null').
+///  @parameter {string} $height [null] - Height of the element to be centered (can be 'null').
 ///
 ///  @example scss
 ///  .action {
@@ -128,13 +128,13 @@
 ///  }
 ///  @example css
 ///  .container::after {
-///    content: "";
+///    content: '';
 ///    display: table;
 ///    clear: both;
 ///  }
 @mixin clearfix {
   &::after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
   }
@@ -180,7 +180,7 @@
 ///  @todo Allow for unitless usage (i.e., `left: 0; right: 0;`) due to it being valid content.
 @mixin position($pos-type: relative, $pos-vals: 0 0 0 0) {
 
-  // If no position type designated, default to "relative"
+  // If no position type designated, default to 'relative'
   @if type-of($pos-type) == list{
     $pos-vals: $pos-type;
     $pos-type: relative;
@@ -239,12 +239,10 @@
     @if $size == auto{
       width: auto;
       height: auto;
-    }
-    @else if unitless($size) {
+    } @else if unitless($size) {
       width: $size * 1px;
       height: $size * 1px;
-    }
-    @else if not(unitless($size)) {
+    } @else if not(unitless($size)) {
       width: $size;
       height: $size;
     }
@@ -258,30 +256,38 @@
 
     @if $width == auto {
       width: $width;
-    }
-    @else if unitless($width){
+    } @else if unitless($width){
       width: $width * 1px;
-    }
-    @else if not(unitless($width)) {
+    } @else if not(unitless($width)) {
       width: $width;
     }
 
     @if $height == auto{
       height: $height;
-    }
-    @else if unitless($height) {
+    } @else if unitless($height) {
       height: $height * 1px;
-    }
-    @else if not(unitless($height)) {
+    } @else if not(unitless($height)) {
       height: $height;
     }
   }
 
   // If more than 2 values, display error
   @if length($size) > 2 {
-    @error "Too many values detected. Size mixin only accepts 1-2 values.";
+    @error 'Too many values detected. Size mixin only accepts 1-2 values.';
   }
 }
+
+
+
+/// Slightly lighten a color
+/// @access public
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function tint($color, $percentage) {
+  @return mix(#fff, $color, $percentage);
+}
+
 
 
 ///  Shorthand for single-line text truncation based on width.
@@ -308,4 +314,15 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   word-wrap: normal;
+}
+
+
+
+/// Slightly darken a color
+/// @access public
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function shade($color, $percentage) {
+  @return mix(#000, $color, $percentage);
 }
