@@ -22,7 +22,7 @@ Kentucky is a class-independent front-end framework built as a standard project 
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_dependency('sass', '>= 3.2.0')
+  s.add_dependency('sass', '~> 3.4')
   s.add_dependency('thor')
 
   s.add_development_dependency('aruba', '= 0.4.11')
