@@ -1,16 +1,18 @@
 // Set global charset for CSS
-@charset "utf-8";
+@charset 'utf-8';
 
 // Project imports
-@import "utilities/variables";
-@import "utilities/functions";
-@import "utilities/mixins";
+@import 'utilities/variables';
+@import 'utilities/functions';
+@import 'utilities/mixins';
 
-// @import "vendors/*";
+// @import 'vendors/*';
 
-@import "base/normalize";
-@import "base/typography";
+@import 'base/normalize';
+@import 'base/typography';
 
-// @import "components/*";
+// @import 'layout/*';
 
-// @import "pages/*";
+// @import 'components/*';
+
+// @import 'pages/*';
