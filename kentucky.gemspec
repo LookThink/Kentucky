@@ -23,8 +23,8 @@ Kentucky is a class-independent front-end framework built as a standard project 
   s.require_paths = ["lib"]
 
   s.add_dependency('sass', '~> 3.4')
-  s.add_dependency('thor', '>= 0')
+  s.add_dependency('thor', '~> 0')
 
-  s.add_development_dependency('aruba', '>= 0')
-  s.add_development_dependency('rake', '>= 0')
+  s.add_development_dependency('aruba', '= 0.4.11')
+  s.add_development_dependency('rake', '~> 0')
 end

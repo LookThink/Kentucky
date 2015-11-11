@@ -1,0 +1,37 @@
+////
+///  Global functions
+///
+///  @group utilities
+////
+
+///  Shorthand color mixing function.
+///  Tint mixes a defined percentage of white into the chosen color.
+///  @parameter {string} $color - Base color to mix white into.
+///  @parameter {string} $percent - Percentage of white to mix into color.
+///  @example scss
+///  .link:hover {
+///    color: tint(#b4d455, 10%);
+///  }
+///  @example css
+///  .link:hover {
+///    color: #bcd866;
+///  }
+@function tint($color, $percent) {
+  @return mix(#fff, $color, $percent);
+}
+
+///  Shorthand color mixing function.
+///  Shade mixes a defined percentage of black into the chosen color.
+///  @parameter {string} $color - Base color to mix black into.
+///  @parameter {string} $percent - Percentage of black to mix into color.
+///  @example scss
+///  .link:hover {
+///    color: shade(#b4d455, 10%);
+///  }
+///  @example css
+///  .link:hover {
+///    color: #a2bf4d;
+///  }
+@function shade($color, $percent) {
+  @return mix(#000, $color, $percent);
+}

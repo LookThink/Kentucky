@@ -1,144 +1,49 @@
 # Kentucky
 ###### Straight from the source.
 
-[![Gem Version](https://badge.fury.io/rb/kentucky.png)](http://badge.fury.io/rb/kentucky)
+[![Gem Version](https://badge.fury.io/rb/kentucky.svg)](https://badge.fury.io/rb/kentucky)
 
-###### CHANGELOG
+**Kentucky is a front-end project kickstart system to allow for rapidly beginning CSS development on a myriad of projects.**
 
-*2.2.2* - Update generated folders when using `-dir` option
+At its core, Kentucky itself provides no initial CSS other than a slightly modified [Normalize.css](https://necolas.github.io/normalize.css/) and typographic styles dictated by the `utilities/variables` file.
 
-*2.2.0* - Update dependencies and code styles
+It's meant to provide SCSS structure and guidance to ensure projects remain clean and well-organized from the beginning while allowing developers full freedom to use whatever naming conventions, methodologies, and HTML structure required for the project.
 
-*2.1.0* - Update file semantics to match custom LookThink linter
+---
 
-***
+# Core structure
+## Base
 
-Kentucky was originally an additional library to use with Bourbon as our developers ventured into the realm of front-end frameworks. As time progressed and more frameworks emerged from all corners of the internet it became clear we needed to create our own.
+The `base/` folder includes two files to start with: `normalize` for increasing expected results and `typography` to apply the variables set in `utilities/variables` to typographic elements. Once created, the files in this folder should rarely be edited unless a fundamental shift in the project design is required.
 
-Kentucky is meant to serve as a leaping point for front-end projects. It has no grid system (flexbox is simple enough without complicated DOM cluttering of classes) and is based entirely on the SCSS side of projects. Our framework is invisible to the end user inspecting elements on your site. This leaves developers completely open to use any form of semantics for classes as they're comfortable with.
+Additional files to be added to this folder could include: `forms`, `tables`, etc.
 
-Below is some base documentation into what is included in Kentucky.
+## Components
 
-***
+The `components/` folder may contain specific modules like a slider, a loader, a widget, or  anything along those lines. There should typically be a lot of files in `components` since the whole site/application should be mostly composed of tiny modules.
 
-### Base
+Example files to be included in this folder could include: `buttons`, `dropdown`, `media`, `thumbnails`, etc.
 
-##### Project Settings
-This file serves as the starting point for all projects. Full of default values for typography, spacing, colors, etc. it's the perfect place to store global, project-specific variables to use throughout your project.
+## Layout
 
-##### Layouts
-A very barebones file meant to serve as a place to keep global layout-related styles.
+The `layout/` folder contains everything that takes part in laying out the site or application. This folder could have stylesheets for the main parts of the site (header, footer, navigation, sidebar) and/or the site grid system (if custom; vendor grid systems should be included in `vendors/`).
 
-##### Typography
-Slightly deceiving in name, but houses general typography / main content styles and normalization. This is where a majority of the variables (related to typography) in *_project-settings.scss* are called. 
+Example files to be included in this folder could include: `header`, `footer`, `hero`, `grid`, etc.
 
-##### Buttons
-Normalization of all button-style inputs and serves as a location where project-wide button styles can live.
+## Pages
 
-##### Forms
-Normalization of form elements.
+The `pages/` folder is for page-specific styles. Each file in this folder should be named after the page it relates to.
 
-##### Lists
-Normalization of unordered / ordered lists as well as definition lists. Also includes placeholder extends `%default-ul` and `%default-ol` that can applied to `ul` and `ol` elements that re-add the default list-styles for both as well as some margin/padding.
+Example files to be included in this folder could include: `home`, `blog`, `about`, `contact`, etc.
 
-##### Tables
-Normalization of table elements.
+## Utilities
 
+The `utilities/` folder gathers all Sass tools and helpers used across the project. Every global variable, function, mixin and placeholder should be put in here. It already includes `functions`, `mixins`, and `variables` to help jumpstart the process.
 
-### Addons
+Example files to be included in this folder could include: `fonts`, `icons`, `media-queries`, etc.
 
-##### Border
-A simple mixin that allows users to define unequal border widths inline with border style and color.
+## Vendors
 
-*Usage Example:*
+The `vendors/` folder is to ensure any external libraries or frameworks remain separated from the core site styles. If you require vendor overrides, it's encouraged to make another folder (within the root SCSS folder) called `vendor-extensions` to keep vendor files intact should they release updates.
 
-```SCSS
-@include border(1px 2px 5px, solid, #b4d455);
-```
-
-##### Clearfix
-Simple mixin to call the super-micro clearfix snippet based on Theirry Koblentz's minification of Nicolas Gallagher's micro clearfix.
-
-*Usage Example:*
-
-```SCSS
-@include clearfix;
-```
-
-##### Easings
-Variable-based timing functions to be used in transition / animation styles.
-
-*Usage Example:*
-
-```SCSS
-.selector {
-  transition: all .5s #{$ease-in-quad};
-}
-```
-
-##### Hide Text
-Simple mixin to "hide text" in a new method, akin to the old -9999px hack to move text off of image replaced objects.
-
-*Usage Example:*
-
-```SCSS
-@include hide-text;
-```
-
-##### Input Types
-Primarily created for usage in the button / form normalization files but these can be used to target all button / text inputs at once without having to list each individually.
-
-*Usage Example:*
-
-```SCSS
-#{$all-button-inputs} {
-  margin-bottom: 20px;
-}
-```
-
-##### Position
-Akin to the border mixin, this allows users to include the type of positioning and coordinates in a single line.
-
-```SCSS
-@include position(absolute, 10px 20px 0 0);
-```
-
-*Note that all four values are required.*
-
-
-##### Size
-A dead simple mixin allowing users to set the width / height on a single line.
-
-```SCSS
-@include size(15px 20px);
-```
-
-*A single value will print the same value for width and height.*
-
-```SCSS
-@include size(20px);
-```
-
-
-##### Truncate
-Mixin that allows single-line, CSS-based truncation with an ellipsis. Requires a width value.
-
-```SCSS
-@include truncate(300px);
-```
-
-
-### Functions
-
-##### Assign
-Used in the input types addon. Usage is fairly minimal outside of that.
-
-##### Tint / Shade
-An improvement to the typical `darken` / `lighten` abilities of SCSS. Tint and shade add white / black respectively to create richer colors.
-
-```SCSS
-.selector {
-  background-color: tint(#b4d455, 5%);
-  color: shade($brand-color, 10%);
-}
-```
+Example folders and files to be included in this folder include: `bootstrap/files`, `susy/files`, `js-plugin/files`, etc.

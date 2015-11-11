@@ -1,0 +1,306 @@
+////
+///  Project mixins
+///
+///  @group utilities
+////
+
+///  Shorthand border creation mixin.
+///  Allows for single line, variable border width,
+///
+///  @parameter {string} $border-width - Accepts 1-4 unit values dictating border-widths.
+///  @parameter {string} $border-style [solid] - Set border style.
+///  @parameter {string} $border-color [$color-border-base] - Set border color.
+///
+///  @example scss
+///  .well {
+///    @include border(2px 1px 5px, dashed, #666);
+///  }
+///  @example css
+///  .well {
+///    border-style: dashed;
+///    border-color: #666;
+///    border-width: 2px 1px 5px;
+///  }
+///
+///  @todo Allow multiple border style and color declarations.
+@mixin border($border-width, $border-style: solid, $border-color: $color-border-base) {
+  // If more than 4 widths submitted, display error
+  @if (length($border-width) > 4) {
+    @error 'Border-width accepts a maximum of 4 width parameters;  #{length($border-width)} found.';
+  }
+
+  // New border width list
+  $new-width: ();
+
+  // Populate it
+  @for $i from 1 through length($border-width) {
+
+    // If border is unitless, append unit
+    @if unitless(nth($border-width, $i)) {
+      $new-width: append($new-width, nth($border-width, $i) * 1px);
+    } @else {
+      $new-width: append($new-width, nth($border-width, $i));
+    }
+  }
+
+  border-style: $border-style;
+  border-color: $border-color;
+  border-width: $new-width;
+}
+
+
+///  Shorthand centering of elements.
+///  If width and height are undefined, centering will be done via `translate`.
+///  If width and height are defined, centering will be done via `margin`.
+///  If width is defined and height is undefined, centering will be done via `margin-left` and `translateY`.
+///  If width is undefined and height is defined, centering will be done via `translateX` and `margin-top`.
+///
+///  Centering via flexbox is included as a separate mixin.
+///  @see {mixin} center-children
+///
+///  @parameter {string} $width [null] - Width of the element to be centered (can be 'null').
+///  @parameter {string} $height [null] - Height of the element to be centered (can be 'null').
+///
+///  @example scss
+///  .action {
+///    @include center(400px null);
+///  }
+///  @example css
+///  .action {
+///    position: absolute;
+///    top: 50%;
+///    left: 50%;
+///    width: 400px;
+///    margin-left: -200px;
+///    transform: translateY(-50%);
+///  }
+@mixin center($width: null, $height: null) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  @if not $width and not $height {
+    transform: translate(-50%, -50%);
+  } @else if $width and $height {
+    width: $width;
+    height: $height;
+    margin: -($width / 2) #{0 0} -($height / 2);
+  } @else if not $height {
+    width: $width;
+    margin-left: -($width / 2);
+    transform: translateY(-50%);
+  } @else {
+    height: $height;
+    margin-top: -($height / 2);
+    transform: translateX(-50%);
+  }
+}
+
+
+///  Shorthand centering of elements via flex.
+///  Should be applied to a container whose child elements you want centered (horizontally and vertically).
+///
+///  @example scss
+///  .callout {
+///    @include center-children;
+///  }
+///  @example css
+///  .callout {
+///    display: flex;
+///    justify-content: center;
+///    align-items: center;
+///  }
+@mixin center-children {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+///  Quick clearfix mixin for clearing container content.
+///  Proper use-case is when a container's children are floated. If the
+///  container itself is floated and needs to be cleared, this will not
+///  function the same as a `clear: left/right/both;`.
+///
+///  @example scss
+///  .container {
+///    @include clearfix;
+///  }
+///  @example css
+///  .container::after {
+///    content: '';
+///    display: table;
+///    clear: both;
+///  }
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+
+///  Quick text replacement mixin for hiding text outside of an element.
+///  Primarily used to hide text when a background-image replaces it.
+///
+///  @example scss
+///  .hero {
+///    @include hide-text;
+///  }
+///  @example css
+///  .hero {
+///    text-indent: 101%;
+///    overflow: hidden;
+///    white-space: nowrap;
+///  }
+@mixin hide-text {
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+///  Shorthand element positioning mixin.
+///
+///  @parameter {string} $pos-type [relative] - Accepts all valid position strings (static, relative, absolute, fixed).
+///  @parameter {string} $pos-vals [0 0 0 0] - Position values in typical order (top, right, bottom, left). If a value is not required, inset a unitless 0.
+///
+///  @example scss
+///  .call-to-action {
+///    @include position(absolute, 15px 50px 0 0);
+///  }
+///  @example css
+///  .call-to-action {
+///    position: absolute;
+///    top: 15px;
+///    right: 50px;
+///  }
+///
+///  @todo Allow for unitless usage (i.e., `left: 0; right: 0;`) due to it being valid content.
+@mixin position($pos-type: relative, $pos-vals: 0 0 0 0) {
+
+  // If no position type designated, default to 'relative'
+  @if type-of($pos-type) == list{
+    $pos-vals: $pos-type;
+    $pos-type: relative;
+  }
+
+  // Separate values into top, right, bottom, left
+  $top: nth($pos-vals, 1);
+  $right: nth($pos-vals, 2);
+  $bottom: nth($pos-vals, 3);
+  $left: nth($pos-vals, 4);
+
+  // Return position
+  position: $pos-type;
+
+  // Return values
+  // If value is a number and has a unit type, print value
+  // otherwise ignore
+  @if (type-of($top) == number and not unitless($top)){
+    top: $top;
+  }
+
+  @if (type-of($right) == number and not unitless($right)){
+    right: $right;
+  }
+
+  @if (type-of($bottom) == number and not unitless($bottom)){
+    bottom: $bottom;
+  }
+
+  @if (type-of($left) == number and not unitless($left)){
+    left: $left;
+  }
+}
+
+
+///  Shorthand element sizing.
+///  Accepts auto or unit values. If only one value is provided, it will use that value for both width and height.
+///  Otherwise the first value is width and the second value is height.
+///
+///  @parameter {string} - Accepts 1 or 2 values.
+///
+///  @example scss
+///  .bucket {
+///    @include size(auto 150px);
+///  }
+///  @example css
+///  .bucket {
+///    width: auto;
+///    height: 150px;
+///  }
+@mixin size($size) {
+
+  // If only one value is present
+  @if length($size) == 1 {
+
+    @if $size == auto{
+      width: auto;
+      height: auto;
+    } @else if unitless($size) {
+      width: $size * 1px;
+      height: $size * 1px;
+    } @else if not(unitless($size)) {
+      width: $size;
+      height: $size;
+    }
+  }
+
+  // If both values are present
+  @if length($size) == 2 {
+
+    $width: nth($size, 1);
+    $height: nth($size, 2);
+
+    @if $width == auto {
+      width: $width;
+    } @else if unitless($width){
+      width: $width * 1px;
+    } @else if not(unitless($width)) {
+      width: $width;
+    }
+
+    @if $height == auto{
+      height: $height;
+    } @else if unitless($height) {
+      height: $height * 1px;
+    } @else if not(unitless($height)) {
+      height: $height;
+    }
+  }
+
+  // If more than 2 values, display error
+  @if length($size) > 2 {
+    @error 'Too many values detected. Size mixin only accepts 1-2 values.';
+  }
+}
+
+
+
+///  Shorthand for single-line text truncation based on width.
+///
+///  @parameter {string} $truncate-width [100%] - Width the element will be truncated at.
+///
+///  @example scss
+///  .short-title {
+///    @include truncate(250px);
+///  }
+///  @example css
+///  .short-title {
+///    display: inline-block;
+///    max-width: 250px;
+///    overflow: hidden;
+///    text-overflow: ellipsis;
+///    white-space: nowrap;
+///    word-wrap: normal;
+///  }
+@mixin truncate($truncate-width: 100%) {
+  display: inline-block;
+  max-width: $truncate-width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}

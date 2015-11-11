@@ -1,0 +1,62 @@
+////
+///  Typographic Normalization and variable applications
+///
+///  @group base
+////
+
+html {
+  color: $color-font-base;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+}
+ 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-header;
+  line-height: $line-height-header;
+}
+
+h1 {
+  font-size: $font-size-h1;
+}
+
+h2 {
+  font-size: $font-size-h2;
+}
+
+h3 {
+  font-size: $font-size-h3;
+}
+
+h4 {
+  font-size: $font-size-h4;
+}
+
+h5 {
+  font-size: $font-size-h5;
+}
+
+h6 {
+  font-size: $font-size-h6;
+}
+
+p {
+  margin: 0 0 $space-half;
+}
+
+a {
+  color: $color-link;
+  text-decoration: none;
+  transition: color .1s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-link-hover;
+  }
+}
