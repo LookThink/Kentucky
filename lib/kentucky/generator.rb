@@ -94,7 +94,7 @@ module Kentucky
     end
 
     def install_path_kentucky
-      return install_path_scss + Pathname.new("kentucky")
+      return install_path_scss
     end
 
     def master_stylesheet
@@ -110,7 +110,7 @@ module Kentucky
     end
 
     def kentucky_directory
-      File.join(stylesheets_directory, "kentucky")
+      File.join(stylesheets_directory)
     end
 
     def stylesheets_directory
