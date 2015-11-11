@@ -6,8 +6,8 @@
 
 // Font variables
 // Font families
-$font-family-base:   ("Source Sans Pro", "Helvetica", "Arial", sans-serif) !default;
-$font-family-header: ("Source Sans Pro", "Helvetica", "Arial", sans-serif) !default;
+$font-family-base:   ('Source Sans Pro', 'Helvetica', 'Arial', sans-serif) !default;
+$font-family-header: ('Source Sans Pro', 'Helvetica', 'Arial', sans-serif) !default;
 
 // Font sizes
 $font-size-base: 16px !default;
@@ -79,6 +79,13 @@ $z-index-base:     0 !default;
 $z-index-nav:     10 !default;
 $z-index-overlay: 20 !default;
 $z-index-modal:   30 !default;
+
+
+
+// Media query breakpoint variables
+$bp-alpha:   1200px;
+$bp-bravo:   900px;
+$bp-charlie: 700px;
 
 
 
