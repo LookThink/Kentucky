@@ -1,3 +1,11 @@
+# 3.0.0
+
+* Full restructuring and rethinking of Kentucky
+  * Included project folders to jumpstart proper SCSS organization for projects
+  * Updated variables to follow new naming scheme, `coreTarget-type-modifier` (e.g., `font-size-h1`, `border-radius-base`, etc.)
+  * Updated normalize to better suit current needs
+
+---
 # 1.2.1
 
 ### Bug Fix
