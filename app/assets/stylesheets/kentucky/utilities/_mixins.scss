@@ -279,17 +279,6 @@
 
 
 
-/// Slightly lighten a color
-/// @access public
-/// @param {Color} $color - color to tint
-/// @param {Number} $percentage - percentage of `$color` in returned color
-/// @return {Color}
-@function tint($color, $percentage) {
-  @return mix(#fff, $color, $percentage);
-}
-
-
-
 ///  Shorthand for single-line text truncation based on width.
 ///
 ///  @parameter {string} $truncate-width [100%] - Width the element will be truncated at.
@@ -314,15 +303,4 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   word-wrap: normal;
-}
-
-
-
-/// Slightly darken a color
-/// @access public
-/// @param {Color} $color - color to shade
-/// @param {Number} $percentage - percentage of `$color` in returned color
-/// @return {Color}
-@function shade($color, $percentage) {
-  @return mix(#000, $color, $percentage);
 }
