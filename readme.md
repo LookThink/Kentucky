@@ -1,16 +1,19 @@
 # Kentucky
 ###### Straight from the source.
+[![Gem Version](https://badge.fury.io/rb/kentucky.svg)](https://badge.fury.io/rb/kentucky)
+
+---
 
 # Usage
 
 - Run `gem install kentucky` from your Terminal app of choice.
+- If you already have Kentucky (look at you, you little go-getter), run `gem update kentucky` to ensure you have the latest version.
 - Navigate to your project's `scss` folder.
 - Run `kentucky install`.
 - Code and stuff!
 
 ---
 
-[![Gem Version](https://badge.fury.io/rb/kentucky.svg)](https://badge.fury.io/rb/kentucky)
 
 **Kentucky is a front-end project kickstart system to allow for rapidly beginning CSS development on a myriad of projects.**
 
