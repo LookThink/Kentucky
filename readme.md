@@ -1,3 +1,4 @@
+![Kentucky logo](http://kentucky.lookthink.com/images/kentucky-logo-2.png)
 # Kentucky
 ###### Straight from the source.
 [![Gem Version](https://badge.fury.io/rb/kentucky.svg)](https://badge.fury.io/rb/kentucky)
