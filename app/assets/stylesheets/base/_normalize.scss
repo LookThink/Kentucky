@@ -97,7 +97,7 @@ a:hover {
 // 1. Remove the bottom border in Firefox 39-.
 // 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
 abbr[title] {
-  border-bottom: none; // 1
+  border-bottom: 0; // 1
   text-decoration: underline; // 2
   text-decoration: underline dotted; // 2
 }
@@ -177,7 +177,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace; // 
+  font-family: monospace, monospace; // 1
   font-size: 1em; // 2
 }
 
