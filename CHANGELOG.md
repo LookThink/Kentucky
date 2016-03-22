@@ -1,3 +1,7 @@
+# 3.1.0
+
+* Update Normalize to match latest update (4.0) from [Normalize.css](https://github.com/necolas/normalize.css/blob/master/normalize.css)
+
 # 3.0.0
 
 * Full restructuring and rethinking of Kentucky
